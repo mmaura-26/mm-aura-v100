@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MM AURA V100 Fresh Start</title>
+<style>
+body{margin:0;font-family:Arial;background:#fff0f3}
+header{background:#fff;padding:12px;text-align:center;border-bottom:4px solid gold;position:sticky;top:0}
+.c{background:#fff;margin:10px;padding:12px;border-radius:12px;border:2px solid gold}
+.b{background:gold;color:#000;border:0;padding:12px;width:100%;border-radius:8px;font-weight:900;font-size:14px}
+input,select,textarea{width:100%;padding:10px;margin:6px 0;border:2px solid gold;border-radius:8px;box-sizing:border-box}
+.bo{background:#111;color:gold;margin:10px;padding:12px;border-radius:12px;border:2px solid gold}
+table{width:100%;border-collapse:collapse;background:#fff}
+th{background:gold;color:#000;padding:6px;border:1px solid #000;font-size:10px}
+td{border:1px solid #000;padding:5px;font-size:10px;color:#000;background:#fff;text-align:center}
+.level{padding:3px 8px;border-radius:12px;font-size:10px;font-weight:900}
+</style></head><body>
+<header>
+👑 <b>MM AURA V100 FRESH START</b><br>
+<small>CEO 27684729270 AUTO ACTIVE NO STOCK | R0 Budget | Compensation Plan Auto</small>
+<div style="margin-top:8px;border:2px solid gold;border-radius:8px;overflow:auto;background:#fff">
+<table>
+<tr><th>LEVEL</th><th>PERSONAL</th><th>TEAM</th><th>COUNT</th><th>COMM</th><th>BONUS</th><th>SALARY</th></tr>
+<tr><td><b>STARTER</b></td><td>-</td><td>-</td><td>L1</td><td>20%</td><td>-</td><td>-</td></tr>
+<tr><td><b>TEAM BUILDER</b></td><td>R400</td><td>R5k</td><td>L1-2</td><td>20%+10%</td><td>R500</td><td>-</td></tr>
+<tr><td><b>SUPERVISOR</b></td><td>R800</td><td>R10k</td><td>L1-3</td><td>20+10+4%</td><td>R1k</td><td>-</td></tr>
+<tr><td><b>MANAGER</b></td><td>R1200</td><td>R30k</td><td>L1-4</td><td>20+10+4+3%</td><td>R2.5k</td><td>R3k</td></tr>
+<tr><td><b>DIRECTOR</b></td><td>R1800</td><td>R65k</td><td>L1-5</td><td>+2%=39%</td><td>R8k</td><td>R6k</td></tr>
+<tr><td><b>EXECUTIVE</b></td><td>R2500</td><td>R100k</td><td>L1-6</td><td>+1%=40%</td><td>R15k</td><td>R12k</td></tr>
+</table>
+<div style="background:#000;color:gold;padding:4px;font-size:9px">NOTE: Rank up once a month - Commission on purchase only</div>
+</div>
+<div id="inv" style="display:none;background:#25D366;color:#fff;padding:8px;border-radius:8px;margin-top:8px;font-weight:900">Invited by <span id="invName"></span> - You join under them!</div>
+</header>
+
+<div class="c" style="background:#ffe0e0;text-align:center">
+<button onclick="localStorage.clear();location.href=location.href.split('?')[0]" style="background:#c00;color:#fff;border:0;padding:8px 12px;border-radius:6px;font-weight:900">🗑️ CLEAR ALL DATA - START FRESH</button>
+</div>
+
+<!-- JOIN -->
+<div class="c" id="joinBox">
+<div style="background:#222;color:gold;padding:6px;border-radius:6px;text-align:center;margin-bottom:8px">Upline: <b id="upName" style="color:#25D366">CEO Mrs Sibane 27684729270</b></div>
+<h3 style="margin:0">JOIN FREE - Commission on Purchase Only</h3>
+<input id="n" placeholder="Full Name - e.g. Thandi Nkosi">
+<input id="w" placeholder="WhatsApp - e.g. 27821234567 (27684729270=CEO)">
+<input id="loc" placeholder="Address - Cape Town, 8001">
+<input id="pw" type="password" placeholder="Password min 4">
+<input id="pw2" type="password" placeholder="Confirm Password">
+<button class="b" onclick="join()" style="background:#25D366;color:#fff">✅ CREATE FREE ACCOUNT + WHATSAPP UPLINE</button>
+<div id="jm" style="display:none;background:yellow;color:red;padding:8px;margin-top:8px;font-weight:900;border-radius:6px"></div>
+<div id="ok" style="display:none;background:#e0ffe0;padding:10px;border:2px solid green;border-radius:8px;margin-top:8px">
+<b>✅ Account Created!</b><div id="fn" style="word-break:break-all;background:#fff;padding:8px;border:1px solid green;margin:6px 0;font-size:11px;font-weight:900"></div>
+<button class="b" onclick="openBO()">OPEN MY BACK OFFICE</button>
+</div>
+</div>
+
+<!-- LOGIN -->
+<div class="c" id="loginBox">
+<h3 style="margin:0">LOGIN</h3>
+<input id="lW" placeholder="WhatsApp 27684729270">
+<input id="lP" type="password" placeholder="Password">
+<button class="b" style="background:#128C7E;color:#fff" onclick="login()">LOGIN</button>
+<div id="lm" style="color:red;font-size:12px;margin-top:5px"></div>
+</div>
+
+<!-- BACK OFFICE -->
+<div id="myBO" style="display:none" class="bo">
+<div style="display:flex;justify-content:space-between;align-items:center">
+<b id="bt">BACK OFFICE</b><span id="badge" class="level" style="background:#ddd">STARTER</span>
+</div>
+<div id="bn" style="color:#fff;font-size:12px;margin:6px 0"></div>
+<div id="rankInfo" style="background:#fff;color:#000;padding:8px;border-radius:8px;font-size:12px;margin:6px 0"></div>
+
+<div style="background:#fff;color:#000;padding:8px;border-radius:8px">
+<b>MY RECRUIT LINK (Auto Generated):</b>
+<div id="bl" style="word-break:break-all;background:#e8ffe8;padding:8px;border:2px solid green;font-size:12px;font-weight:900;margin:6px 0"></div>
+<button class="b" style="background:#25D366;color:#fff" onclick="copyLink()">📋 COPY LINK</button>
+<button class="b" style="background:#128C7E;color:#fff;margin-top:6px" onclick="shareWA()">💬 SHARE ON WHATSAPP</button>
+<div style="font-size:10px;color:#666;margin-top:4px">Test in Incognito: Paste full link?sponsor=Name&wa=Number</div>
+</div>
+
+<div style="margin-top:10px">
+<button class="b" style="width:auto;padding:6px 12px;font-size:12px" onclick="tab('shop')">🛒 Shop</button>
+<button class="b" style="width:auto;padding:6px 12px;font-size:12px" onclick="tab('team')">👥 Team</button>
+<button class="b" style="width:auto;padding:6px 12px;font-size:12px;background:#000;color:gold" onclick="tab('comm')">💰 Money</button>
+<button class="b" style="width:auto;padding:6px 12px;font-size:12px" onclick="tab('note')">📝 Notes</button>
+<button class="b" style="width:auto;padding:6px 12px;background:gold;display:none" onclick="tab('ceo')" id="ceoBtn">👑 CEO DB</button>
+</div>
+
+<div id="tShop" class="c" style="color:#000">
+<b>SHOP - Buy = Become ACTIVE + Personal Sales</b>
+<div style="border:2px solid gold;padding:8px;border-radius:8px;margin:6px 0"><b>Glow Soap - R150</b><button onclick="addCart('Glow Soap',150)" class="b" style="width:auto;padding:6px 12px;margin-top:4px">Add to Cart</button></div>
+<div style="border:2px solid gold;padding:8px;border-radius:8px;margin:6px 0"><b>Body Lotion - R250</b><button onclick="addCart('Lotion',250)" class="b" style="width:auto;padding:6px 12px;margin-top:4px">Add to Cart</button></div>
+<div style="border:3px solid #25D366;padding:8px;border-radius:8px;background:#e8ffe8;margin:6px 0"><b>⭐ Starter Kit R500 = ACTIVE + Rank STARTER</b><button onclick="addCart('Starter Kit',500)" class="b" style="width:auto;background:#25D366;color:#fff;margin-top:4px">Buy & Activate</button></div>
+<b>Courier:</b><select id="courier"><option value="PAXI 5-9 Days R60|60">PAXI 5-9 Days R60</option><option value="PAXI 3-5 Days R120|120">PAXI 3-5 R120</option><option value="Pargo Point R65|65">Pargo Point R65</option><option value="Pargo Door R85|85">Pargo Door R85</option><option value="Courier Guy R99|99">Courier Guy R99</option><option value="Cape Town 24-48hr R50|50">Cape Town 24-48hr R50</option></select>
+<div style="background:#e8ffe8;padding:8px;border-radius:8px;margin-top:8px"><div id="cart">Cart Empty</div><b>Total: R<span id="total">0</span></b><br><b>Pay:</b><select id="pay"><option>EFT</option><option>PayFast</option><option>COD Cape Town</option></select><button class="b" style="background:gold;margin-top:6px" onclick="checkout()">💳 PAY NOW + EMAIL CEO + WHATSAPP RECEIPT</button><div id="orderMsg" style="font-size:11px;margin-top:6px"></div></div>
+</div>
+
+<div id="tTeam" class="c" style="display:none;color:#000"><b>MY TEAM - L1 to L6 - Who is Active/Inactive</b><div id="teamList" style="font-size:12px;margin-top:8px">No team yet - Share your link!</div></div>
+<div id="tComm" class="c" style="display:none;color:#000"><b>💰 COMMISSIONS + BONUS + SALARY AUTO per Your Plan</b><div style="background:#fffbe6;padding:6px;border-radius:6px;font-size:11px;margin:6px 0">Personal: R<span id="ps">0</span> | Team: R<span id="ts">0</span> | Next: <span id="next">-</span></div><div id="commList" style="font-size:11px"></div><div style="background:gold;padding:8px;border-radius:8px;margin-top:8px;font-weight:900">Bonus: R<span id="bonus">0</span> | Salary: R<span id="sal">0</span> | Commission: R<span id="commTotal">0</span><br>GRAND TOTAL: R<span id="grand">0</span></div></div>
+<div id="tNote" class="c" style="display:none;color:#000"><b>📝 Note Box to CEO + Delivery Address</b><textarea id="noteText" rows="4" placeholder="Write note to CEO Mrs Sibane + your full delivery address..."></textarea><button class="b" onclick="saveNote()">📤 SEND NOTE TO CEO DATABASE</button><div id="noteList" style="font-size:11px;margin-top:6px"></div></div>
+<div id="tCeo" class="bo" style="display:none"><b>👑 CEO MASTER DATABASE - See Everyone</b><div id="ceoStats" style="background:gold;color:#000;padding:6px;border-radius:6px;font-weight:900;margin:6px 0;font-size:12px"></div><div id="ca" style="background:#fff;color:#000;padding:8px;border-radius:6px;font-size:10px;max-height:300px;overflow:auto"></div><div style="margin-top:8px"><b>All Notes & Addresses:</b><div id="allNotes" style="background:#fff;color:#000;padding:8px;border-radius:6px;font-size:11px;max-height:150px;overflow:auto"></div></div><div style="margin-top:8px"><b>All Orders:</b><div id="allOrders" style="background:#fff;color:#000;padding:8px;border-radius:6px;font-size:10px;max-height:150px;overflow:auto"></div></div><button class="b" style="background:#25D366;color:#fff;margin-top:8px" onclick="exportDB()">📥 Export Database CSV</button></div>
+
+<button class="b" style="background:#333;color:#fff;margin-top:10px" onclick="logout()">Logout</button>
+</div>
+
+<script>
+var base=location.href.split('?')[0];var CEO='27684729270';var cur=null;var sp=null,spW=null;var cart=[];var RANKS=[{n:'STARTER',ps:0,ts:0,l:1,c:[20],b:0,s:0},{n:'TEAM BUILDER',ps:400,ts:5000,l:2,c:[20,10],b:500,s:0},{n:'SUPERVISOR',ps:800,ts:10000,l:3,c:[20,10,4],b:1000,s:0},{n:'MANAGER',ps:1200,ts:30000,l:4,c:[20,10,4,3],b:2500,s:3000},{n:'DIRECTOR',ps:1800,ts:65000,l:5,c:[20,10,4,3,2],b:8000,s:6000},{n:'EXECUTIVE',ps:2500,ts:100000,l:6,c:[20,10,4,3,2,1],b:15000,s:12000}];
+try{var q=new URLSearchParams(location.search);sp=q.get('sponsor');spW=q.get('wa');if(sp){document.getElementById('inv').style.display='block';document.getElementById('invName').innerText=sp;document.getElementById('upName').innerText=sp+' ('+spW+')';}}catch(e){}
+function getRank(ps,ts){var r=RANKS[0];for(var i=RANKS.length-1;i>=0;i--)if(ps>=RANKS[i].ps&&ts>=RANKS[i].ts){r=RANKS[i];break;}return r;}
+function join(){var n=document.getElementById('n').value.trim(),w=document.getElementById('w').value.trim(),lc=document.getElementById('loc').value.trim(),p=document.getElementById('pw').value.trim(),p2=document.getElementById('pw2').value.trim(),m=document.getElementById('jm');function e(t){m.style.display='block';m.innerText=t;alert(t);}if(!n)return e('Enter Full Name');if(!w)return e('Enter WhatsApp');if(w[0]=='0'){w='27'+w.slice(1);document.getElementById('w').value=w;return e('Fixed to '+w+' - Click CREATE again');}if(p.length<4)return e('Password min 4');if(p!=p2)return e('Passwords no match');var isCEO=w==CEO;var link=base+'?sponsor='+encodeURIComponent(n)+'&wa='+w;var o={name:n,wa:w,loc:lc||'SA',link:link,password:p,active:isCEO?1:0,isCEO:isCEO,sponsor:sp||'CEO Mrs Sibane',sponsorWa:spW||CEO,orders:[],totalSpent:0,personalSales:0,teamSales:0,commissions:[],totalComm:0,rank:'STARTER',notes:[],date:new Date().toLocaleDateString()};cur=o;try{var a=JSON.parse(localStorage.getItem('mm_all')||'[]');a=a.filter(x=>x.wa!=w);a.push(o);localStorage.setItem('mm_all',JSON.stringify(a));localStorage.setItem('mm_logged',JSON.stringify(o));if(spW){var d=JSON.parse(localStorage.getItem('dl_'+spW)||'[]');d.push(o);localStorage.setItem('dl_'+spW,JSON.stringify(d));window.open('https://wa.me/'+spW+'?text='+encodeURIComponent('🌸 NEW JOIN! '+n+' ('+w+') joined via your link! Check BO Team tab! '+base),'_blank');}document.getElementById('ok').style.display='block';document.getElementById('fn').innerText=link;alert((isCEO?'👑 CEO AUTO ACTIVE NO STOCK! ':'✅ Joined FREE! ')+'WhatsApp notify sent to upline!');openBO();}catch(err){e(err.message);}}
+function login(){var w=document.getElementById('lW').value.trim(),p=document.getElementById('lP').value.trim();if(w[0]=='0')w='27'+w.slice(1);try{var a=JSON.parse(localStorage.getItem('mm_all')||'[]');var f=a.find(x=>x.wa==w&&x.password==p);if(!f){document.getElementById('lm').innerText='Wrong - Try CLEAR DATA then create CEO 27684729270';return;}if(f.wa==CEO){f.active=1;f.isCEO=1;}cur=f;localStorage.setItem('mm_logged',JSON.stringify(f));openBO();}catch(e){document.getElementById('lm').innerText='Error';}}
+function openBO(){var me=null;try{me=JSON.parse(localStorage.getItem('mm_logged')||'null');}catch(e){}if(!me&&cur)me=cur;if(!me)return;if(me.wa==CEO){me.active=1;me.isCEO=1;}cur=me;if(sp&&!me.isCEO){document.getElementById('myBO').style.display='none';return;}document.getElementById('myBO').style.display='block';document.getElementById('joinBox').style.display='none';document.getElementById('loginBox').style.display='none';var r=getRank(me.personalSales||0,me.teamSales||0);me.rank=r.n;document.getElementById('badge').innerText=r.n;document.getElementById('bt').innerText=me.wa==CEO?'👑 CEO MASTER - ACTIVE':'BO '+me.name;document.getElementById('bn').innerText=me.name+' | '+me.wa+' | '+(me.loc||'SA');document.getElementById('bl').innerText=me.link;document.getElementById('fn').innerText=me.link;document.getElementById('rankInfo').innerHTML='<b>Rank:</b> '+r.n+' | <b>Personal:</b> R'+(me.personalSales||0)+'/'+r.ps+' | <b>Team:</b> R'+(me.teamSales||0)+'/'+r.ts+' | <b>Levels:</b> L1-'+r.l+' | <b>Comm:</b> '+r.c.join('%+')+'% | <b>Bonus:</b> R'+r.b+' | <b>Salary:</b> R'+r.s+'<br><small>Rank up once a month</small>';if(me.wa==CEO)document.getElementById('ceoBtn').style.display='inline-block';tab('shop');}
+function tab(t){document.getElementById('tShop').style.display=t=='shop'?'block':'none';document.getElementById('tTeam').style.display=t=='team'?'block':'none';document.getElementById('tComm').style.display=t=='comm'?'block':'none';document.getElementById('tNote').style.display=t=='note'?'block':'none';document.getElementById('tCeo').style.display=t=='ceo'?'block':'none';if(t=='team')loadTeam();if(t=='comm')loadComm();if(t=='ceo')loadCeoDB();}
+function addCart(n,p){cart.push({name:n,price:p});renderCart();}
+function renderCart(){var h='';var tot=0;for(var i=0;i<cart.length;i++){h+=cart[i].name+' R'+cart[i].price+'<br>';tot+=cart[i].price;}var ship=parseInt(document.getElementById('courier').value.split('|')[1]||0);tot+=ship;document.getElementById('cart').innerHTML=h||'Cart Empty';document.getElementById('total').innerText=tot;}
+function checkout(){if(cart.length==0){alert('Add product first');return;}var tot=parseInt(document.getElementById('total').innerText);var courier=document.getElementById('courier').value.split('|')[0];var pay=document.getElementById('pay').value;var orderId='MM'+Date.now();var order={id:orderId,items:cart.slice(),total:tot,courier:courier,pay:pay,status:'Pending',date:new Date().toLocaleString()};cur.orders.push(order);cur.totalSpent=(cur.totalSpent||0)+tot;cur.personalSales=(cur.personalSales||0)+tot;if(cur.totalSpent>=500)cur.active=1;var all=JSON.parse(localStorage.getItem('mm_all')||'[]');function addSales(wa,amount,level){if(level>6||!wa)return;var u=all.find(x=>x.wa==wa);if(!u)return;u.teamSales=(u.teamSales||0)+amount;var rk=getRank(u.personalSales||0,u.teamSales||0);var perc=rk.c[level-1]||0;if(perc>0){var amt=Math.round(amount*perc/100);u.commissions.push({from:cur.name,wa:cur.wa,level:level,percent:perc,amount:amt,order:orderId,date:new Date().toLocaleDateString()});u.totalComm=(u.totalComm||0)+amt;}var idx=all.findIndex(x=>x.wa==u.wa);all[idx]=u;if(u.sponsorWa)addSales(u.sponsorWa,amount,level+1);}if(cur.sponsorWa)addSales(cur.sponsorWa,tot,1);var idx=all.findIndex(x=>x.wa==cur.wa);if(idx>=0)all[idx]=cur;else all.push(cur);localStorage.setItem('mm_all',JSON.stringify(all));localStorage.setItem('mm_logged',JSON.stringify(cur));window.open('mailto:you@gmail.com?subject=New Order '+orderId+'&body='+encodeURIComponent('Order '+orderId+' Buyer '+cur.name+' '+cur.wa+' Total R'+tot+' Items '+JSON.stringify(cart)+' Courier '+courier+' Pay '+pay),'_blank');window.open('https://wa.me/'+cur.wa+'?text='+encodeURIComponent('Hello '+cur.name+'! Order '+orderId+' Received! Total R'+tot+' Status: Pending > Paid > Processing > Shipped. Courier: '+courier),'_blank');document.getElementById('orderMsg').innerHTML='<b style="color:green">✅ Order '+orderId+' R'+tot+' Placed! Commission auto per plan! Email to CEO & WhatsApp receipt sent!</b>';cart=[];renderCart();openBO();}
+function loadTeam(){try{var all=JSON.parse(localStorage.getItem('mm_all')||'[]');function getDown(wa,level,max,arr){if(level>max)return arr;var direct=JSON.parse(localStorage.getItem('dl_'+wa)||'[]');for(var i=0;i<direct.length;i++){var d=all.find(x=>x.wa==direct[i].wa)||direct[i];arr.push({user:d,level:level});getDown(d.wa,level+1,max,arr);}return arr;}var rk=getRank(cur.personalSales||0,cur.teamSales||0);var team=getDown(cur.wa,1,rk.l,[]);var h='';for(var i=0;i<team.length;i++){var u=team[i].user;var r=getRank(u.personalSales||0,u.teamSales||0);h+='<div style="border-bottom:1px solid #ddd;padding:6px"><b>L'+team[i].level+' '+u.name+'</b> '+u.wa+' <span class="level" style="background:'+(r.n=='STARTER'?'#ddd':r.n=='TEAM BUILDER'?'#a3d977':r.n=='SUPERVISOR'?'#6ec6ff':r.n=='MANAGER'?'gold':r.n=='DIRECTOR'?'#ff8c00':'#000')+';color:'+(r.n=='EXECUTIVE'?'gold':'#000')+'">'+r.n+'</span> '+(u.active?'<span style="background:#25D366;color:#fff;padding:2px 6px;border-radius:10px">ACTIVE R'+(u.totalSpent||0)+'</span>':'<span style="background:#c00;color:#fff;padding:2px 6px;border-radius:10px">INACTIVE</span>')+'<br><small>'+u.link+'</small></div>';}document.getElementById('teamList').innerHTML=h||'No team in L1-'+rk.l+' - Share your link!';}catch(e){}}
+function loadComm(){try{var me=JSON.parse(localStorage.getItem('mm_logged'));var h='';for(var i=0;i<(me.commissions||[]).length;i++){var c=me.commissions[i];h+='<div style="border-bottom:1px solid #ddd;padding:5px">L'+c.level+' '+c.percent+'% from '+c.from+' Order '+c.order+' R'+c.amount+' '+c.date+'</div>';}document.getElementById('commList').innerHTML=h||'No commissions yet - When downline buys, you earn per plan image!';document.getElementById('commTotal').innerText=me.totalComm||0;var rk=getRank(me.personalSales||0,me.teamSales||0);document.getElementById('ps').innerText=me.personalSales||0;document.getElementById('ts').innerText=me.teamSales||0;document.getElementById('bonus').innerText=rk.b;document.getElementById('sal').innerText=rk.s;document.getElementById('grand').innerText=(me.totalComm||0)+rk.b+rk.s;var idx=RANKS.findIndex(x=>x.n==rk.n);var next=RANKS[idx+1];document.getElementById('next').innerText=next?next.n+' need Personal R'+next.ps+' Team R'+next.ts:'MAX EXECUTIVE';}catch(e){}}
+function saveNote(){var t=document.getElementById('noteText').value.trim();if(!t){alert('Write note');return;}cur.notes.push({text:t,date:new Date().toLocaleString()});var a=JSON.parse(localStorage.getItem('mm_all')||'[]');var idx=a.findIndex(x=>x.wa==cur.wa);a[idx]=cur;localStorage.setItem('mm_all',JSON.stringify(a));localStorage.setItem('mm_logged',JSON.stringify(cur));document.getElementById('noteList').innerHTML='✅ Saved! CEO will see in CEO DB: '+t;document.getElementById('noteText').value='';}
+function loadCeoDB(){try{var a=JSON.parse(localStorage.getItem('mm_all')||'[]');var active=a.filter(x=>x.active).length;document.getElementById('ceoStats').innerText='Total: '+a.length+' Active: '+active+' Inactive: '+(a.length-active)+' Sales: R'+a.reduce((s,x)=>s+(x.totalSpent||0),0)+' Comm: R'+a.reduce((s,x)=>s+(x.totalComm||0),0);var h='';var notes='';var orders='';for(var i=0;i<a.length;i++){var u=a[i];if(u.wa==CEO)u.active=1;var r=getRank(u.personalSales||0,u.teamSales||0);h+='<div style="border-bottom:1px solid #ddd;padding:5px"><b>'+u.name+'</b> '+u.wa+' '+r.n+' '+(u.active?'ACTIVE R'+(u.totalSpent||0):'INACTIVE')+' Personal R'+(u.personalSales||0)+' Team R'+(u.teamSales||0)+' Comm R'+(u.totalComm||0)+'<br>Link: '+u.link+'<br>Loc: '+(u.loc||'SA')+'</div>';if(u.notes)for(var j=0;j<u.notes.length;j++)notes+='<div style="border-bottom:1px solid #eee;padding:4px"><b>'+u.name+' '+u.wa+':</b> '+u.notes[j].text+' <small>'+u.notes[j].date+'</small></div>';if(u.orders)for(var k=0;k<u.orders.length;k++)orders+='<div style="border-bottom:1px solid #eee;padding:4px"><b>'+u.orders[k].id+'</b> '+u.name+' R'+u.orders[k].total+' '+u.orders[k].courier+' '+u.orders[k].pay+' '+u.orders[k].status+' '+u.orders[k].date+'</div>';}document.getElementById('ca').innerHTML=h||'No team yet';document.getElementById('allNotes').innerHTML=notes||'No notes';document.getElementById('allOrders').innerHTML=orders||'No orders';}catch(e){}}
+function logout(){localStorage.removeItem('mm_logged');location.href=base;}
+function copyLink(){navigator.clipboard.writeText(document.getElementById('bl').innerText);alert('✅ Link Copied!');}
+function shareWA(){window.open('https://wa.me/?text='+encodeURIComponent('Join MM Aura FREE! My link: '+document.getElementById('bl').innerText),'_blank');}
+function exportDB(){var a=JSON.parse(localStorage.getItem('mm_all')||'[]');var csv='Name,Wa,Rank,Active,Personal,Team,TotalSpent,TotalComm,Sponsor,Link,Location\n';for(var i=0;i<a.length;i++){var r=getRank(a[i].personalSales||0,a[i].teamSales||0);csv+=a[i].name+','+a[i].wa+','+r.n+','+a[i].active+','+(a[i].personalSales||0)+','+(a[i].teamSales||0)+','+(a[i].totalSpent||0)+','+(a[i].totalComm||0)+','+a[i].sponsor+','+a[i].link+','+(a[i].loc||'')+'\n';}var blob=new Blob([csv],{type:'text/csv'});var url=URL.createObjectURL(blob);var aa=document.createElement('a');aa.href=url;aa.download='mm_aura_v100_fresh.csv';aa.click();}
+document.getElementById('courier').addEventListener('change',renderCart);
+try{var lg=JSON.parse(localStorage.getItem('mm_logged')||'null');if(lg){if(lg.wa==CEO){lg.active=1;lg.isCEO=1;}cur=lg;openBO();}}catch(e){}
+</script></body></html>
