@@ -1,346 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>MM AURA V100 - REAL SHOP</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MM AURA - CORRECT PRICES</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#C8A46B;--goldD:#9C7B4A;--black:#1A1A1A;--border:#F2E8DA;--cream:#FFF8F2}
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
-.topbar{background:#1A1A1A;color:white;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-.topbar button{background:var(--gold);border:none;color:white;padding:6px 12px;border-radius:20px;font-weight:700;font-size:.7rem;margin-left:4px}
-.header{text-align:center;padding:14px;background:var(--cream)}
-.logo-line{font-family:'Cormorant Garamond',serif;font-size:1.9rem;letter-spacing:2px}
-.wrap{padding:10px 10px 80px}
-.prod{background:white;border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;gap:10px;align-items:center}
-.prod img{width:60px;height:60px;border-radius:8px;background:#f5f0e8;object-fit:cover}
-.prod-info{flex:1}
-.prod-info b{font-size:.85rem}
-.prod-info small{font-size:.68rem;color:#666;display:block}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
+.topbar{background:#1A1A1A;color:white;padding:10px 12px;display:flex;justify-content:space-between;position:sticky;top:0;z-index:100}
+.topbar button{background:var(--gold);border:none;color:white;padding:7px 12px;border-radius:20px;font-weight:700;font-size:.7rem;margin-left:4px}
+.bo{display:none;padding:10px}.bo.active{display:block}
+.bo-card{background:white;border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
+.prod{border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;background:white}
+.prod b{font-size:.88rem}.prod small{font-size:.70rem;color:#666;display:block}
 .prod button{background:var(--black);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.7rem;font-weight:700}
 .btn{width:100%;background:linear-gradient(135deg,var(--gold),var(--goldD));color:white;border:none;padding:14px;border-radius:30px;font-weight:700;margin-top:10px}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:9999;align-items:flex-start;justify-content:center;padding:10px;overflow-y:auto}
-.modal.active{display:flex}
-.modal-box{background:white;border-radius:18px;padding:16px;width:100%;max-width:380px;border:2px solid var(--gold);margin:20px 0}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:flex-start;justify-content:center;padding:10px;overflow-y:auto}.modal.active{display:flex}
+.modal-box{background:white;border-radius:18px;padding:16px;width:100%;max-width:390px;border:2px solid var(--gold);margin:20px 0}
 .modal-box input,.modal-box select,.modal-box textarea{width:100%;padding:11px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;font-size:.85rem}
-.modal-box textarea{height:60px}
-.bo{display:none;padding:10px}
-.bo.active{display:block}
-.bo-card{background:white;border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
-.linkbox{background:var(--cream);border:2px dashed var(--gold);border-radius:10px;padding:10px;word-break:break-all;font-size:.75rem;color:var(--goldD);font-weight:700}
-.earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.earn-box{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center}
-.earn-box b{color:var(--goldD);display:block}
-.rank-bar{background:var(--black);color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.72rem}
-.rank-bar b{color:var(--gold)}
-.cart-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #f0e6d8;font-size:.78rem}
-.cart-total{background:var(--black);color:white;padding:12px;border-radius:10px;margin-top:10px;font-size:.85rem}
-.cart-total b{color:var(--gold)}
+.earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.earn-box{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center}.earn-box b{color:var(--goldD);font-size:1.1rem;display:block}
+.rank-bar{background:var(--black);color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.72rem}.rank-bar b{color:var(--gold)}
+.cart-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee;font-size:.78rem}
+.cart-total{background:var(--black);color:white;padding:12px;border-radius:10px;margin-top:10px}
+.linkbox{background:var(--cream);border:2px dashed var(--gold);border-radius:10px;padding:10px;word-break:break-all;font-size:.73rem;color:var(--goldD);font-weight:700}
 </style>
 </head>
 <body>
-<div class="topbar">
-<span>MM 🍃 AURA V100</span>
-<div><button onclick="openCart()">🛒 CART <span id="cartCount">0</span></button><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div>
-</div>
+<div class="topbar"><span>MM 🍃 AURA V100</span><div><button onclick="openCart()">🛒 <span id="cartCount">0</span></button><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div></div>
 
-<div id="mainPage">
-<div style="background:#1A1A1A;color:var(--gold);text-align:center;padding:10px;font-family:'Great Vibes',cursive;font-size:1.6rem">Invited by <span id="s1">CEO</span> — Free Join</div>
-<div class="header"><div class="logo-line">MM 🍃 AURA V100</div><p style="font-size:.7rem;color:#666">Free join • Commission after purchase only</p><button class="btn" onclick="openReg()">JOIN FREE UNDER <span id="s2">CEO</span></button></div>
-<div class="wrap">
-<h3 style="font-family:'Cormorant Garamond',serif;text-align:center;margin:10px 0">🛍️ Single Products Shop</h3>
-<div id="mainProducts"></div>
-<h3 style="font-family:'Cormorant Garamond',serif;text-align:center;margin:16px 0 8px">💼 Starter Kits</h3>
-<div id="mainKits"></div>
-</div>
-</div>
+<div id="mainPage"><div style="background:#1A1A1A;color:var(--gold);text-align:center;padding:14px">Invited by <span id="s1">CEO</span> — FREE JOIN</div>
+<div style="text-align:center;padding:16px"><div style="font-family:'Cormorant Garamond',serif;font-size:1.9rem">MM 🍃 AURA V100</div><button class="btn" onclick="openReg()">JOIN FREE UNDER <span id="s2">CEO</span></button></div></div>
 
-<!-- MEMBER BO -->
 <div id="memberBO" class="bo">
 <div class="bo-card"><h3>Welcome <span id="boName">-</span> 🌸</h3><p style="font-size:.7rem">Phone: <span id="boPhone"></span> | Sponsor: <span id="boSponsor"></span></p></div>
-<div class="bo-card">
-<h3>💰 Commissions & Salaries (After Purchase Only)</h3>
-<div class="earn-grid">
-<div class="earn-box"><b id="personalSales">R0</b><small>Personal Purchase</small></div>
-<div class="earn-box"><b id="teamSales">R0</b><small>Team Purchase</small></div>
-<div class="earn-box"><b id="earnDirect">R0</b><small>20% Direct (L1)</small></div>
-<div class="earn-box"><b id="earnBonus">R0</b><small>Rank Bonus</small></div>
-</div>
-<div class="rank-bar">Rank: <b id="rankName">STARTER (20%)</b><br>Next: <b id="nextRank">TEAM BUILDER — Need R400 + R5k</b><br>Total Earnings: <b id="earnTotal">R0</b></div>
-<p style="font-size:.6rem;color:#999">All calculations happen AFTER checkout — not on free join</p>
-</div>
-<div class="bo-card"><h3>🛍️ Shop Inside BO — Buy to Rank Up</h3><div id="boProducts"></div></div>
-<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.72rem">COPY</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.72rem;margin-left:6px">SHARE</button></div>
+<div class="bo-card"><h3>💰 Commission AFTER Purchase</h3><div class="earn-grid"><div class="earn-box"><b id="personalSales">R0</b><small>Personal</small></div><div class="earn-box"><b id="teamSales">R0</b><small>Team</small></div><div class="earn-box"><b id="earnDirect">R0</b><small>20% L1</small></div><div class="earn-box"><b id="earnBonus">R0</b><small>Bonus</small></div></div><div class="rank-bar">Rank: <b id="rankName">STARTER</b><br>Next: <b id="nextRank"></b><br>Total: <b id="earnTotal">R0</b></div></div>
+
+<div class="bo-card"><h3>💼 COMBO ACTIVATION KITS 1-10</h3><div id="boKits"></div></div>
+<div class="bo-card"><h3>🧴 INDIVIDUAL PRODUCTS — YOUR CORRECT PRICES</h3><div id="boSingles"></div></div>
+<div class="bo-card" style="text-align:center"><button class="btn" onclick="openCart()">🛒 VIEW CART & CHECKOUT (<span id="cartCount2">0</span>)</button></div>
+<div class="bo-card"><h3>🔗 My Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.72rem">COPY LINK</button></div>
 <div class="bo-card"><h3>📦 My Orders</h3><div id="myOrders"></div></div>
-<div class="bo-card"><h3>👥 My Team</h3><div id="teamLevels"></div><div id="teamList" style="margin-top:10px"></div></div>
+<div class="bo-card"><h3>👥 My Team</h3><div id="teamLevels"></div><div id="teamList"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
 </div>
 
-<!-- CEO BO -->
-<div id="ceoBO" class="bo">
-<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN — REAL ORDERS</h3></div>
-<div class="bo-card" style="background:#1A1A1A;color:white"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem"><div>Members<br><b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Total Sales<br><b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>To Pay Comm<br><b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Orders<br><b id="ceoOrdersCount" style="color:var(--gold)">0</b></div></div></div>
-<div class="bo-card"><h3>📦 All Orders (Checkout)</h3><div id="ceoOrders"></div></div>
-<div class="bo-card"><h3>📋 All Members</h3><input id="ceoSearch" placeholder="Search..." style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px" oninput="renderCEO()"><div id="ceoList"></div></div>
-<button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT CEO</button>
-</div>
+<div id="ceoBO" class="bo"><div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem;margin-top:8px"><div>Members <b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales <b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm 20% <b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Orders <b id="ceoOrdersCount" style="color:var(--gold)">0</b></div></div></div><div class="bo-card"><h3>📦 Orders</h3><div id="ceoOrders"></div></div><div class="bo-card"><h3>Members</h3><div id="ceoList"></div></div><button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button></div>
 
-<!-- REGISTER MODAL - FREE -->
-<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join FREE</h2><p style="font-size:.75rem;text-align:center;color:#666;margin:6px 0">Under <b id="s4">CEO</b> — No purchase needed</p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp e.g. 0797161665"><input id="regPass" type="password" placeholder="Create Password"><button onclick="doRegister()">REGISTER FREE → GO TO BO</button><button onclick="closeReg()" style="background:#eee;color:#333">Cancel</button></div></div>
+<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center">Join FREE</h2><p style="text-align:center;font-size:.75rem;color:#666">Under <span id="s4">CEO</span></p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp"><input id="regPass" type="password" placeholder="Password"><button onclick="doRegister()" class="btn">REGISTER FREE → BO</button><button onclick="closeReg()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
+<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()" class="btn">SIGN IN</button><button onclick="closeLogin()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
 
-<!-- LOGIN MODAL -->
-<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
-
-<!-- CART & CHECKOUT MODAL -->
-<div id="cartModal" class="modal"><div class="modal-box" style="max-width:400px">
-<h2 style="font-family:'Cormorant Garamond',serif;text-align:center">🛒 Your Cart</h2>
+<div id="cartModal" class="modal"><div class="modal-box">
+<h2 style="text-align:center;font-family:'Cormorant Garamond',serif">🛒 CART & CHECKOUT</h2>
 <div id="cartItems"></div>
-<div class="cart-total">
-<div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="cartSub">R0</b></div>
-<div style="display:flex;justify-content:space-between;margin-top:4px"><span>Shipping:</span><b id="cartShip">R0</b></div>
-<div style="display:flex;justify-content:space-between;margin-top:6px;font-size:1rem"><span>Total:</span><b id="cartTotal">R0</b></div>
-</div>
-<h3 style="margin:14px 0 6px;font-size:.9rem">🚚 Courier Options</h3>
-<select id="courierSelect" onchange="calcCart()">
-<option value="0">Select courier</option>
-<option value="60">Paxi — R60 (7-9 days)</option>
-<option value="75">Pudo — R75 (3-5 days)</option>
-<option value="120">Courier Guy — R120 (1-2 days)</option>
-<option value="0">Collection — Free (Cape Town)</option>
-</select>
-<h3 style="margin:10px 0 6px;font-size:.9rem">💳 Payment Options</h3>
-<select id="payMethod">
-<option value="EFT">EFT / Bank Transfer</option>
-<option value="Cash">Cash on Collection</option>
-<option value="Paystack">Paystack (Card)</option>
-<option value="COD">Cash on Delivery (R40 extra)</option>
-</select>
-<input id="deliveryAddr" placeholder="Delivery address — Street, Town, Province">
-<textarea id="orderNotes" placeholder="Notes for order — e.g. Shade, allergies, gift wrap, etc"></textarea>
-<button onclick="checkout()" style="background:var(--gold)">CHECKOUT & PAY → CALCULATE COMMISSION</button>
-<button onclick="closeCart()" style="background:#eee;color:#333">Continue Shopping</button>
+<div class="cart-total"><div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="cartSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping:</span><b id="cartShip">R0</b></div><div style="display:flex;justify-content:space-between;font-size:1.1rem;margin-top:6px"><span>TOTAL:</span><b id="cartTotal" style="color:var(--gold)">R0</b></div><small style="color:#ccc">20% commission on subtotal AFTER checkout</small></div>
+<h3 style="margin:12px 0 6px;font-size:.85rem">🚚 Courier *</h3><select id="courierSelect" onchange="calcCart()"><option value="">Select</option><option value="60">Paxi R60</option><option value="75">Pudo R75</option><option value="120">Courier Guy R120</option><option value="150">Aramex R150</option><option value="0">Collection Free</option></select>
+<h3 style="margin:10px 0 6px;font-size:.85rem">💳 Payment *</h3><select id="payMethod" onchange="calcCart()"><option value="EFT">EFT</option><option value="Cash">Cash on Collection</option><option value="Paystack">Paystack Card</option><option value="COD">COD (+R40)</option></select>
+<h3 style="margin:10px 0 6px;font-size:.85rem">📍 Delivery Address *</h3><input id="deliveryAddr" placeholder="Street, Town, Province">
+<h3 style="margin:10px 0 6px;font-size:.85rem">📝 Note Box</h3><textarea id="orderNotes" placeholder="Notes..."></textarea>
+<button onclick="checkout()" class="btn">✅ CHECKOUT & CALCULATE</button>
+<button onclick="closeCart()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Continue Shopping</button>
 </div></div>
 
 <script>
 const CEO_NUMBER="27684729270";
-const RANKS=[
- {name:'STARTER', personal:0, team:0, levels:1, perc:[20], bonus:0, next:'TEAM BUILDER — Need R400 personal + R5k team'},
- {name:'TEAM BUILDER', personal:400, team:5000, levels:2, perc:[20,10], bonus:500, next:'SUPERVISOR — Need R800 + R10k team'},
- {name:'SUPERVISOR', personal:800, team:10000, levels:3, perc:[20,10,4], bonus:1000, next:'MANAGER — Need R1200 + R30k team'},
- {name:'MANAGER', personal:1200, team:30000, levels:4, perc:[20,10,4,3], bonus:2500, next:'DIRECTOR — Need R1800 + R65k team'},
- {name:'DIRECTOR', personal:1800, team:65000, levels:5, perc:[20,10,4,3,2], bonus:8000, next:'EXECUTIVE — Need R2500 + R100k team'},
- {name:'EXECUTIVE', personal:2500, team:100000, levels:6, perc:[20,10,4,3,2,1], bonus:15000, next:'MAX RANK 👑'}
+const RANKS=[{name:'STARTER',personal:0,team:0,levels:1,perc:[20],bonus:0,next:'TEAM BUILDER — Need R400 + R5k'},{name:'TEAM BUILDER',personal:400,team:5000,levels:2,perc:[20,10],bonus:500,next:'SUPERVISOR — Need R800 + R10k'},{name:'SUPERVISOR',personal:800,team:10000,levels:3,perc:[20,10,4],bonus:1000,next:'MANAGER — Need R1200 + R30k'},{name:'MANAGER',personal:1200,team:30000,levels:4,perc:[20,10,4,3],bonus:2500,next:'DIRECTOR — Need R1800 + R65k'},{name:'DIRECTOR',personal:1800,team:65000,levels:5,perc:[20,10,4,3,2],bonus:8000,next:'EXECUTIVE — Need R2500 + R100k'},{name:'EXECUTIVE',personal:2500,team:100000,levels:6,perc:[20,10,4,3,2,1],bonus:15000,next:'MAX RANK 👑'}];
+const KITS=[
+{id:101,name:'Kit 1',price:270,desc:'3x Soaps + 2x Glow oil + 2x Lip scrubs'},
+{id:102,name:'Kit 2',price:370,desc:'3x Soaps + 3x Glow oil + 3x Heel balm'},
+{id:103,name:'Kit 3',price:400,desc:'3x Soaps + 2x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Hand lotion'},
+{id:104,name:'Kit 4',price:495,desc:'3x Soaps + 3x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Face mask'},
+{id:105,name:'Kit 5',price:520,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on'},
+{id:106,name:'Kit 6',price:600,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on + 6x AirFreshner'},
+{id:107,name:'Kit 7',price:400,desc:'10x Lip scrub + 10x Lip balm'},
+{id:108,name:'Kit 8',price:375,desc:'15x Air freshners'},
+{id:109,name:'Kit 9',price:540,desc:'6x Soap + 6x Glow oil'},
+{id:110,name:'Kit 10',price:600,desc:'3x Perfume (hers) + 3x Perfume (his)'},
 ];
-const PRODUCTS=[
- {id:1, name:'Glow Soap 100g', price:70, cat:'single'},
- {id:2, name:'Turmeric Soap', price:70, cat:'single'},
- {id:3, name:'Glow Oil 30ml', price:120, cat:'single'},
- {id:4, name:'Lip Scrub', price:50, cat:'single'},
- {id:5, name:'Body Lotion 250ml', price:150, cat:'single'},
- {id:6, name:'Face Cream', price:180, cat:'single'},
- {id:7, name:'Kit 1 ⭐ Starter R270', price:270, cat:'kit'},
- {id:8, name:'Kit 2 R370', price:370, cat:'kit'},
- {id:9, name:'Kit 3 R400', price:400, cat:'kit'},
- {id:10, name:'Kit 4 R495', price:495, cat:'kit'},
- {id:11, name:'Kit 5 R520', price:520, cat:'kit'},
- {id:12, name:'Kit 6 R600', price:600, cat:'kit'},
- {id:13, name:'Kit 8 R375', price:375, cat:'kit'},
- {id:14, name:'Kit 9 R540', price:540, cat:'kit'},
+const SINGLES=[
+{id:1,name:'Soap',price:40},
+{id:2,name:'Glow Oil',price:50},
+{id:3,name:'Lip Scrub',price:25},
+{id:4,name:'Lip Balm',price:15},
+{id:5,name:'Heel Balm',price:75},
+{id:6,name:'Hand Lotion',price:20},
+{id:7,name:'Face Mask',price:35},
+{id:8,name:'Body Oil',price:60},
+{id:9,name:'Roll On',price:32.5},
+{id:10,name:'Air Freshner',price:25},
+{id:11,name:'Perfume (Hers/His)',price:100},
 ];
 let cart=JSON.parse(localStorage.getItem('mmaura_cart')||'[]');
-const p=new URLSearchParams(location.search);
-let sponsor=p.get('sponsor')?decodeURIComponent(p.get('sponsor')):'CEO';
-let sponsorPhone=p.get('sphone')||CEO_NUMBER;
-document.getElementById('s1').textContent=sponsor;
-document.getElementById('s2').textContent=sponsor.toUpperCase();
-document.getElementById('s4').textContent=sponsor;
-
-function renderMainProducts(){
- let singles=PRODUCTS.filter(p=>p.cat==='single');
- let kits=PRODUCTS.filter(p=>p.cat==='kit');
- document.getElementById('mainProducts').innerHTML=singles.map(pr=>`<div class="prod"><img src="https://via.placeholder.com/60x60/C8A46B/fff?text=${encodeURIComponent(pr.name.substring(0,3))}"><div class="prod-info"><b>${pr.name}</b><small>R${pr.price} — Single product</small></div><button onclick="addToCart(${pr.id})">ADD</button></div>`).join('');
- document.getElementById('mainKits').innerHTML=kits.map(pr=>`<div class="prod"><img src="https://via.placeholder.com/60x60/1A1A1A/C8A46B?text=KIT"><div class="prod-info"><b>${pr.name}</b><small>R${pr.price} — Full kit</small></div><button onclick="addToCart(${pr.id})">ADD</button></div>`).join('');
- document.getElementById('boProducts').innerHTML=PRODUCTS.map(pr=>`<div class="prod"><div class="prod-info"><b>${pr.name}</b><small>R${pr.price}</small></div><button onclick="addToCart(${pr.id})">ADD TO CART</button></div>`).join('');
-}
-renderMainProducts();
-
-function openReg(){document.getElementById('regModal').classList.add('active')}
-function closeReg(){document.getElementById('regModal').classList.remove('active')}
-function openLogin(){document.getElementById('loginModal').classList.add('active')}
-function closeLogin(){document.getElementById('loginModal').classList.remove('active')}
-function openCart(){document.getElementById('cartModal').classList.add('active'); renderCart();}
-function closeCart(){document.getElementById('cartModal').classList.remove('active')}
-function showMain(){document.getElementById('memberBO').classList.remove('active');document.getElementById('ceoBO').classList.remove('active');document.getElementById('mainPage').style.display='block';}
-function showMember(){document.getElementById('mainPage').style.display='none';document.getElementById('memberBO').classList.add('active');}
-function showCEO(){document.getElementById('mainPage').style.display='none';document.getElementById('ceoBO').classList.add('active');renderCEO();}
-
-function addToCart(id){
- let prod=PRODUCTS.find(p=>p.id===id);
- let exist=cart.find(c=>c.id===id);
- if(exist){exist.qty++;} else {cart.push({id:prod.id, name:prod.name, price:prod.price, qty:1});}
- localStorage.setItem('mmaura_cart',JSON.stringify(cart));
- document.getElementById('cartCount').textContent=cart.reduce((s,i)=>s+i.qty,0);
- alert(`${prod.name} added to cart!`);
- renderCart();
-}
-function renderCart(){
- let html=''; let sub=0;
- cart.forEach((it,idx)=>{
-   sub+=it.price*it.qty;
-   html+=`<div class="cart-item"><span><b>${it.name}</b> x${it.qty} — R${it.price*it.qty}</span><span><button onclick="changeQty(${idx},-1)" style="padding:2px 8px">-</button> <button onclick="changeQty(${idx},1)" style="padding:2px 8px">+</button> <button onclick="removeItem(${idx})" style="padding:2px 8px;background:#ff4444;color:white;border:none;border-radius:10px">x</button></span></div>`;
- });
- document.getElementById('cartItems').innerHTML=html||'<p style="text-align:center;color:#999;font-size:.8rem">Cart empty — add products</p>';
- calcCart();
-}
-function changeQty(i,delta){ cart[i].qty+=delta; if(cart[i].qty<=0) cart.splice(i,1); localStorage.setItem('mmaura_cart',JSON.stringify(cart)); document.getElementById('cartCount').textContent=cart.reduce((s,it)=>s+it.qty,0); renderCart();}
-function removeItem(i){ cart.splice(i,1); localStorage.setItem('mmaura_cart',JSON.stringify(cart)); document.getElementById('cartCount').textContent=cart.reduce((s,it)=>s+it.qty,0); renderCart();}
-function calcCart(){
- let sub=cart.reduce((s,it)=>s+it.price*it.qty,0);
- let ship=parseInt(document.getElementById('courierSelect')?.value||0);
- if(document.getElementById('payMethod')?.value==='COD') ship+=40;
- document.getElementById('cartSub').textContent='R'+sub;
- document.getElementById('cartShip').textContent='R'+ship;
- document.getElementById('cartTotal').textContent='R'+(sub+ship);
- return {sub, ship, total:sub+ship};
-}
-function checkout(){
- if(cart.length===0){alert('Cart empty');return;}
- let courier=document.getElementById('courierSelect').value;
- let courierText=document.getElementById('courierSelect').options[document.getElementById('courierSelect').selectedIndex].text;
- if(courierText.includes('Select')){alert('Select courier');return;}
- let pay=document.getElementById('payMethod').value;
- let addr=document.getElementById('deliveryAddr').value.trim();
- let notes=document.getElementById('orderNotes').value.trim();
- if(!addr){alert('Enter delivery address');return;}
- let {sub, ship, total}=calcCart();
- let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');
- if(!me){alert('Please JOIN FREE first, then checkout inside BO to get commission tracking!'); closeCart(); openReg(); return;}
- // SAVE ORDER - AFTER PURCHASE CALCULATION
- let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- let idx=users.findIndex(u=>u.phone===me.phone);
- if(idx>=0){
-   users[idx].purchase=(users[idx].purchase||0)+sub; // only products, not shipping
-   me.purchase=users[idx].purchase;
-   localStorage.setItem('mmaura_users',JSON.stringify(users));
-   localStorage.setItem('mmaura_me',JSON.stringify(me));
- }
- let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');
- let order={id:Date.now(), buyer:me.name, phone:me.phone, sponsor:me.sponsor, sponsorPhone:me.sponsorPhone||CEO_NUMBER, items:[...cart], sub, ship, total, courier:courierText, pay, addr, notes, date:new Date().toLocaleString()};
- orders.push(order);
- localStorage.setItem('mmaura_orders',JSON.stringify(orders));
- cart=[]; localStorage.setItem('mmaura_cart',JSON.stringify(cart));
- document.getElementById('cartCount').textContent='0';
- closeCart();
- alert(`✅ ORDER PLACED! Total R${total} (${courierText}, ${pay})\\nPersonal purchase now R${me.purchase}\\nSponsor gets 20% = R${Math.round(sub*0.2)} AFTER purchase — Check BO!`);
- loginSuccess(me);
- renderCEO();
-}
-
-function doRegister(){
- let name=document.getElementById('regName').value.trim();
- let phone=document.getElementById('regPhone').value.trim();
- let pass=document.getElementById('regPass').value.trim();
- if(!name||!phone||!pass){alert('Fill all');return;}
- let cleanPhone=phone.replace(/\D/g,''); if(cleanPhone.startsWith('0')) cleanPhone='27'+cleanPhone.substring(1);
- let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- if(users.find(u=>u.phone===cleanPhone)){alert('Already registered. LOGIN.');closeReg();openLogin();return;}
- let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;
- users.push({name, phone:cleanPhone, pass, sponsor, sponsorPhone, kit:0, purchase:0, date:new Date().toLocaleString(), link:myLink});
- localStorage.setItem('mmaura_users',JSON.stringify(users));
- let userObj={name, phone:cleanPhone, pass, sponsor, sponsorPhone, link:myLink, purchase:0, isCEO: cleanPhone===CEO_NUMBER};
- localStorage.setItem('mmaura_me',JSON.stringify(userObj));
- closeReg(); loginSuccess(userObj);
-}
-function doLogin(){
- let phone=document.getElementById('loginPhone').value.trim().replace(/\D/g,''); if(phone.startsWith('0')) phone='27'+phone.substring(1);
- let pass=document.getElementById('loginPass').value.trim();
- if(phone===CEO_NUMBER){localStorage.setItem('mmaura_me',JSON.stringify({name:'CEO', phone:CEO_NUMBER, sponsor:'CEO', link:'https://mmauranaturals.netlify.app/?sponsor=CEO&sphone='+CEO_NUMBER, isCEO:true, purchase:0, sponsorPhone:CEO_NUMBER})); closeLogin(); showCEO(); return;}
- let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- let user=users.find(u=>u.phone===phone && u.pass===pass);
- if(!user){alert('Wrong phone or password');return;}
- user.isCEO=(user.phone===CEO_NUMBER);
- localStorage.setItem('mmaura_me',JSON.stringify(user));
- closeLogin(); loginSuccess(user);
-}
-function getDownlines(users, name, level, maxLevel, result){
- if(level>maxLevel) return;
- let direct=users.filter(u=>u.sponsor.toLowerCase()===name.toLowerCase());
- direct.forEach(d=>{ result.push({...d, lvl:level}); getDownlines(users, d.name, level+1, maxLevel, result); });
-}
-function calcRank(personal, teamSales){
- let rank=RANKS[0];
- for(let i=RANKS.length-1;i>=0;i--){ if(personal>=RANKS[i].personal && teamSales>=RANKS[i].team){rank=RANKS[i]; break;} }
- return rank;
-}
-function loginSuccess(user){
- if(user.isCEO || user.phone===CEO_NUMBER){showCEO(); return;}
- let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- let personal=user.purchase||0;
- let allDown=[]; getDownlines(users, user.name, 1, 6, allDown);
- let teamSales=allDown.reduce((s,u)=>s+(u.purchase||0),0);
- let rank=calcRank(personal, teamSales);
- let comm=0; let levels={};
- allDown.forEach(d=>{
-   if(d.lvl<=rank.levels){
-     let perc=rank.perc[d.lvl-1]||0;
-     comm+= (d.purchase||0)*perc/100;
-     levels[d.lvl]=(levels[d.lvl]||0)+1;
-   }
- });
- document.getElementById('boName').textContent=user.name;
- document.getElementById('boPhone').textContent=user.phone;
- document.getElementById('boSponsor').textContent=user.sponsor;
- document.getElementById('boLink').textContent=user.link;
- document.getElementById('personalSales').textContent='R'+personal;
- document.getElementById('teamSales').textContent='R'+teamSales;
- document.getElementById('earnDirect').textContent='R'+Math.round(comm);
- document.getElementById('earnBonus').textContent='R'+rank.bonus;
- document.getElementById('earnTotal').textContent='R'+Math.round(comm+rank.bonus);
- document.getElementById('rankName').textContent=rank.name+' (L'+rank.levels+' - '+rank.perc.join('+')+'%)';
- document.getElementById('nextRank').textContent=rank.next;
- let levelHtml=''; for(let i=1;i<=6;i++){ let count=levels[i]||0; let active=i<=rank.levels? '✅':'🔒'; levelHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0e6d8;font-size:.75rem"><span>L${i} — ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${active}</span><span>${count}</span></div>`; }
- document.getElementById('teamLevels').innerHTML=levelHtml;
- let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet</p>';
- allDown.forEach(m=>{ listHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0e6d8;font-size:.72rem"><span><b>${m.name}</b> L${m.lvl} • R${m.purchase||0}</span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
- document.getElementById('teamList').innerHTML=listHtml;
- let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]').filter(o=>o.phone===user.phone);
- document.getElementById('myOrders').innerHTML=orders.length? orders.map(o=>`<div style="border:1px solid var(--border);border-radius:8px;padding:8px;margin-bottom:6px;font-size:.72rem"><b>Order #${o.id}</b> — R${o.total} (${o.courier})<br><small>${o.items.map(it=>it.name+' x'+it.qty).join(', ')}<br>${o.addr} • ${o.pay}<br>Notes: ${o.notes||'none'}<br>${o.date}</small></div>`).join('') : '<p style="font-size:.75rem;color:#999">No orders yet — Buy kits above!</p>';
- showMember(); document.getElementById('boBtn').textContent='MY BO';
-}
-function renderCEO(){
- let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');
- let search=(document.getElementById('ceoSearch').value||'').toLowerCase();
- let filtered=users.filter(u=>u.name.toLowerCase().includes(search)||u.phone.includes(search));
- document.getElementById('ceoTotalMembers').textContent=users.length;
- document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.purchase||0),0);
- document.getElementById('ceoOrdersCount').textContent=orders.length;
- let totalComm=0; users.forEach(u=>{
-   let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
-   let teamSales=allDown.reduce((s,x)=>s+(x.purchase||0),0);
-   let rank=calcRank(u.purchase||0, teamSales);
-   let comm=0; allDown.forEach(d=>{ if(d.lvl<=rank.levels){ comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100; }});
-   totalComm+=comm;
- });
- document.getElementById('ceoTotalComm').textContent='R'+Math.round(totalComm);
- let oHtml=orders.length? orders.map(o=>`<div style="border:1px solid var(--border);border-radius:8px;padding:8px;margin-bottom:6px;font-size:.72rem;background:var(--cream)"><b>#${o.id} ${o.buyer} (${o.phone})</b> — R${o.total}<br>Items: ${o.items.map(it=>it.name+' x'+it.qty).join(', ')}<br>Sponsor: ${o.sponsor} — Gets 20% = R${Math.round(o.sub*0.2)}<br>Courier: ${o.courier}<br>Pay: ${o.pay}<br>Addr: ${o.addr}<br>Notes: ${o.notes||'none'}<br><small>${o.date}</small></div>`).join('') : '<p style="font-size:.75rem;color:#999">No orders yet</p>';
- document.getElementById('ceoOrders').innerHTML=oHtml;
- let html=''; filtered.forEach(u=>{
-   let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
-   let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);
-   let rank=calcRank(u.purchase||0, teamSales);
-   html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f0e6d8;font-size:.72rem"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Team R${teamSales} | Pers R${u.purchase||0}</small></span></div>`;
- });
- document.getElementById('ceoList').innerHTML=html||'No members';
-}
-function logout(){localStorage.removeItem('mmaura_me');showMain();document.getElementById('boBtn').textContent='BO LOGIN';}
-function copyBoLink(){navigator.clipboard.writeText(document.getElementById('boLink').textContent).then(()=>alert('Copied!'));}
-function shareWa(){let t=document.getElementById('boLink').textContent; window.open(`https://wa.me/?text=${encodeURIComponent('Join MM AURA FREE under me! '+t)}`,'_blank');}
-let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');
-if(me){document.getElementById('boBtn').textContent=me.phone===CEO_NUMBER?'CEO ADMIN':'MY BO';}
-document.getElementById('cartCount').textContent=cart.reduce((s,it)=>s+it.qty,0);
-</script>
-</body>
-</html>
+const p=new URLSearchParams(location.search);let sponsor=p.get('sponsor')?decodeURIComponent(p.get('sponsor')):'CEO';let sponsorPhone=p.get('sphone')||CEO_NUMBER;
+document.getElementById('s1').textContent=sponsor;document.getElementById('s2').textContent=sponsor.toUpperCase();document.getElementById('s4').textContent=sponsor;
+function renderBOShop(){document.getElementById('boKits').innerHTML=KITS.map(k=>`<div class="prod"><div><b>${k.name} — R${k.price}</b><small>${k.desc}</small></div><button onclick="addToCart(${k.id},'kit')">ADD</button></div>`).join('');document.getElementById('boSingles').innerHTML=SINGLES.map(s=>`<div class="prod"><div><b>${s.name} — R${s.price}</b></div><button onclick="addToCart(${s.id},'single')">ADD</button></div>`).join('');}
+renderBOShop();
+function openReg(){document.getElementById('regModal').classList.add('active')}function closeReg(){document.getElementById('regModal').classList.remove('active')}function openLogin(){document.getElementById('loginModal').classList.add('active')}function closeLogin(){document.getElementById('loginModal').classList.remove('active')}function openCart(){document.getElementById('cartModal').classList.add('active');renderCart();}function closeCart(){document.getElementById('cartModal').classList.remove('active')}function showMain(){document.getElementById('memberBO').classList.remove('active');document.getElementById('ceoBO').classList.remove('active');document.getElementById('mainPage').style.display='block';}function showMember(){document.getElementById('mainPage').style.display='none';
