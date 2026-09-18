@@ -42,7 +42,7 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 <div class="invited"><span class="script">Invited by <span id="s1">CEO</span></span></div>
 <div class="header"><div class="logo-line">MM 🍃 AURA V100</div></div>
 <div class="wrap">
-<div style="text-align:center;padding:10px;font-size:.8rem;color:#666">🎉 FREE to join! No purchase needed to register. Buy kits later to earn!</div>
+<div style="text-align:center;padding:10px;font-size:.8rem;color:#666">🎉 FREE to join! No purchase needed</div>
 <div class="kit feat"><h4>Kit 1 ⭐ R270 — Starter</h4></div>
 <div class="kit"><h4>Kit 2 — R370</h4></div>
 <div class="kit"><h4>Kit 3 — R400</h4></div>
@@ -69,35 +69,33 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 </div>
 <div class="rank-bar">
 Rank: <b id="rankName">STARTER (L1 - 20%)</b><br>
-Next: <b id="nextRank">TEAM BUILDER — Need R400 personal + R5k team</b><br>
+Next: <b id="nextRank">TEAM BUILDER — Need R400 + R5k team</b><br>
 Total: <b id="earnTotal" style="font-size:1.1rem">R0</b>
 </div>
-<p style="font-size:.6rem;color:#999">Commission only when your team BUYS kits (purchase only) — Not on free join</p>
 </div>
-<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE</button></div>
+<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY LINK</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE WHATSAPP</button></div>
 <div class="bo-card"><h3>👥 My Team</h3><div id="teamLevels"></div><div id="teamList" style="margin-top:10px"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
 </div>
 
 <div id="ceoBO" class="bo">
-<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3></div>
+<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3><p style="font-size:.7rem;color:#ccc">CEO: 0684729270</p></div>
 <div class="bo-card" style="background:#1A1A1A;color:white"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem"><div>Members<br><b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales<br><b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm To Pay<br><b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Bonuses<br><b id="ceoBonuses" style="color:var(--gold)">R0</b></div></div></div>
 <div class="bo-card"><h3>📋 All Members</h3><input id="ceoSearch" placeholder="Search..." style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px" oninput="renderCEO()"><div id="ceoList"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT CEO</button>
 </div>
 
-<!-- FREE REGISTER MODAL - NO KIT -->
 <div id="regModal" class="modal"><div class="modal-box">
 <h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join MM 🍃 AURA</h2>
-<p style="font-size:.75rem;text-align:center;margin:6px 0 12px;color:#666">Free to join under <b id="s4">CEO</b><br>No purchase needed!</p>
+<p style="font-size:.75rem;text-align:center;margin:6px 0 12px;color:#666">Free to join under <b id="s4">CEO</b></p>
 <input id="regName" placeholder="Full Name e.g. Makazi">
 <input id="regPhone" placeholder="WhatsApp e.g. 0797161665">
-<input id="regPass" type="password" placeholder="Create Password for BO login">
-<button onclick="doRegister()">REGISTER FREE</button>
+<input id="regPass" type="password" placeholder="Create Password">
+<button onclick="doRegister()">REGISTER FREE → GO TO BO</button>
 <button onclick="closeReg()" style="background:#eee;color:#333">Cancel</button>
 </div></div>
 
-<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
+<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN TO BACK OFFICE</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
 
 <script>
 const CEO_NUMBER="27684729270";
@@ -127,20 +125,20 @@ function doRegister(){
  let name=document.getElementById('regName').value.trim();
  let phone=document.getElementById('regPhone').value.trim();
  let pass=document.getElementById('regPass').value.trim();
- if(!name||!phone||!pass){alert('Fill name, phone, password');return;}
+ if(!name||!phone||!pass){alert('Fill all');return;}
  let cleanPhone=phone.replace(/\D/g,''); if(cleanPhone.startsWith('0')) cleanPhone='27'+cleanPhone.substring(1);
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
  if(users.find(u=>u.phone===cleanPhone)){alert('Already registered. LOGIN.');closeReg();openLogin();return;}
+ // FIXED LINK - use real domain, not content://
  let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;
- // FREE JOIN: kit=0, purchase=0
  users.push({name, phone:cleanPhone, pass, sponsor, sponsorPhone, kit:0, purchase:0, date:new Date().toLocaleString(), link:myLink});
  localStorage.setItem('mmaura_users',JSON.stringify(users));
- localStorage.setItem('mmaura_me',JSON.stringify({name, phone:cleanPhone, pass, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER}));
+ let userObj={name, phone:cleanPhone, pass, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER};
+ localStorage.setItem('mmaura_me',JSON.stringify(userObj));
  closeReg();
- let waMsg=`🌸 NEW JOIN! ${name} (${phone}) joined FREE under you!%0A${myLink}`;
- let sendTo=sponsor.toUpperCase()==='CEO'?CEO_NUMBER:sponsorPhone;
- window.open(`https://wa.me/${sendTo}?text=${waMsg}`,'_blank');
- setTimeout(()=>{loginSuccess({name, phone:cleanPhone, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER, pass})}, 800);
+ // NO WHATSAPP ANYMORE - GO DIRECT TO BO
+ alert(`Welcome ${name}! 🌸 Your BO is opening...`);
+ loginSuccess(userObj);
 }
 
 function doLogin(){
@@ -194,7 +192,7 @@ function loginSuccess(user){
  let levelHtml=''; for(let i=1;i<=6;i++){ let count=levels[i]||0; let active=i<=rank.levels? '✅':'🔒'; levelHtml+=`<div class="team-item"><span>L${i} — ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${active}</span><span>${count}</span></div>`; }
  document.getElementById('teamLevels').innerHTML=levelHtml;
  let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet. Share your link! Free join!</p>';
- allDown.forEach(m=>{ listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl}<br><small>${m.phone} • Purchase R${m.purchase||0}</small></span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
+ allDown.forEach(m=>{ listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl}<br><small>${m.phone}</small></span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
  document.getElementById('teamList').innerHTML=listHtml;
  showMember(); document.getElementById('boBtn').textContent='MY BO';
 }
@@ -223,7 +221,7 @@ function renderCEO(){
    let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
    let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);
    let rank=calcRank(u.purchase||0, teamSales);
-   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor} | Team R${teamSales} | Purchase R${u.purchase||0}</small></span></div>`;
+   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor}</small></span></div>`;
  });
  document.getElementById('ceoList').innerHTML=html||'No members';
 }
