@@ -36,30 +36,30 @@
 </style>
 </head>
 <body>
-<div class="topbar"><span>MM 🍃 AURA V101</span><div><button onclick="openCart()">🛒 <span id="cartCount">0</span></button><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div></div>
-<div id="mainPage"><div style="background:#1A1A1A;color:var(--gold);text-align:center;padding:12px">Invited by <span id="s1">CEO</span> — FREE JOIN</div><div class="header"><div class="logo-line">MM 🍃 AURA</div><p style="font-size:.75rem;color:#666">Free join • Commission AFTER purchase • 20% Direct</p><button class="btn" onclick="openReg()">JOIN FREE UNDER <span id="s2">CEO</span></button></div><div class="wrap"><div class="section-title">💼 Combo Kits 1-10</div><div id="mainKits"></div><div class="section-title">🧴 Singles — R40 R50 R25 R15 R75 R20 R35 R60 R32.50 R25 R100</div><div id="mainSingles"></div></div></div>
+<div class="topbar"><span>MM  AURA V101</span><div><button onclick="openCart()"> <span id="cartCount">0</span></button><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div></div>
+<div id="mainPage"><div style="background:#1A1A1A;color:var(--gold);text-align:center;padding:12px">Invited by <span id="s1">CEO</span> — FREE JOIN</div><div class="header"><div class="logo-line">MM  AURA</div><p style="font-size:.75rem;color:#666">Free join • Commission AFTER purchase • 20% Direct</p><button class="btn" onclick="openReg()">JOIN FREE UNDER <span id="s2">CEO</span></button></div><div class="wrap"><div class="section-title"> Combo Kits 1-10</div><div id="mainKits"></div><div class="section-title"> Singles — R40 R50 R25 R15 R75 R20 R35 R60 R32.50 R25 R100</div><div id="mainSingles"></div></div></div>
 
 <div id="memberBO" class="bo">
-<div class="bo-card"><h3>Welcome <span id="boName">-</span> 🌸</h3><p style="font-size:.7rem">Phone: <span id="boPhone"></span> | Sponsor: <span id="boSponsor"></span></p></div>
-<div class="bo-card"><h3>💰 Commission AFTER Purchase</h3><div class="earn-grid"><div class="earn-box"><b id="personalSales">R0</b><small>Personal</small></div><div class="earn-box"><b id="teamSales">R0</b><small>Team</small></div><div class="earn-box"><b id="earnDirect">R0</b><small>20% L1</small></div><div class="earn-box"><b id="earnBonus">R0</b><small>Bonus</small></div></div><div class="rank-bar">Rank: <b id="rankName">STARTER</b><br>Next: <b id="nextRank"></b><br>Total: <b id="earnTotal">R0</b></div></div>
-<div class="bo-card"><h3>💼 Kits 1-10</h3><div id="boKits"></div></div>
-<div class="bo-card"><h3>🧴 Singles</h3><div id="boSingles"></div></div>
-<div class="bo-card" style="text-align:center"><button class="btn" onclick="openCart()">🛒 CHECKOUT (<span id="cartCount2">0</span>)</button></div>
-<div class="bo-card"><h3>🔗 My Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.72rem">COPY LINK</button></div>
-<div class="bo-card"><h3>📦 My Orders — Timeline Colours</h3><div id="myOrders"></div></div>
-<div class="bo-card"><h3>👥 My Team L1-L6</h3><div id="teamLevels"></div><div id="teamList"></div></div>
+<div class="bo-card"><h3>Welcome <span id="boName">-</span> </h3><p style="font-size:.7rem">Phone: <span id="boPhone"></span> | Sponsor: <span id="boSponsor"></span></p></div>
+<div class="bo-card"><h3> Commission AFTER Purchase</h3><div class="earn-grid"><div class="earn-box"><b id="personalSales">R0</b><small>Personal</small></div><div class="earn-box"><b id="teamSales">R0</b><small>Team</small></div><div class="earn-box"><b id="earnDirect">R0</b><small>20% L1</small></div><div class="earn-box"><b id="earnBonus">R0</b><small>Bonus</small></div></div><div class="rank-bar">Rank: <b id="rankName">STARTER</b><br>Next: <b id="nextRank"></b><br>Total: <b id="earnTotal">R0</b></div></div>
+<div class="bo-card"><h3> Kits 1-10</h3><div id="boKits"></div></div>
+<div class="bo-card"><h3> Singles</h3><div id="boSingles"></div></div>
+<div class="bo-card" style="text-align:center"><button class="btn" onclick="openCart()"> CHECKOUT (<span id="cartCount2">0</span>)</button></div>
+<div class="bo-card"><h3> My Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.72rem">COPY LINK</button></div>
+<div class="bo-card"><h3> My Orders — Timeline Colours</h3><div id="myOrders"></div></div>
+<div class="bo-card"><h3> My Team L1-L6</h3><div id="teamLevels"></div><div id="teamList"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
 </div>
 
-<div id="ceoBO" class="bo"><div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO — Verify EFT: Capitec 2584793357</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem;margin-top:8px"><div>Members <b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales <b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm <b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Orders <b id="ceoOrdersCount" style="color:var(--gold)">0</b></div></div></div><div class="bo-card"><h3>📦 All Orders — Change Status = Customer Sees Colour Move!</h3><div id="ceoOrders"></div></div><div class="bo-card"><h3>Members</h3><div id="ceoList"></div></div><button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button></div>
+<div id="ceoBO" class="bo"><div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)"> CEO — Verify EFT: Capitec 2584793357</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem;margin-top:8px"><div>Members <b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales <b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm <b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Orders <b id="ceoOrdersCount" style="color:var(--gold)">0</b></div></div></div><div class="bo-card"><h3> All Orders — Change Status = Customer Sees Colour Move!</h3><div id="ceoOrders"></div></div><div class="bo-card"><h3>Members</h3><div id="ceoList"></div></div><button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button></div>
 
-<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center">Join FREE</h2><p style="text-align:center;font-size:.75rem;color:#666">Under <span id="s4">CEO</span></p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp"><input id="regPass" type="password" placeholder="Password"><button onclick="doRegister()" class="btn">REGISTER FREE → BO</button><button onclick="closeReg()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
+<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center">Join FREE</h2><p style="text-align:center;font-size:.75rem;color:#666">Under <span id="s4">CEO</span></p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp"><input id="regPass" type="password" placeholder="Password"><button onclick="doRegister()" class="btn">REGISTER FREE  BO</button><button onclick="closeReg()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
 <div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()" class="btn">SIGN IN</button><button onclick="closeLogin()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
 
 <div id="cartModal" class="modal"><div class="modal-box">
-<h2 style="text-align:center">🛒 CART & CHECKOUT</h2><div id="cartItems"></div>
+<h2 style="text-align:center"> CART & CHECKOUT</h2><div id="cartItems"></div>
 <div class="cart-total"><div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="cartSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping:</span><b id="cartShip">R0</b></div><div style="display:flex;justify-content:space-between;font-size:1.1rem;margin-top:6px"><span>TOTAL:</span><b id="cartTotal" style="color:var(--gold)">R0</b></div></div>
-<h3 style="margin:12px 0 6px;font-size:.85rem">🚚 Courier *</h3>
+<h3 style="margin:12px 0 6px;font-size:.85rem"> Courier *</h3>
 <select id="courierSelect" onchange="calcCart()">
 <option value="">-- Select --</option>
 <option value="60">Paxi R60 (7-9 days)</option>
@@ -69,24 +69,24 @@
 <option value="120">Courier Guy R120 (1-2 days)</option>
 <option value="0">Collection Free</option>
 </select>
-<h3 style="margin:10px 0 6px;font-size:.85rem">💳 Payment * — EFT Main</h3>
+<h3 style="margin:10px 0 6px;font-size:.85rem"> Payment * — EFT Main</h3>
 <select id="payMethod" onchange="showPaymentDetails()">
 <option value="EFT">EFT — Capitec 2584793357 (Manual - Main)</option>
-<option value="FastPay">⚡ PayFast Instant EFT / Card — Merchant 36377707</option>
+<option value="FastPay"> PayFast Instant EFT / Card — Merchant 36377707</option>
 <option value="Cash">Cash on Collection</option>
 <option value="COD">COD (+R40)</option>
 </select>
 <div id="paymentDetailsBox" class="payBox" style="display:none"></div>
-<h3 style="margin:10px 0 6px;font-size:.85rem">📍 Address *</h3><input id="deliveryAddr" placeholder="Street, Town, Province">
-<h3 style="margin:10px 0 6px;font-size:.85rem">📝 Notes</h3><textarea id="orderNotes" placeholder="Notes..."></textarea>
-<button onclick="checkout()" class="btn">✅ CHECKOUT</button>
+<h3 style="margin:10px 0 6px;font-size:.85rem"> Address *</h3><input id="deliveryAddr" placeholder="Street, Town, Province">
+<h3 style="margin:10px 0 6px;font-size:.85rem"> Notes</h3><textarea id="orderNotes" placeholder="Notes..."></textarea>
+<button onclick="checkout()" class="btn"> CHECKOUT</button>
 <button onclick="closeCart()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Continue Shopping</button>
 </div></div>
 
 <script>
 const PAYFAST_MERCHANT_ID="36377707"; const PAYFAST_MERCHANT_KEY="xjjvc07mqh1jy";
 const BANK_ACCOUNT="2584793357"; const BANK_NAME="MM Aura"; const CEO_NUMBER="27684729270";
-const RANKS=[{name:'STARTER',personal:0,team:0,levels:1,perc:[20],bonus:0,next:'TEAM BUILDER — Need R400 + R5k'},{name:'TEAM BUILDER',personal:400,team:5000,levels:2,perc:[20,10],bonus:500,next:'SUPERVISOR — Need R800 + R10k'},{name:'SUPERVISOR',personal:800,team:10000,levels:3,perc:[20,10,4],bonus:1000,next:'MANAGER — Need R1200 + R30k'},{name:'MANAGER',personal:1200,team:30000,levels:4,perc:[20,10,4,3],bonus:2500,next:'DIRECTOR — Need R1800 + R65k'},{name:'DIRECTOR',personal:1800,team:65000,levels:5,perc:[20,10,4,3,2],bonus:8000,next:'EXECUTIVE — Need R2500 + R100k'},{name:'EXECUTIVE',personal:2500,team:100000,levels:6,perc:[20,10,4,3,2,1],bonus:15000,next:'MAX RANK 👑'}];
+const RANKS=[{name:'STARTER',personal:0,team:0,levels:1,perc:[20],bonus:0,next:'TEAM BUILDER — Need R400 + R5k'},{name:'TEAM BUILDER',personal:400,team:5000,levels:2,perc:[20,10],bonus:500,next:'SUPERVISOR — Need R800 + R10k'},{name:'SUPERVISOR',personal:800,team:10000,levels:3,perc:[20,10,4],bonus:1000,next:'MANAGER — Need R1200 + R30k'},{name:'MANAGER',personal:1200,team:30000,levels:4,perc:[20,10,4,3],bonus:2500,next:'DIRECTOR — Need R1800 + R65k'},{name:'DIRECTOR',personal:1800,team:65000,levels:5,perc:[20,10,4,3,2],bonus:8000,next:'EXECUTIVE — Need R2500 + R100k'},{name:'EXECUTIVE',personal:2500,team:100000,levels:6,perc:[20,10,4,3,2,1],bonus:15000,next:'MAX RANK '}];
 const KITS=[{id:101,name:'Kit 1',price:270,desc:'3x Soaps + 2x Glow oil + 2x Lip scrubs'},{id:102,name:'Kit 2',price:370,desc:'3x Soaps + 3x Glow oil + 3x Heel balm'},{id:103,name:'Kit 3',price:400,desc:'3x Soaps + 2x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Hand lotion'},{id:104,name:'Kit 4',price:495,desc:'3x Soaps + 3x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Face mask'},{id:105,name:'Kit 5',price:520,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on'},{id:106,name:'Kit 6',price:600,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on + 6x AirFreshner'},{id:107,name:'Kit 7',price:400,desc:'10x Lip scrub + 10x Lip balm'},{id:108,name:'Kit 8',price:375,desc:'15x Air freshners'},{id:109,name:'Kit 9',price:540,desc:'6x Soap + 6x Glow oil'},{id:110,name:'Kit 10',price:600,desc:'3x Perfume (hers) + 3x Perfume (his)'}];
 const SINGLES=[{id:1,name:'Soap',price:40},{id:2,name:'Glow Oil',price:50},{id:3,name:'Lip Scrub',price:25},{id:4,name:'Lip Balm',price:15},{id:5,name:'Heel Balm',price:75},{id:6,name:'Hand Lotion',price:20},{id:7,name:'Face Mask',price:35},{id:8,name:'Body Oil',price:60},{id:9,name:'Roll On',price:32.5},{id:10,name:'Air Freshner',price:25},{id:11,name:'Perfume',price:100}];
 let cart=JSON.parse(localStorage.getItem('mmaura_cart')||'[]');
@@ -99,13 +99,13 @@ function addToCart(id,type){let prod=(type==='kit'?KITS:SINGLES).find(p=>p.id===
 function updateCartCount(){let c=cart.reduce((s,i)=>s+i.qty,0);document.getElementById('cartCount').textContent=c;let c2=document.getElementById('cartCount2');if(c2)c2.textContent=c;}
 function getStatusTimeline(currentStatus){
   const steps=['Pending','Confirmed','Packed','Shipped','Delivered'];
-  const icons=['🟡','🟢','🔵','🟣','⚫'];
+  const icons=['','','','',''];
   const idx=steps.indexOf(currentStatus);
   let html='<div class="timeline">';
   steps.forEach((s,i)=>{
     let state = i < idx? 'done' : i===idx? 'active' : '';
-    let label = i<=idx? '✓' : '○';
-    html+=`<div class="t-step"><div class="t-dot ${state}">${i<=idx?'✓':'○'}</div><div class="t-label">${icons[i]}<br>${s}</div></div>`;
+    let label = i<=idx? '' : '';
+    html+=`<div class="t-step"><div class="t-dot ${state}">${i<=idx?'':''}</div><div class="t-label">${icons[i]}<br>${s}</div></div>`;
   });
   html+='</div>';
   return html;
@@ -116,7 +116,7 @@ function showPaymentDetails(){
   let box=document.getElementById('paymentDetailsBox');
   box.style.display='block';
   if(method==='EFT'){
-    box.innerHTML=`<b>🏦 EFT — CAPITEC BANK — MAIN METHOD:</b><br>
+    box.innerHTML=`<b> EFT — CAPITEC BANK — MAIN METHOD:</b><br>
     Bank: <b>Capitec Bank</b><br>
     Account Name: <b>${BANK_NAME}</b><br>
     Account No: <b>${BANK_ACCOUNT}</b><br>
@@ -126,22 +126,22 @@ function showPaymentDetails(){
     <b>After you pay via Capitec App:</b><br>
     <input id="eftRef" placeholder="Enter EFT Reference / POP No *" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin-top:6px">
     </div>
-    <small style="color:#666;display:block;margin-top:6px">🟡 Status = Pending. CEO checks Capitec App 2584793357 and changes to 🟢 Payment Approved. Customer sees colour move!</small>`;
+    <small style="color:#666;display:block;margin-top:6px"> Status = Pending. CEO checks Capitec App 2584793357 and changes to  Payment Approved. Customer sees colour move!</small>`;
   } else if(method==='FastPay'){
-    box.innerHTML=`<b>⚡ PAYFAST — Instant EFT / Card — Merchant ${PAYFAST_MERCHANT_ID}</b><br>
+    box.innerHTML=`<b> PAYFAST — Instant EFT / Card — Merchant ${PAYFAST_MERCHANT_ID}</b><br>
     Pay securely via PayFast using Capitec App, FNB, ABSA, Standard Bank or Card.<br><br>
     <div style="background:white;border:2px solid var(--gold);border-radius:10px;padding:10px;text-align:center">
     <b>Total: <span id="payfastTotal">R0</span></b><br>
     <small>Account: ${BANK_ACCOUNT} — ${BANK_NAME}</small><br>
-    <button onclick="payWithPayFast()" style="background:linear-gradient(135deg,var(--gold),var(--goldD));color:white;border:none;padding:12px 20px;border-radius:25px;font-weight:700;margin-top:8px;width:100%">💳 PAY NOW WITH PAYFAST</button>
-    <small style="display:block;margin-top:6px;color:#666">Redirects to PayFast secure page. Order becomes 🟢 Confirmed automatically after payment.</small>
+    <button onclick="payWithPayFast()" style="background:linear-gradient(135deg,var(--gold),var(--goldD));color:white;border:none;padding:12px 20px;border-radius:25px;font-weight:700;margin-top:8px;width:100%"> PAY NOW WITH PAYFAST</button>
+    <small style="display:block;margin-top:6px;color:#666">Redirects to PayFast secure page. Order becomes  Confirmed automatically after payment.</small>
     </div>
     <input type="hidden" id="fastRef" value="PayFast Payment">`;
     document.getElementById('payfastTotal').textContent=document.getElementById('cartTotal').textContent;
   } else if(method==='Cash'){
-    box.innerHTML=`<b>💵 CASH ON COLLECTION:</b><br>Collect: 32488 Khwaza Street, Delft, Cape Town<br>Pay cash when you collect.`;
+    box.innerHTML=`<b> CASH ON COLLECTION:</b><br>Collect: 32488 Khwaza Street, Delft, Cape Town<br>Pay cash when you collect.`;
   } else if(method==='COD'){
-    box.innerHTML=`<b>🚚 CASH ON DELIVERY:</b><br>R40 COD fee added. Pay cash to courier.`;
+    box.innerHTML=`<b> CASH ON DELIVERY:</b><br>R40 COD fee added. Pay cash to courier.`;
   }
 }
 function payWithPayFast(){
@@ -184,7 +184,7 @@ function checkout(){
   let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let orderId=Date.now();let status= (pay==='FastPay')? 'Confirmed' : 'Pending';
   orders.push({id:orderId,status,tracking:'',buyer:me.name,phone:me.phone,sponsor:me.sponsor,items:[...cart],sub,ship,total,courier:courierSel.options[courierSel.selectedIndex].text,pay: pay + ' — ' + paymentRef,addr,notes,paymentDetails:paymentRef,date:new Date().toLocaleString()});
   localStorage.setItem('mmaura_orders',JSON.stringify(orders));cart=[];localStorage.setItem('mmaura_cart',JSON.stringify(cart));updateCartCount();closeCart();
-  alert(`✅ ORDER #${orderId} PLACED!\nBank: Capitec ${BANK_ACCOUNT} ${BANK_NAME}\nCourier: ${courierSel.options[courierSel.selectedIndex].text}\nMethod: ${pay}\nRef: ${paymentRef}\nTotal: R${total}\nStatus: ${status}\n\nTIMELINE:\n🟡 Pending (Order Placed)\n🟢 Payment Approved (You verify EFT in Capitec App)\n🔵 Packed\n🟣 Shipped + Tracking\n⚫ Delivered\n\nCEO: Check Capitec App for R${total} then change status to Confirmed!`);
+  alert(` ORDER #${orderId} PLACED!\nBank: Capitec ${BANK_ACCOUNT} ${BANK_NAME}\nCourier: ${courierSel.options[courierSel.selectedIndex].text}\nMethod: ${pay}\nRef: ${paymentRef}\nTotal: R${total}\nStatus: ${status}\n\nTIMELINE:\n Pending (Order Placed)\n Payment Approved (You verify EFT in Capitec App)\n Packed\n Shipped + Tracking\n Delivered\n\nCEO: Check Capitec App for R${total} then change status to Confirmed!`);
   loginSuccess(me);
 }
 function doRegister(){let name=document.getElementById('regName').value.trim();let phone=document.getElementById('regPhone').value.trim();let pass=document.getElementById('regPass').value.trim();if(!name||!phone||!pass){alert('Fill all');return;}let cleanPhone=phone.replace(/\D/g,'');if(cleanPhone.startsWith('0'))cleanPhone='27'+cleanPhone.substring(1);let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');if(users.find(u=>u.phone===cleanPhone)){alert('Already registered');closeReg();openLogin();return;}let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;users.push({name,phone:cleanPhone,pass,sponsor,sponsorPhone,purchase:0,date:new Date().toLocaleString(),link:myLink});localStorage.setItem('mmaura_users',JSON.stringify(users));let userObj={name,phone:cleanPhone,pass,sponsor,sponsorPhone,link:myLink,purchase:0,isCEO:cleanPhone===CEO_NUMBER};localStorage.setItem('mmaura_me',JSON.stringify(userObj));closeReg();loginSuccess(userObj);}
@@ -195,7 +195,7 @@ function loginSuccess(user){
   if(user.isCEO||user.phone===CEO_NUMBER){showCEO();return;}
   let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let personal=user.purchase||0;let allDown=[];getDownlines(users,user.name,1,6,allDown);let teamSales=allDown.reduce((s,u)=>s+(u.purchase||0),0);let rank=calcRank(personal,teamSales);let comm=0;let levels={};allDown.forEach(d=>{if(d.lvl<=rank.levels){comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100;levels[d.lvl]=(levels[d.lvl]||0)+1;}});
   document.getElementById('boName').textContent=user.name;document.getElementById('boPhone').textContent=user.phone;document.getElementById('boSponsor').textContent=user.sponsor;document.getElementById('boLink').textContent=user.link;document.getElementById('personalSales').textContent='R'+personal;document.getElementById('teamSales').textContent='R'+teamSales;document.getElementById('earnDirect').textContent='R'+Math.round(comm);document.getElementById('earnBonus').textContent='R'+rank.bonus;document.getElementById('earnTotal').textContent='R'+Math.round(comm+rank.bonus);document.getElementById('rankName').textContent=rank.name+' L'+rank.levels+' '+rank.perc.join('+')+'%';document.getElementById('nextRank').textContent=rank.next;
-  let levelHtml='';for(let i=1;i<=6;i++){let c=levels[i]||0;let a=i<=rank.levels?'✅':'🔒';levelHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:.75rem"><span>L${i} ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${a}</span><span>${c} members</span></div>`;}document.getElementById('teamLevels').innerHTML=levelHtml;
+  let levelHtml='';for(let i=1;i<=6;i++){let c=levels[i]||0;let a=i<=rank.levels?'':'';levelHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:.75rem"><span>L${i} ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${a}</span><span>${c} members</span></div>`;}document.getElementById('teamLevels').innerHTML=levelHtml;
   let listHtml=allDown.length?'':'<p style="font-size:.75rem;color:#999">No team yet — Share your link!</p>';allDown.forEach(m=>{listHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:.72rem"><span><b>${m.name}</b> L${m.lvl} R${m.purchase||0}</span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`;});document.getElementById('teamList').innerHTML=listHtml;
   let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]').filter(o=>o.phone===user.phone);
   document.getElementById('myOrders').innerHTML=orders.length? orders.map(o=>{
@@ -205,15 +205,15 @@ function loginSuccess(user){
     ${getStatusTimeline(st)}
     <div style="margin-top:8px"><b>R${o.total}</b> - ${o.courier}</div><div style="color:#666">${o.items.map(it=>it.name+' x'+it.qty).join(', ')}</div>
     <div style="margin-top:4px;font-size:.68rem">${o.addr}<br>${o.pay}<br>Notes: ${o.notes||'-'}</div>
-    ${tr?`<div style="margin-top:6px;background:var(--cream);padding:6px;border-radius:6px;border:1px dashed var(--gold)"><b>📦 Tracking: ${tr}</b></div>`:''}
+    ${tr?`<div style="margin-top:6px;background:var(--cream);padding:6px;border-radius:6px;border:1px dashed var(--gold)"><b> Tracking: ${tr}</b></div>`:''}
     <small style="color:#999">${o.date}</small></div>`;
   }).join('') : '<p style="font-size:.75rem;color:#999">No orders yet</p>';
   showMember();document.getElementById('boBtn').textContent='MY BO';
 }
-function renderCEO(){let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');document.getElementById('ceoTotalMembers').textContent=users.length;document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.purchase||0),0);document.getElementById('ceoOrdersCount').textContent=orders.length;let totalComm=0;users.forEach(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((s,x)=>s+(x.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);let comm=0;allDown.forEach(d=>{if(d.lvl<=rank.levels)comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100;});totalComm+=comm;});document.getElementById('ceoTotalComm').textContent='R'+Math.round(totalComm);document.getElementById('ceoOrders').innerHTML=orders.length? orders.map(o=>{let st=o.status||'Pending';let tr=o.tracking||'';return `<div style="border:2px solid var(--border);border-radius:12px;padding:10px;margin-bottom:10px;font-size:.72rem;background:var(--cream)"><div style="display:flex;justify-content:space-between"><b>#${o.id} ${o.buyer} ${o.phone}</b><span class="status status-${st}">${st}</span></div>${getStatusTimeline(st)}Items: ${o.items.map(it=>it.name+' x'+it.qty).join(', ')}<br>Sub R${o.sub} → Sponsor ${o.sponsor} 20% = R${Math.round(o.sub*0.2)}<br>Courier: ${o.courier}<br>Pay: ${o.pay}<br>Addr: ${o.addr}<br>Notes: ${o.notes||'-'}<br><small>${o.date}</small><div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><select onchange="updateStatus(${o.id}, this.value)" style="padding:6px;border-radius:8px;border:1px solid var(--gold);font-size:.7rem"><option ${st==='Pending'?'selected':''}>Pending</option><option ${st==='Confirmed'?'selected':''}>Confirmed</option><option ${st==='Packed'?'selected':''}>Packed</option><option ${st==='Shipped'?'selected':''}>Shipped</option><option ${st==='Delivered'?'selected':''}>Delivered</option></select><input id="track-${o.id}" placeholder="Tracking No" value="${tr}" style="flex:1;padding:6px;border-radius:8px;border:1px solid var(--border);font-size:.7rem;min-width:120px"><button onclick="saveTracking(${o.id})" style="background:var(--black);color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">SAVE TRACKING</button><button onclick="whatsappCustomer('${o.phone}', ${o.id})" style="background:#25D366;color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">WA</button></div></div>`;}).join('') : '<p style="font-size:.75rem;color:#999">No orders</p>';document.getElementById('ceoList').innerHTML=users.map(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);return `<div style="padding:6px 0;border-bottom:1px solid #eee;font-size:.72rem"><b>${u.name}</b> ${rank.name} R${u.purchase||0} Team R${teamSales}</div>`;}).join('')||'No members';}
-function updateStatus(orderId, newStatus){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].status=newStatus;localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(`✅ Status updated to ${newStatus.toUpperCase()} — Customer BO will now show ${newStatus} colour indicator moved!`);}}
-function saveTracking(orderId){let track=document.getElementById('track-'+orderId).value.trim();let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].tracking=track;if(track && (orders[idx].status==='Pending'||orders[idx].status==='Confirmed')){orders[idx].status='Shipped';}localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(`📦 Tracking ${track} saved — Status → SHIPPED 🟣 — Customer sees tracking!`);}}
-function whatsappCustomer(phone, orderId){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let o=orders.find(x=>x.id===orderId);let st=o.status||'Pending';let msg=`Hi ${o.buyer} 🌸 Your MM AURA Order #${o.id} is now ${st} ${o.tracking?' Tracking: '+o.tracking:''} Total R${o.total}`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');}
+function renderCEO(){let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');document.getElementById('ceoTotalMembers').textContent=users.length;document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.purchase||0),0);document.getElementById('ceoOrdersCount').textContent=orders.length;let totalComm=0;users.forEach(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((s,x)=>s+(x.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);let comm=0;allDown.forEach(d=>{if(d.lvl<=rank.levels)comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100;});totalComm+=comm;});document.getElementById('ceoTotalComm').textContent='R'+Math.round(totalComm);document.getElementById('ceoOrders').innerHTML=orders.length? orders.map(o=>{let st=o.status||'Pending';let tr=o.tracking||'';return `<div style="border:2px solid var(--border);border-radius:12px;padding:10px;margin-bottom:10px;font-size:.72rem;background:var(--cream)"><div style="display:flex;justify-content:space-between"><b>#${o.id} ${o.buyer} ${o.phone}</b><span class="status status-${st}">${st}</span></div>${getStatusTimeline(st)}Items: ${o.items.map(it=>it.name+' x'+it.qty).join(', ')}<br>Sub R${o.sub}  Sponsor ${o.sponsor} 20% = R${Math.round(o.sub*0.2)}<br>Courier: ${o.courier}<br>Pay: ${o.pay}<br>Addr: ${o.addr}<br>Notes: ${o.notes||'-'}<br><small>${o.date}</small><div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><select onchange="updateStatus(${o.id}, this.value)" style="padding:6px;border-radius:8px;border:1px solid var(--gold);font-size:.7rem"><option ${st==='Pending'?'selected':''}>Pending</option><option ${st==='Confirmed'?'selected':''}>Confirmed</option><option ${st==='Packed'?'selected':''}>Packed</option><option ${st==='Shipped'?'selected':''}>Shipped</option><option ${st==='Delivered'?'selected':''}>Delivered</option></select><input id="track-${o.id}" placeholder="Tracking No" value="${tr}" style="flex:1;padding:6px;border-radius:8px;border:1px solid var(--border);font-size:.7rem;min-width:120px"><button onclick="saveTracking(${o.id})" style="background:var(--black);color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">SAVE TRACKING</button><button onclick="whatsappCustomer('${o.phone}', ${o.id})" style="background:#25D366;color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">WA</button></div></div>`;}).join('') : '<p style="font-size:.75rem;color:#999">No orders</p>';document.getElementById('ceoList').innerHTML=users.map(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);return `<div style="padding:6px 0;border-bottom:1px solid #eee;font-size:.72rem"><b>${u.name}</b> ${rank.name} R${u.purchase||0} Team R${teamSales}</div>`;}).join('')||'No members';}
+function updateStatus(orderId, newStatus){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].status=newStatus;localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(` Status updated to ${newStatus.toUpperCase()} — Customer BO will now show ${newStatus} colour indicator moved!`);}}
+function saveTracking(orderId){let track=document.getElementById('track-'+orderId).value.trim();let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].tracking=track;if(track && (orders[idx].status==='Pending'||orders[idx].status==='Confirmed')){orders[idx].status='Shipped';}localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(` Tracking ${track} saved — Status  SHIPPED  — Customer sees tracking!`);}}
+function whatsappCustomer(phone, orderId){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let o=orders.find(x=>x.id===orderId);let st=o.status||'Pending';let msg=`Hi ${o.buyer}  Your MM AURA Order #${o.id} is now ${st} ${o.tracking?' Tracking: '+o.tracking:''} Total R${o.total}`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');}
 function logout(){localStorage.removeItem('mmaura_me');showMain();document.getElementById('boBtn').textContent='BO LOGIN';}
 function copyBoLink(){navigator.clipboard.writeText(document.getElementById('boLink').textContent).then(()=>alert('Link copied!'));}
 let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');if(me)document.getElementById('boBtn').textContent=me.phone===CEO_NUMBER?'CEO ADMIN':'MY BO';updateCartCount();
