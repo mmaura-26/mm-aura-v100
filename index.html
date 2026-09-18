@@ -3,26 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>MM AURA V100 - FREE JOIN</title>
+<title>MM AURA V100 - SHOP + FREE JOIN</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#C8A46B;--black:#1A1A1A;--border:#F2E8DA}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
-.topbar{background:#1A1A1A;color:white;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:.75rem}
+.topbar{background:#1A1A1A;color:white;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;font-size:.75rem;position:sticky;top:0;z-index:100}
 .topbar button{background:var(--gold);border:none;color:white;padding:6px 14px;border-radius:20px;font-weight:700;font-size:.7rem}
-.invited{background:#1A1A1A;padding:16px 12px;text-align:center;border-bottom:2px solid var(--gold)}
-.script{font-family:'Great Vibes',cursive;font-size:2rem;color:var(--gold)}
-.header{text-align:center;padding:14px;background:#FFF8F2}
-.logo-line{font-family:'Cormorant Garamond',serif;font-size:2rem;letter-spacing:2px}
-.wrap{padding:12px 10px 80px}
-.kit{background:white;border:1px solid var(--border);border-radius:12px;padding:11px;margin-bottom:8px}
+.invited{background:#1A1A1A;padding:12px;text-align:center;border-bottom:2px solid var(--gold)}
+.script{font-family:'Great Vibes',cursive;font-size:1.8rem;color:var(--gold)}
+.header{text-align:center;padding:12px;background:#FFF8F2}
+.logo-line{font-family:'Cormorant Garamond',serif;font-size:1.9rem;letter-spacing:2px}
+.wrap{padding:10px 10px 80px}
+.kit{background:white;border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.kit b{font-size:.9rem}
+.kit small{font-size:.7rem;color:#666;display:block}
+.kit button{background:var(--gold);color:white;border:none;padding:8px 14px;border-radius:20px;font-weight:700;font-size:.72rem}
 .kit.feat{border:2px solid var(--gold);background:#FFF8F2}
-.btn{width:100%;background:linear-gradient(135deg,var(--gold),#9C7B4A);color:white;border:none;padding:14px;border-radius:30px;font-weight:600;margin-top:14px;letter-spacing:1px}
+.btn{width:100%;background:linear-gradient(135deg,var(--gold),#9C7B4A);color:white;border:none;padding:14px;border-radius:30px;font-weight:600;margin-top:14px}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:14px}
 .modal.active{display:flex}
 .modal-box{background:white;border-radius:18px;padding:18px;width:100%;max-width:350px;border:2px solid var(--gold)}
-.modal-box input{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;font-size:.9rem}
+.modal-box input{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:10px}
 .modal-box button{width:100%;background:#1A1A1A;color:white;border:none;padding:12px;border-radius:30px;font-weight:600;margin-top:4px}
 .bo{display:none;padding:12px 10px}
 .bo.active{display:block}
@@ -31,29 +34,31 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 .earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .earn-box{background:#FFFEFB;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center}
 .earn-box b{font-size:1.05rem;color:#9C7B4A;display:block}
-.rank-bar{background:#1A1A1A;color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.75rem}
+.rank-bar{background:#1A1A1A;color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.73rem}
 .rank-bar b{color:var(--gold)}
 .team-item{border-bottom:1px solid #f0e6d8;padding:8px 0;display:flex;justify-content:space-between;font-size:.75rem}
+.shop-title{font-family:'Cormorant Garamond',serif;text-align:center;margin:14px 0 8px;font-size:1.3rem}
 </style>
 </head>
 <body>
 <div class="topbar"><span>MM 🍃 AURA V100 — FREE JOIN</span><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div>
 <div id="mainPage">
 <div class="invited"><span class="script">Invited by <span id="s1">CEO</span></span></div>
-<div class="header"><div class="logo-line">MM 🍃 AURA V100</div></div>
+<div class="header"><div class="logo-line">MM 🍃 AURA V100</div><p style="font-size:.7rem;color:#666">Free to join • Commission on purchase only</p></div>
 <div class="wrap">
-<div style="text-align:center;padding:10px;font-size:.8rem;color:#666">🎉 FREE to join! No purchase needed</div>
-<div class="kit feat"><h4>Kit 1 ⭐ R270 — Starter</h4></div>
-<div class="kit"><h4>Kit 2 — R370</h4></div>
-<div class="kit"><h4>Kit 3 — R400</h4></div>
-<div class="kit"><h4>Kit 4 — R495</h4></div>
-<div class="kit"><h4>Kit 5 — R520</h4></div>
-<div class="kit"><h4>Kit 6 — R600</h4></div>
-<div class="kit"><h4>Kit 7 — R400</h4></div>
-<div class="kit"><h4>Kit 8 — R375</h4></div>
-<div class="kit"><h4>Kit 9 — R540</h4></div>
-<div class="kit"><h4>Kit 10 — R600</h4></div>
 <button class="btn" onclick="openReg()">JOIN UNDER <span id="s2">CEO</span> — FREE</button>
+<div class="shop-title">🛍️ Shop Kits — Buy & Earn 20%</div>
+<div class="kit feat"><div><b>Kit 1 ⭐ R270</b><small>3 Soaps + 2 Glow + 2 Lip Scrub — Starter</small></div><button onclick="buyMain(270)">BUY</button></div>
+<div class="kit"><div><b>Kit 2 — R370</b><small>Glow + Soap combo</small></div><button onclick="buyMain(370)">BUY</button></div>
+<div class="kit"><div><b>Kit 3 — R400</b><small>Full face combo</small></div><button onclick="buyMain(400)">BUY</button></div>
+<div class="kit"><div><b>Kit 4 — R495</b><small>Body + Face</small></div><button onclick="buyMain(495)">BUY</button></div>
+<div class="kit"><div><b>Kit 5 — R520</b><small>Best seller</small></div><button onclick="buyMain(520)">BUY</button></div>
+<div class="kit"><div><b>Kit 6 — R600</b><small>Complete set</small></div><button onclick="buyMain(600)">BUY</button></div>
+<div class="kit"><div><b>Kit 7 — R400</b><small>Special</small></div><button onclick="buyMain(400)">BUY</button></div>
+<div class="kit"><div><b>Kit 8 — R375</b><small>Light kit</small></div><button onclick="buyMain(375)">BUY</button></div>
+<div class="kit"><div><b>Kit 9 — R540</b><small>Premium</small></div><button onclick="buyMain(540)">BUY</button></div>
+<div class="kit"><div><b>Kit 10 — R600</b><small>Executive kit</small></div><button onclick="buyMain(600)">BUY</button></div>
+<p style="font-size:.65rem;color:#999;text-align:center;margin-top:10px">Buy after joining — Sponsor gets 20% L1 commission</p>
 </div>
 </div>
 
@@ -73,29 +78,42 @@ Next: <b id="nextRank">TEAM BUILDER — Need R400 + R5k team</b><br>
 Total: <b id="earnTotal" style="font-size:1.1rem">R0</b>
 </div>
 </div>
-<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY LINK</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE WHATSAPP</button></div>
+
+<div class="bo-card">
+<h3>🛍️ Buy Kits — Increase Your Rank!</h3>
+<p style="font-size:.68rem;color:#666;margin-bottom:8px">Buy here → Sponsor gets 20% + Your personal goes up → Rank up!</p>
+<div class="kit"><div><b>Kit 1 R270</b></div><button onclick="buyKit(270)">BUY R270</button></div>
+<div class="kit"><div><b>Kit 2 R370</b></div><button onclick="buyKit(370)">BUY R370</button></div>
+<div class="kit"><div><b>Kit 3 R400</b></div><button onclick="buyKit(400)">BUY R400</button></div>
+<div class="kit"><div><b>Kit 4 R495</b></div><button onclick="buyKit(495)">BUY R495</button></div>
+<div class="kit"><div><b>Kit 5 R520</b></div><button onclick="buyKit(520)">BUY R520</button></div>
+<div class="kit"><div><b>Kit 6 R600</b></div><button onclick="buyKit(600)">BUY R600</button></div>
+<div class="kit"><div><b>Kit 8 R375</b></div><button onclick="buyKit(375)">BUY R375</button></div>
+<div class="kit"><div><b>Kit 9 R540</b></div><button onclick="buyKit(540)">BUY R540</button></div>
+</div>
+
+<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE</button></div>
 <div class="bo-card"><h3>👥 My Team</h3><div id="teamLevels"></div><div id="teamList" style="margin-top:10px"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
 </div>
 
 <div id="ceoBO" class="bo">
-<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3><p style="font-size:.7rem;color:#ccc">CEO: 0684729270</p></div>
+<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3></div>
 <div class="bo-card" style="background:#1A1A1A;color:white"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem"><div>Members<br><b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales<br><b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm To Pay<br><b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Bonuses<br><b id="ceoBonuses" style="color:var(--gold)">R0</b></div></div></div>
 <div class="bo-card"><h3>📋 All Members</h3><input id="ceoSearch" placeholder="Search..." style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px" oninput="renderCEO()"><div id="ceoList"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT CEO</button>
 </div>
 
 <div id="regModal" class="modal"><div class="modal-box">
-<h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join MM 🍃 AURA</h2>
-<p style="font-size:.75rem;text-align:center;margin:6px 0 12px;color:#666">Free to join under <b id="s4">CEO</b></p>
+<h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join MM 🍃 AURA FREE</h2>
+<p style="font-size:.75rem;text-align:center;margin:6px 0 12px;color:#666">Under <b id="s4">CEO</b> — Free join, buy later</p>
 <input id="regName" placeholder="Full Name e.g. Makazi">
 <input id="regPhone" placeholder="WhatsApp e.g. 0797161665">
 <input id="regPass" type="password" placeholder="Create Password">
-<button onclick="doRegister()">REGISTER FREE → GO TO BO</button>
+<button onclick="doRegister()">REGISTER FREE → BO</button>
 <button onclick="closeReg()" style="background:#eee;color:#333">Cancel</button>
 </div></div>
-
-<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN TO BACK OFFICE</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
+<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
 
 <script>
 const CEO_NUMBER="27684729270";
@@ -120,7 +138,6 @@ function closeLogin(){document.getElementById('loginModal').classList.remove('ac
 function showMain(){document.getElementById('memberBO').classList.remove('active');document.getElementById('ceoBO').classList.remove('active');document.getElementById('mainPage').style.display='block';}
 function showMember(){document.getElementById('mainPage').style.display='none';document.getElementById('memberBO').classList.add('active');}
 function showCEO(){document.getElementById('mainPage').style.display='none';document.getElementById('ceoBO').classList.add('active');renderCEO();}
-
 function doRegister(){
  let name=document.getElementById('regName').value.trim();
  let phone=document.getElementById('regPhone').value.trim();
@@ -129,18 +146,13 @@ function doRegister(){
  let cleanPhone=phone.replace(/\D/g,''); if(cleanPhone.startsWith('0')) cleanPhone='27'+cleanPhone.substring(1);
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
  if(users.find(u=>u.phone===cleanPhone)){alert('Already registered. LOGIN.');closeReg();openLogin();return;}
- // FIXED LINK - use real domain, not content://
  let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;
  users.push({name, phone:cleanPhone, pass, sponsor, sponsorPhone, kit:0, purchase:0, date:new Date().toLocaleString(), link:myLink});
  localStorage.setItem('mmaura_users',JSON.stringify(users));
  let userObj={name, phone:cleanPhone, pass, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER};
  localStorage.setItem('mmaura_me',JSON.stringify(userObj));
- closeReg();
- // NO WHATSAPP ANYMORE - GO DIRECT TO BO
- alert(`Welcome ${name}! 🌸 Your BO is opening...`);
- loginSuccess(userObj);
+ closeReg(); alert(`Welcome ${name}! 🌸`); loginSuccess(userObj);
 }
-
 function doLogin(){
  let phone=document.getElementById('loginPhone').value.trim().replace(/\D/g,''); if(phone.startsWith('0')) phone='27'+phone.substring(1);
  let pass=document.getElementById('loginPass').value.trim();
@@ -152,7 +164,6 @@ function doLogin(){
  localStorage.setItem('mmaura_me',JSON.stringify(user));
  closeLogin(); loginSuccess(user);
 }
-
 function getDownlines(users, name, level, maxLevel, result){
  if(level>maxLevel) return;
  let direct=users.filter(u=>u.sponsor.toLowerCase()===name.toLowerCase());
@@ -191,10 +202,28 @@ function loginSuccess(user){
  document.getElementById('nextRank').textContent=rank.next;
  let levelHtml=''; for(let i=1;i<=6;i++){ let count=levels[i]||0; let active=i<=rank.levels? '✅':'🔒'; levelHtml+=`<div class="team-item"><span>L${i} — ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${active}</span><span>${count}</span></div>`; }
  document.getElementById('teamLevels').innerHTML=levelHtml;
- let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet. Share your link! Free join!</p>';
- allDown.forEach(m=>{ listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl}<br><small>${m.phone}</small></span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
+ let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet. Share your free link!</p>';
+ allDown.forEach(m=>{ listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl}<br><small>${m.phone} • Purchase R${m.purchase||0}</small></span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
  document.getElementById('teamList').innerHTML=listHtml;
  showMember(); document.getElementById('boBtn').textContent='MY BO';
+}
+function buyKit(amount){
+ let me=JSON.parse(localStorage.getItem('mmaura_me')||'{}');
+ if(!me.phone){alert('Login first'); return;}
+ let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
+ let idx=users.findIndex(u=>u.phone===me.phone);
+ if(idx>=0){ users[idx].purchase=(users[idx].purchase||0)+amount; users[idx].kit=amount; me.purchase=users[idx].purchase; localStorage.setItem('mmaura_users',JSON.stringify(users)); localStorage.setItem('mmaura_me',JSON.stringify(me)); }
+ alert(`✅ You bought Kit R${amount}! Personal now R${me.purchase}. Sponsor gets 20% = R${Math.round(amount*0.2)}`);
+ // Send WhatsApp to sponsor about purchase (commission notification) but NOT auto redirect
+ let msg=`🛍️ PURCHASE! ${me.name} bought Kit R${amount}! Your 20% commission = R${Math.round(amount*0.2)}%0A${me.link}`;
+ let sPhone=me.sponsorPhone||CEO_NUMBER;
+ // Optional: open WhatsApp for notification? We skip to avoid spam, but show in CEO BO
+ loginSuccess(me);
+}
+function buyMain(amount){
+ let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');
+ if(!me){ alert('Please JOIN FREE first, then buy inside BO to earn ranks!'); openReg(); return; }
+ buyKit(amount);
 }
 function renderCEO(){
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
@@ -221,7 +250,7 @@ function renderCEO(){
    let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
    let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);
    let rank=calcRank(u.purchase||0, teamSales);
-   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor}</small></span></div>`;
+   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor} | Purchase R${u.purchase||0} | Team R${teamSales}</small></span></div>`;
  });
  document.getElementById('ceoList').innerHTML=html||'No members';
 }
