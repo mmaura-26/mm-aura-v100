@@ -1,182 +1,46 @@
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MM AURA V103 FINAL CLEAN</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
-body{background:#fffaf5}header{position:sticky;top:0;background:#111;color:#fff;padding:12px;display:flex;justify-content:space-between;z-index:10}
-.btn{background:#111;color:#fff;border:0;padding:10px 16px;border-radius:20px;font-weight:bold;cursor:pointer}
-.btn-gold{background:#c9a86a;color:#111;width:100%;margin-top:12px;padding:14px;font-size:16px;border-radius:12px;font-weight:bold;border:0}
-.card{background:#fff;border:1px solid #eee;border-radius:16px;padding:15px;margin:12px}
-.black{background:#111;color:#fff;border-radius:14px;padding:14px;margin-top:10px}
-.input,select,textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin-top:6px;font-size:15px;background:#f9fafb}
-.eft-box{background:#fffaf0;border:2px dashed #c9a86a;border-radius:14px;padding:14px;margin-top:10px}
-.banner{background:#fef3c7;border:2px dashed #c9a86a;padding:10px;text-align:center;font-weight:bold;margin:12px;border-radius:12px;display:none}
-.leader{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f3f4f6}
-.small{font-size:11px;color:#666}
-</style></head><body>
-<header><b>MM AURA V103 CLEAN</b><span id="sponsorTag">CEO</span></header>
-<div id="refBanner" class="banner"></div>
-
-<div class="card" style="background:#111;color:#c9a86a">
-<h3>👑 DISTRIBUTOR BACK OFFICE - CLEAN ZERO</h3>
-<p class="small" style="color:#c9a86a">Capitec 2584793357 | All trials erased | Netlify deleted | GitHub only</p>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:10px;text-align:center">
-<div>Members<br><b id="mCount">0</b></div><div>Sales<br><b id="mSales">R0</b></div><div>Orders<br><b id="mOrders">0</b></div><div>Comm 20%<br><b id="mComm">R0</b></div>
-</div>
-<div style="margin-top:12px;background:#fff1;border-radius:12px;padding:10px">
-<b>🔗 My Referral Link (share WhatsApp):</b>
-<input id="myLink" readonly class="input" style="font-size:11px">
-<button onclick="navigator.clipboard.writeText(document.getElementById('myLink').value);alert('Link copied!')" class="btn" style="background:#c9a86a;color:#111;margin-top:6px;width:100%">Copy Link</button>
-</div>
-</div>
-
-<div class="card"><h3>🏆 Leaderboard</h3><div id="leader">Clean start - 0 sales - Ready!</div></div>
-
-<div class="card" id="cartBox">
-<h2>🛒 CART & CHECKOUT</h2>
-<div id="cartItems" style="margin-top:10px">Cart empty</div>
-<div class="black">
-<div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="tSub">R0</b></div>
-<div style="display:flex;justify-content:space-between"><span>Shipping:</span><b id="tShip" style="color:#fbbf24">R0 - SELECT COURIER!</b></div>
-<div style="display:flex;justify-content:space-between;font-size:22px;margin-top:8px;border-top:1px solid #333;padding-top:8px"><span>TOTAL:</span><b id="tTotal" style="color:#c9a86a">R0</b></div>
-<p class="small" style="color:#aaa;margin-top:6px">Sponsor: <b id="sponsorDisplay">CEO</b> gets 20%</p>
-</div>
-
-<div style="margin-top:14px"><b>🚚 Courier Option *</b>
-<select id="courier" class="input" onchange="calc()">
-<option value="">-- Select --</option>
-<option value="PAXI|100">PAXI - R100 (7-9 days)</option>
-<option value="PAXI_3_5|110">Paxi 3-5 days R110</option>
-<option value="COURIER_GUY|99">Courier Guy - R99</option>
-<option value="CAPE_TOWN_FLATS|75">Cape Town Orders (For Cape Flats 48-72hr) - R75</option>
-</select>
-<p id="cErr" style="color:red;font-size:12px;display:none">⚠️ Select courier — TOTAL must include shipping!</p>
-</div>
-
-<div style="margin-top:10px"><b>💳 Payment *</b>
-<select id="payMethod" class="input">
-<option>EFT — Capitec 2584793357 (Manual - Main)</option>
-<option>PayFast</option>
-<option>EFT / Bank Transfer</option>
-</select>
-</div>
-
-<div class="eft-box">
-<b>💳 EFT — CAPITEC BANK — MAIN METHOD:</b><br>
-Bank: <b>Capitec Bank</b><br>Account Name: <b>MM Aura</b><br>Account No: <b>2584793357</b><br>
-Branch Code: <b>470010 (Universal)</b><br>Reference: <b>Your Name + Order ID</b>
-<div style="background:#fff;border:2px solid #c9a86a;border-radius:12px;padding:10px;margin-top:10px">
-<b>After you pay via Capitec App:</b>
-<input id="eftRef" class="input" placeholder="Enter EFT Reference / POP No *">
-</div>
-<p class="small" style="margin-top:8px">🟡 Status = Pending. CEO checks Capitec App 2584793357 → Changes to ✅ Approved</p>
-</div>
-
-<div style="margin-top:12px"><b>📍 Delivery Address *</b><input id="addr" class="input" placeholder="Street, Town, Province, Postal Code"></div>
-<div style="margin-top:10px"><b>📝 Note Box</b><textarea id="note" class="input" placeholder="Shade, allergies, leave at gate..."></textarea></div>
-
-<button class="btn-gold" onclick="checkout()">✅ CHECKOUT & PAY</button>
-<button class="btn" style="width:100%;margin-top:8px;background:#eee;color:#111" onclick="cart=[];calc();">Continue Shopping</button>
-</div>
-
-<div class="card"><h3>🧴 Kits — Add to Cart</h3>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px">
-<button class="btn" onclick="addKit('Kit 1',270)">Kit 1<br><b>R270</b></button>
-<button class="btn" onclick="addKit('Kit 2',450)">Kit 2<br><b>R450</b></button>
-<button class="btn" onclick="addKit('Kit 3',750)">Kit 3<br><b>R750</b></button>
-</div></div>
-
-<div class="card"><h3>📦 Orders LIVE — ALL DISTRIBUTORS</h3><div id="orders">Clean - No trials</div></div>
-
+<title>MM AURA V106 EXACT 10 KITS</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0;font-family:'Outfit',Arial}body{background:#fdf8f0}header{position:sticky;top:0;z-index:20;background:#111;color:#fff;padding:12px 16px;display:flex;justify-content:space-between}.gold{color:#c9a86a}.tabs{display:flex;background:#111;padding:0 12px;gap:5px;position:sticky;top:48px;z-index:19}.tab{flex:1;padding:11px;border-radius:12px 12px 0 0;background:#222;color:#aaa;text-align:center;font-size:10px;font-weight:700;border:0}.tab.active{background:#fdf8f0;color:#111}.page{display:none;padding:10px}.page.active{display:block}.card{background:#fff;border-radius:18px;padding:14px;margin-bottom:10px;box-shadow:0 4px 18px rgba(0,0,0,.06);border:1px solid #f0e6d8}.card-black{background:#111;color:#fff;border-radius:18px;padding:14px;margin-bottom:10px}.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kit{border-radius:16px;padding:10px;text-align:center;background:#fff;border:1.5px solid #d4af37;cursor:pointer}.kit b{color:#8b6f2a;display:block;font-size:13px}.kit small{font-size:9px;color:#666;display:block;line-height:1.3;margin-top:4px}.input,select,textarea{width:100%;padding:13px;border:1.5px solid #e8ddd0;border-radius:12px;margin-top:6px;background:#fffaf5;font-size:13px}label{font-size:11px;font-weight:700;margin-top:10px;display:block}.total-box{background:#111;color:#fff;border-radius:16px;padding:14px;margin-top:12px}.total-row{display:flex;justify-content:space-between;margin:3px 0;font-size:13px}.total-row.big{font-size:20px;font-weight:700;margin-top:8px;border-top:1px solid #333;padding-top:8px}.btn-gold{background:#c9a86a;color:#111;width:100%;padding:15px;font-size:15px;margin-top:12px;border-radius:12px;border:0;font-weight:700}.banner{background:#fef3c7;border:2px solid #c9a86a;padding:8px;border-radius:10px;text-align:center;font-weight:700;margin-bottom:10px;font-size:11px}.stat{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:6px;text-align:center}.stat div{background:rgba(255,255,255,.1);border-radius:10px;padding:6px;font-size:10px}.badge{background:#111;color:#c9a86a;padding:2px 7px;border-radius:20px;font-size:9px}</style></head><body>
+<header><div>MM AURA <span class="gold">V106</span></div><div id="sponsorTag" style="font-size:10px">CEO</div></header>
+<div class="tabs"><button class="tab active" onclick="openTab('shop')">🛒 Shop</button><button class="tab" onclick="openTab('checkout')">💳 Checkout <span id="cartCount" class="badge">0</span></button><button class="tab" onclick="openTab('office')">👑 Office</button></div>
+<div id="page-shop" class="page active"><div id="refBanner" class="banner" style="display:none"></div><div id="shopGrid" class="kit-grid"></div></div>
+<div id="page-checkout" class="page"><div class="card"><h3>🛒 Cart</h3><div id="cartItems" style="font-size:13px">Empty</div></div><div class="card"><label>🚚 Courier *</label><select id="courier" class="input" onchange="calc()"><option value="">-- Select Courier --</option><option value="PAXI|100">PAXI — R100 (7-9 days)</option><option value="PAXI_3_5|110">Paxi 3-5 days R110</option><option value="COURIER_GUY|99">Courier Guy — R99</option><option value="CAPE_TOWN_FLATS|75">Cape Town Orders (For Cape Flats 48-72hr) — R75</option></select><p id="cErr" style="color:red;font-size:10px;display:none">⚠️ Select courier — TOTAL must include shipping!</p><label>💳 Payment *</label><select id="payMethod" class="input"><option>EFT — Capitec 2584793357 (Manual - Main)</option></select><div style="background:#fffaf0;border:2px dashed #c9a86a;border-radius:12px;padding:10px;margin-top:10px"><b style="font-size:12px">💳 EFT CAPITEC 2584793357</b><br><small>MM Aura | 470010 | Ref: Name+OrderID</small><input id="eftRef" class="input" placeholder="EFT Ref *"></div><label>📍 Address *</label><input id="addr" class="input" placeholder="Street, Town, Code"><label>📝 Note</label><textarea id="note" class="input" rows="2"></textarea><div class="total-box"><div class="total-row"><span>Subtotal</span><b id="tSub">R0</b></div><div class="total-row"><span>Shipping</span><b id="tShip" style="color:#fbbf24">R0 SELECT COURIER!</b></div><div class="total-row big"><span>TOTAL</span><b id="tTotal" style="color:#c9a86a">R0</b></div><div style="font-size:9px;color:#aaa">Sponsor <b id="sponsorDisplay">CEO</b> 20%</div></div><button class="btn-gold" onclick="checkout()">✅ CHECKOUT</button></div></div>
+<div id="page-office" class="page"><div class="card-black"><h3 style="color:#c9a86a">👑 OFFICE — CLEAN ZERO</h3><div class="stat" style="margin-top:10px"><div>Members<b id="mCount">0</b></div><div>Sales<b id="mSales">R0</b></div><div>Orders<b id="mOrders">0</b></div><div>Comm<b id="mComm">R0</b></div></div><div style="margin-top:10px;background:rgba(255,255,255,.08);padding:10px;border-radius:10px"><input id="myLink" readonly class="input" style="font-size:10px"><button onclick="navigator.clipboard.writeText(document.getElementById('myLink').value);alert('Copied')" style="background:#c9a86a;border:0;padding:8px;width:100%;border-radius:8px;margin-top:6px;font-weight:700">Copy Link</button></div></div><div class="card"><h3>🏆 Leaderboard</h3><div id="leader">Clean</div></div><div class="card"><h3>📦 Orders</h3><div id="orders">0</div></div></div>
 <script>
-// ==== AUTO-CLEAR ALL OLD DISTRIBUTORS & TRIALS ====
-const CURRENT_VERSION = "v103_final_clean";
-let lastVer = localStorage.getItem('mm_version');
-if(lastVer!== CURRENT_VERSION){
-  localStorage.removeItem('mm_orders');
-  localStorage.removeItem('mm_orders_v103');
-  localStorage.removeItem('mm_members');
-  localStorage.removeItem('mm_cart');
-  // Keep sponsor if ref present
-  let keepSponsor = localStorage.getItem('mm_sponsor');
-  localStorage.clear();
-  if(keepSponsor) localStorage.setItem('mm_sponsor', keepSponsor);
-  localStorage.setItem('mm_version', CURRENT_VERSION);
-  console.log('Cleared old trials');
-}
-localStorage.setItem('mm_version', CURRENT_VERSION);
-
-// ==== CONFIG ====
-const SHEET_URL = "https://script.google.com/macros/s/AKfycbzYOUR_ID_HERE/exec";
-let cart = [];
-let orders = JSON.parse(localStorage.getItem('mm_orders_v103_final')||'[]');
-
-// Check?clear=1 or?ref=
-let params = new URLSearchParams(location.search);
-if(params.get('clear')=='1'){ localStorage.clear(); orders=[]; localStorage.setItem('mm_version', CURRENT_VERSION); alert('✅ ERASED ALL DISTRIBUTORS & TRIALS! Clean Zero!'); }
-let ref = params.get('ref');
-let sponsor = localStorage.getItem('mm_sponsor')||'CEO';
-if(ref){ localStorage.setItem('mm_sponsor', ref); sponsor=ref; let b=document.getElementById('refBanner'); b.style.display='block'; b.innerText='🎉 Shopping via '+ref.toUpperCase()+' — '+ref+' earns 20% commission!'; }
-
-document.getElementById('sponsorTag').innerText='Sponsor: '+sponsor;
-document.getElementById('myLink').value=location.origin+location.pathname+'?ref='+(localStorage.getItem('mm_current_user')||'CEO');
-
-function calc(){
-  let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);
-  let cVal=document.getElementById('courier').value;
-  let ship=cVal?Number(cVal.split('|')[1]):0;
-  document.getElementById('tSub').innerText='R'+sub;
-  if(ship==0){ document.getElementById('tShip').innerText='R0 - SELECT COURIER!'; document.getElementById('tShip').style.color='red'; document.getElementById('cErr').style.display='block'; }
-  else{ document.getElementById('tShip').innerText='R'+ship; document.getElementById('tShip').style.color='#fbbf24'; document.getElementById('cErr').style.display='none'; }
-  document.getElementById('tTotal').innerText='R'+(sub+ship);
-  document.getElementById('sponsorDisplay').innerText=sponsor;
-  let html=''; cart.forEach((it,i)=>{ html+=`<div style="display:flex;justify-content:space-between;margin:6px 0"><span>${it.name} x${it.qty} — R${it.price*it.qty}</span><span><button onclick="cart[${i}].qty++;calc()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);calc()">-</button> <button onclick="cart.splice(${i},1);calc()">x</button></span></div>`; });
-  document.getElementById('cartItems').innerHTML=html||'Cart empty — Add Kit 1 R270';
-}
-function addKit(name,price){ let f=cart.find(c=>c.name==name); if(f) f.qty++; else cart.push({name,price,qty:1}); calc(); }
-function checkout(){
-  let cVal=document.getElementById('courier').value;
-  if(cart.length==0){ alert('Cart empty! Add Kit!'); return; }
-  if(!cVal){ alert('⚠️ SELECT COURIER! Shipping cannot be R0!'); document.getElementById('courier').style.border='2px solid red'; return; }
-  if(!document.getElementById('addr').value){ alert('Enter Delivery Address *'); return; }
-  if(!document.getElementById('eftRef').value){ alert('Enter EFT Reference / POP No *'); return; }
-  let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);
-  let ship=Number(cVal.split('|')[1]);
-  let courierName=cVal.split('|')[0];
-  let order={
-    order_id:'MM'+Date.now().toString().slice(-6),
-    customer_name: prompt('Your Full Name for order?')||'Customer',
-    items: cart.map(x=>x.name+' x'+x.qty).join(', '),
-    subtotal: sub,
-    amount: sub+ship,
-    sponsor: sponsor,
-    sponsor_comm: Math.round(sub*0.2),
-    courier: courierName,
-    courier_price: ship,
-    pay_method: document.getElementById('payMethod').value,
-    address: document.getElementById('addr').value,
-    eft_ref: document.getElementById('eftRef').value,
-    note: document.getElementById('note').value,
-    status: 'Pending',
-    tracking: 'Pending - CEO to approve EFT',
-    date: new Date().toISOString().slice(0,10)
-  };
-  orders.push(order);
-  localStorage.setItem('mm_orders_v103_final', JSON.stringify(orders));
-  if(!SHEET_URL.includes('YOUR_ID')){ fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(order)}); }
-  alert('✅ Order '+order.order_id+' placed! TOTAL R'+(sub+ship)+' — Sponsor '+sponsor+' earns R'+order.sponsor_comm+' (20%). Capitec 2584793357');
-  cart=[]; calc(); render();
-}
-function render(){
-  let map={}; orders.forEach(o=>{ if(!map[o.sponsor]) map[o.sponsor]=[]; map[o.sponsor].push(o); });
-  let arr=Object.entries(map).map(([name,list])=>({name,sales:list.reduce((a,b)=>a+b.subtotal,0),count:list.length})).sort((a,b)=>b.sales-a.sales);
-  document.getElementById('mCount').innerText=Object.keys(map).length;
-  document.getElementById('mSales').innerText='R'+orders.reduce((a,b)=>a+b.subtotal,0);
-  document.getElementById('mOrders').innerText=orders.length;
-  document.getElementById('mComm').innerText='R'+orders.reduce((a,b)=>a+b.sponsor_comm,0);
-  document.getElementById('leader').innerHTML=arr.length? arr.map((m,i)=>{let med=i==0?'🥇':i==1?'🥈':i==2?'🥉':'🏅'; return `<div class=leader><span>${med} <b>${m.name}</b> (${m.count})</span><b>R${m.sales}</b></div>`}).join('') : 'Clean start - 0 sales - Ready for real business! All trials erased!';
-  document.getElementById('orders').innerHTML=orders.slice().reverse().map(o=>`<div style=background:#fffaf0;border:1px solid #fde68a;border-radius:12px;padding:10px;margin-top:8px><b>#${o.order_id} ${o.customer_name}</b> — ${o.status}<br><span class=small>${o.items} | R${o.amount} (Ship R${o.courier_price} ${o.courier}) | Sponsor:${o.sponsor} 20% R${o.sponsor_comm} | ${o.date}</span><br><span class=small>EFT Ref:${o.eft_ref} | ${o.address}</span></div>`).join('') || 'Clean - No trials - 0 orders';
-}
-calc(); render();
-</script>
-</body></html>
+const VER="v106_exact";if(localStorage.getItem('mm_ver')!==VER){let s=localStorage.getItem('mm_sponsor');localStorage.clear();if(s)localStorage.setItem('mm_sponsor',s);localStorage.setItem('mm_ver',VER);}
+let PRODUCTS=[
+{name:"Kit 1 • R270",price:270,desc:"3x Soaps (2x Impepho, 1x Turmeric) + 2x Glow Oil + 2x Lip Scrub",type:"kit"},
+{name:"Kit 2 • R370",price:370,desc:"3x Soaps + 3x Glow Oil + 3x Heel Balm",type:"kit"},
+{name:"Kit 3 • R400",price:400,desc:"3x Soaps + 2x Glow Oil + 3x Lip Scrub + 3x Lip Balm + 3x Hand Lotion",type:"kit"},
+{name:"Kit 4 • R495",price:495,desc:"3x Soaps + 3x Glow Oil + 1x Lip Scrub + 3x Lip Balm + 3x Face Mask",type:"kit"},
+{name:"Kit 5 • R520",price:520,desc:"3x Soaps + 3x Glow Oil + 2x Body Oil + 4x Roll On",type:"kit"},
+{name:"Kit 6 • R600",price:600,desc:"3x Soaps + 3x Glow Oil + 2x Body Oil + 4x Roll On + 6x Air Freshener",type:"kit"},
+{name:"Kit 7 • R400",price:400,desc:"10x Lip Scrub + 10x Lip Balm",type:"kit"},
+{name:"Kit 8 • R540",price:540,desc:"6x Soaps (3x Impepho, 3x Turmeric) + 6x Glow Oil",type:"kit"},
+{name:"Kit 9 • R375",price:375,desc:"15x Air Freshener",type:"kit"},
+{name:"Kit 10 • R600",price:600,desc:"6x Perfume (3x Hers + 3x His) 50ml",type:"kit"},
+{name:"Soaps",price:40,desc:"Impepho / Turmeric Soap",type:"single"},
+{name:"Glow Oil",price:50,desc:"Glow Oil 100ml",type:"single"},
+{name:"Body Oil",price:60,desc:"Body Oil 100ml",type:"single"},
+{name:"Heel Balm",price:75,desc:"Heel Balm",type:"single"},
+{name:"Lip Balm",price:15,desc:"Lip Balm",type:"single"},
+{name:"Lip Scrub",price:25,desc:"Lip Scrub",type:"single"},
+{name:"Face Mask",price:35,desc:"Face Mask 5ml",type:"single"},
+{name:"Roll On",price:32.5,desc:"Roll On 45ml",type:"single"},
+{name:"Air Freshener",price:25,desc:"Air Freshener",type:"single"},
+{name:"Perfume",price:100,desc:"Perfume 50ml",type:"single"},
+{name:"Hand Lotion",price:20,desc:"Hand Lotion",type:"single"}
+];
+let cart=JSON.parse(localStorage.getItem('mm_cart_v106')||'[]');let orders=JSON.parse(localStorage.getItem('mm_orders_v106')||'[]');
+let params=new URLSearchParams(location.search);let sponsor=localStorage.getItem('mm_sponsor')||'CEO';if(params.get('ref')){sponsor=params.get('ref');localStorage.setItem('mm_sponsor',sponsor);let b=document.getElementById('refBanner');b.style.display='block';b.innerText='🎉 Shopping via '+sponsor.toUpperCase()+' — 20% commission!';}
+document.getElementById('sponsorTag').innerText='Sponsor: '+sponsor;document.getElementById('myLink').value=location.origin+location.pathname+'?ref=CEO';
+function openTab(t){document.querySelectorAll('.tab').forEach((el,i)=>el.classList.toggle('active',['shop','checkout','office'][i]==t));document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+t).classList.add('active');}
+function renderShop(){let h='';PRODUCTS.forEach(p=>{h+=`<div class=kit onclick="addKit('${p.name}',${p.price})"><div>${p.type=='kit'?'🎁':'🧴'}</div><b>${p.name}</b><small>${p.desc}</small><div style="background:#111;color:#c9a86a;padding:5px;border-radius:8px;margin-top:5px;font-size:10px;font-weight:700">R${p.price} • + ADD</div></div>`;});document.getElementById('shopGrid').innerHTML=h;}
+function calc(){let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);let c=document.getElementById('courier').value;let ship=c?Number(c.split('|')[1]):0;document.getElementById('tSub').innerText='R'+sub;let sEl=document.getElementById('tShip'),tEl=document.getElementById('tTotal');if(!ship){sEl.innerText='R0 SELECT!';sEl.style.color='red';tEl.innerText='R'+sub+' + SHIP!';tEl.style.color='red';document.getElementById('cErr').style.display='block';}else{sEl.innerText='R'+ship;sEl.style.color='#c9a86a';tEl.innerText='R'+(sub+ship);tEl.style.color='#c9a86a';document.getElementById('cErr').style.display='none';}document.getElementById('sponsorDisplay').innerText=sponsor;document.getElementById('cartCount').innerText=cart.reduce((a,b)=>a+b.qty,0);let html='';cart.forEach((it,i)=>{html+=`<div style="display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #eee"><span>${it.name} x${it.qty}<br><small style="color:#c9a86a">R${it.price*it.qty}</small></span><span><button onclick="cart[${i}].qty++;save()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);save()">-</button></span></div>`;});document.getElementById('cartItems').innerHTML=html||'Empty — add from Shop tab';localStorage.setItem('mm_cart_v106',JSON.stringify(cart));renderOrders();}
+function save(){calc();}function addKit(n,p){let f=cart.find(c=>c.name==n);if(f)f.qty++;else{let pr=PRODUCTS.find(x=>x.name==n);cart.push({name:n,price:p,qty:1,desc:pr?pr.desc:''});}calc();openTab('checkout');}
+function checkout(){let c=document.getElementById('courier').value;if(!cart.length){alert('Cart empty');openTab('shop');return;}if(!c){alert('Select courier! Paxi 3-5 days R110 etc');return;}if(!document.getElementById('addr').value||!document.getElementById('eftRef').value){alert('Address + EFT Ref required');return;}let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);let ship=Number(c.split('|')[1]);let o={id:'MM'+Date.now().toString().slice(-6),items:cart.map(x=>x.name+' x'+x.qty).join(', '),sub:sub,amt:sub+ship,sponsor:sponsor,comm:Math.round(sub*0.2),courier:c.split('|')[0],ship:ship,addr:document.getElementById('addr').value,eft:document.getElementById('eftRef').value,note:document.getElementById('note').value,status:'Pending',date:new Date().toISOString().slice(0,10)};orders.push(o);localStorage.setItem('mm_orders_v106',JSON.stringify(orders));alert('✅ Order '+o.id+' TOTAL R'+o.amt+' Sponsor '+sponsor+' earns R'+o.comm);cart=[];calc();openTab('office');}
+function renderOrders(){let map={};orders.forEach(o=>{if(!map[o.sponsor])map[o.sponsor]=[];map[o.sponsor].push(o);});let arr=Object.entries(map).map(([n,l])=>({n,s:l.reduce((a,b)=>a+b.sub,0),c:l.length})).sort((a,b)=>b.s-a.s);document.getElementById('mCount').innerText=Object.keys(map).length;document.getElementById('mSales').innerText='R'+orders.reduce((a,b)=>a+b.sub,0);document.getElementById('mOrders').innerText=orders.length;document.getElementById('mComm').innerText='R'+orders.reduce((a,b)=>a+b.comm,0);document.getElementById('leader').innerHTML=arr.length?arr.map((m,i)=>`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee"><span>${i==0?'🥇':i==1?'🥈':'🥉'} <b>${m.n}</b> (${m.c})</span><b>R${m.s}</b></div>`).join(''):'Clean start - 0 sales';document.getElementById('orders').innerHTML=orders.slice().reverse().map(o=>`<div style="background:#fffaf0;border:1px solid #fde68a;border-radius:10px;padding:8px;margin-top:6px"><b>#${o.id}</b> ${o.status}<br><small>${o.items} | R${o.amt} Ship R${o.ship} | Sponsor ${o.sponsor} R${o.comm} | ${o.date}</small></div>`).join('')||'0 orders';}
+renderShop();calc();
+</script></body></html>
