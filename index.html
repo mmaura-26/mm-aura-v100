@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>MM AURA V100 - COMP PLAN</title>
+<title>MM AURA V100 - FREE JOIN</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Great+Vibes&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--gold:#C8A46B;--black:#1A1A1A;--border:#F2E8DA}
@@ -18,12 +18,12 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 .wrap{padding:12px 10px 80px}
 .kit{background:white;border:1px solid var(--border);border-radius:12px;padding:11px;margin-bottom:8px}
 .kit.feat{border:2px solid var(--gold);background:#FFF8F2}
-.btn{width:100%;background:linear-gradient(135deg,var(--gold),#9C7B4A);color:white;border:none;padding:14px;border-radius:30px;font-weight:600;margin-top:14px}
+.btn{width:100%;background:linear-gradient(135deg,var(--gold),#9C7B4A);color:white;border:none;padding:14px;border-radius:30px;font-weight:600;margin-top:14px;letter-spacing:1px}
 .modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:9999;align-items:center;justify-content:center;padding:14px}
 .modal.active{display:flex}
-.modal-box{background:white;border-radius:18px;padding:18px;width:100%;max-width:360px;border:2px solid var(--gold)}
-.modal-box input,.modal-box select{width:100%;padding:11px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px}
-.modal-box button{width:100%;background:#1A1A1A;color:white;border:none;padding:11px;border-radius:30px;font-weight:600;margin-top:4px}
+.modal-box{background:white;border-radius:18px;padding:18px;width:100%;max-width:350px;border:2px solid var(--gold)}
+.modal-box input{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin-bottom:10px;font-size:.9rem}
+.modal-box button{width:100%;background:#1A1A1A;color:white;border:none;padding:12px;border-radius:30px;font-weight:600;margin-top:4px}
 .bo{display:none;padding:12px 10px}
 .bo.active{display:block}
 .bo-card{background:white;border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
@@ -31,19 +31,18 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 .earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
 .earn-box{background:#FFFEFB;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center}
 .earn-box b{font-size:1.05rem;color:#9C7B4A;display:block}
-.earn-box span{font-size:.62rem;color:#666}
 .rank-bar{background:#1A1A1A;color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.75rem}
 .rank-bar b{color:var(--gold)}
 .team-item{border-bottom:1px solid #f0e6d8;padding:8px 0;display:flex;justify-content:space-between;font-size:.75rem}
-.badge{padding:2px 8px;border-radius:10px;font-size:.65rem;background:var(--gold);color:white}
 </style>
 </head>
 <body>
-<div class="topbar"><span>MM 🍃 AURA V100</span><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div>
+<div class="topbar"><span>MM 🍃 AURA V100 — FREE JOIN</span><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div>
 <div id="mainPage">
 <div class="invited"><span class="script">Invited by <span id="s1">CEO</span></span></div>
 <div class="header"><div class="logo-line">MM 🍃 AURA V100</div></div>
 <div class="wrap">
+<div style="text-align:center;padding:10px;font-size:.8rem;color:#666">🎉 FREE to join! No purchase needed to register. Buy kits later to earn!</div>
 <div class="kit feat"><h4>Kit 1 ⭐ R270 — Starter</h4></div>
 <div class="kit"><h4>Kit 2 — R370</h4></div>
 <div class="kit"><h4>Kit 3 — R400</h4></div>
@@ -54,57 +53,61 @@ body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
 <div class="kit"><h4>Kit 8 — R375</h4></div>
 <div class="kit"><h4>Kit 9 — R540</h4></div>
 <div class="kit"><h4>Kit 10 — R600</h4></div>
-<button class="btn" onclick="openReg()">JOIN UNDER <span id="s2">CEO</span> — R270</button>
+<button class="btn" onclick="openReg()">JOIN UNDER <span id="s2">CEO</span> — FREE</button>
 </div>
 </div>
 
 <div id="memberBO" class="bo">
 <div class="bo-card"><h3>Welcome <span id="boName">-</span> 🌸</h3><p style="font-size:.7rem">Phone: <span id="boPhone"></span> | Sponsor: <span id="boSponsor"></span></p></div>
-
 <div class="bo-card">
-<h3>💰 Commissions & Salaries — As Per Table</h3>
+<h3>💰 Commissions & Salaries</h3>
 <div class="earn-grid">
-<div class="earn-box"><b id="personalSales">R0</b><span>Personal Sales</span></div>
-<div class="earn-box"><b id="teamSales">R0</b><span>Team Sales</span></div>
-<div class="earn-box"><b id="earnDirect">R0</b><span>Commission Earned</span></div>
+<div class="earn-box"><b id="personalSales">R0</b><span>Personal Purchase</span></div>
+<div class="earn-box"><b id="teamSales">R0</b><span>Team Purchase</span></div>
+<div class="earn-box"><b id="earnDirect">R0</b><span>20% Direct (L1)</span></div>
 <div class="earn-box"><b id="earnBonus">R0</b><span>Rank Bonus</span></div>
 </div>
 <div class="rank-bar">
-Current Rank: <b id="rankName">STARTER</b> (L1 - 20%)<br>
-Personal: <b id="rankPersonal">R0 / R400</b> | Team: <b id="rankTeam">R0 / R5k</b><br>
-Next: <b id="nextRank">TEAM BUILDER — Need R400 + R5k team</b><br>
-<div style="margin-top:6px">Total Earnings: <b id="earnTotal" style="font-size:1.1rem">R0</b> (Comm + Bonus)</div>
+Rank: <b id="rankName">STARTER (L1 - 20%)</b><br>
+Next: <b id="nextRank">TEAM BUILDER — Need R400 personal + R5k team</b><br>
+Total: <b id="earnTotal" style="font-size:1.1rem">R0</b>
 </div>
-<p style="font-size:.6rem;color:#999">NOTE: Rank up once a month - Commission on purchase only</p>
+<p style="font-size:.6rem;color:#999">Commission only when your team BUYS kits (purchase only) — Not on free join</p>
 </div>
-
-<div class="bo-card"><h3>🔗 My Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY LINK</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE</button></div>
-
-<div class="bo-card"><h3>👥 My Team Levels</h3><div id="teamLevels"></div><div id="teamList" style="margin-top:10px"></div></div>
-
+<div class="bo-card"><h3>🔗 My Free Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem">COPY</button><button onclick="shareWa()" style="background:#25D366;color:white;border:none;padding:8px 16px;border-radius:20px;font-size:.75rem;margin-left:6px">SHARE</button></div>
+<div class="bo-card"><h3>👥 My Team</h3><div id="teamLevels"></div><div id="teamList" style="margin-top:10px"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
-<button class="btn" style="background:#eee;color:#333" onclick="showMain()">SHOP</button>
 </div>
 
 <div id="ceoBO" class="bo">
-<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN — COMP PLAN CONTROL</h3><p style="font-size:.7rem;color:#ccc">Full view of all sales per your table</p></div>
-<div class="bo-card" style="background:#1A1A1A;color:white"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem"><div>Members<br><b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Total Sales<br><b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>To Pay (Comm)<br><b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Bonuses<br><b id="ceoBonuses" style="color:var(--gold)">R0</b></div></div></div>
+<div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)">👑 CEO ADMIN</h3></div>
+<div class="bo-card" style="background:#1A1A1A;color:white"><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem"><div>Members<br><b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales<br><b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm To Pay<br><b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Bonuses<br><b id="ceoBonuses" style="color:var(--gold)">R0</b></div></div></div>
 <div class="bo-card"><h3>📋 All Members</h3><input id="ceoSearch" placeholder="Search..." style="width:100%;padding:8px;border:1px solid var(--border);border-radius:8px;margin-bottom:8px" oninput="renderCEO()"><div id="ceoList"></div></div>
 <button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT CEO</button>
 </div>
 
-<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join MM 🍃 AURA</h2><p style="font-size:.72rem;text-align:center">Under <b id="s4">CEO</b></p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp e.g. 0684729270"><input id="regPass" type="password" placeholder="Create Password"><select id="regKit"><option value="270">Kit 1 R270</option><option value="370">Kit 2 R370</option><option value="400">Kit 3 R400</option><option value="495">Kit 4 R495</option><option value="520">Kit 5 R520</option><option value="600">Kit 6 R600</option><option value="375">Kit 8 R375</option><option value="540">Kit 9 R540</option></select><button onclick="doRegister()">REGISTER</button><button onclick="closeReg()" style="background:#eee;color:#333">Cancel</button></div></div>
-<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN</button><p style="font-size:.65rem;text-align:center;margin-top:6px">CEO: 0684729270 + Mmaura2024</p><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
+<!-- FREE REGISTER MODAL - NO KIT -->
+<div id="regModal" class="modal"><div class="modal-box">
+<h2 style="text-align:center;font-family:'Cormorant Garamond',serif">Join MM 🍃 AURA</h2>
+<p style="font-size:.75rem;text-align:center;margin:6px 0 12px;color:#666">Free to join under <b id="s4">CEO</b><br>No purchase needed!</p>
+<input id="regName" placeholder="Full Name e.g. Makazi">
+<input id="regPhone" placeholder="WhatsApp e.g. 0797161665">
+<input id="regPass" type="password" placeholder="Create Password for BO login">
+<button onclick="doRegister()">REGISTER FREE</button>
+<button onclick="closeReg()" style="background:#eee;color:#333">Cancel</button>
+</div></div>
+
+<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center;font-family:'Cormorant Garamond',serif">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()">SIGN IN</button><button onclick="closeLogin()" style="background:#eee;color:#333">Cancel</button></div></div>
 
 <script>
-const CEO_NUMBER="27684729270"; const CEO_PASS="Mmaura2024";
+const CEO_NUMBER="27684729270";
 const RANKS=[
  {name:'STARTER', personal:0, team:0, levels:1, perc:[20], bonus:0, next:'TEAM BUILDER — Need R400 personal + R5k team'},
  {name:'TEAM BUILDER', personal:400, team:5000, levels:2, perc:[20,10], bonus:500, next:'SUPERVISOR — Need R800 + R10k team'},
  {name:'SUPERVISOR', personal:800, team:10000, levels:3, perc:[20,10,4], bonus:1000, next:'MANAGER — Need R1200 + R30k team'},
  {name:'MANAGER', personal:1200, team:30000, levels:4, perc:[20,10,4,3], bonus:2500, next:'DIRECTOR — Need R1800 + R65k team'},
  {name:'DIRECTOR', personal:1800, team:65000, levels:5, perc:[20,10,4,3,2], bonus:8000, next:'EXECUTIVE — Need R2500 + R100k team'},
- {name:'EXECUTIVE', personal:2500, team:100000, levels:6, perc:[20,10,4,3,2,1], bonus:15000, next:'MAX RANK EXECUTIVE 👑'}
+ {name:'EXECUTIVE', personal:2500, team:100000, levels:6, perc:[20,10,4,3,2,1], bonus:15000, next:'MAX RANK 👑'}
 ];
 const p=new URLSearchParams(location.search);
 let sponsor=p.get('sponsor')?decodeURIComponent(p.get('sponsor')):'CEO';
@@ -124,26 +127,26 @@ function doRegister(){
  let name=document.getElementById('regName').value.trim();
  let phone=document.getElementById('regPhone').value.trim();
  let pass=document.getElementById('regPass').value.trim();
- let kitVal=parseInt(document.getElementById('regKit').value);
- if(!name||!phone||!pass){alert('Fill all');return;}
+ if(!name||!phone||!pass){alert('Fill name, phone, password');return;}
  let cleanPhone=phone.replace(/\D/g,''); if(cleanPhone.startsWith('0')) cleanPhone='27'+cleanPhone.substring(1);
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
  if(users.find(u=>u.phone===cleanPhone)){alert('Already registered. LOGIN.');closeReg();openLogin();return;}
  let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;
- users.push({name, phone:cleanPhone, pass, sponsor, sponsorPhone, kit:kitVal, date:new Date().toLocaleString(), link:myLink});
+ // FREE JOIN: kit=0, purchase=0
+ users.push({name, phone:cleanPhone, pass, sponsor, sponsorPhone, kit:0, purchase:0, date:new Date().toLocaleString(), link:myLink});
  localStorage.setItem('mmaura_users',JSON.stringify(users));
- localStorage.setItem('mmaura_me',JSON.stringify({name, phone:cleanPhone, pass, sponsor, link:myLink, kit:kitVal, isCEO: cleanPhone===CEO_NUMBER}));
+ localStorage.setItem('mmaura_me',JSON.stringify({name, phone:cleanPhone, pass, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER}));
  closeReg();
- let waMsg=`🌸 NEW JOIN! ${name} (${phone}) Kit R${kitVal} joined under you!%0A${myLink}`;
+ let waMsg=`🌸 NEW JOIN! ${name} (${phone}) joined FREE under you!%0A${myLink}`;
  let sendTo=sponsor.toUpperCase()==='CEO'?CEO_NUMBER:sponsorPhone;
  window.open(`https://wa.me/${sendTo}?text=${waMsg}`,'_blank');
- setTimeout(()=>{loginSuccess({name, phone:cleanPhone, sponsor, link:myLink, kit:kitVal, isCEO: cleanPhone===CEO_NUMBER, pass})}, 800);
+ setTimeout(()=>{loginSuccess({name, phone:cleanPhone, sponsor, link:myLink, kit:0, purchase:0, isCEO: cleanPhone===CEO_NUMBER, pass})}, 800);
 }
 
 function doLogin(){
  let phone=document.getElementById('loginPhone').value.trim().replace(/\D/g,''); if(phone.startsWith('0')) phone='27'+phone.substring(1);
  let pass=document.getElementById('loginPass').value.trim();
- if(phone===CEO_NUMBER){localStorage.setItem('mmaura_me',JSON.stringify({name:'CEO', phone:CEO_NUMBER, sponsor:'CEO', link:'https://mmauranaturals.netlify.app/?sponsor=CEO&sphone='+CEO_NUMBER, isCEO:true})); closeLogin(); showCEO(); return;}
+ if(phone===CEO_NUMBER){localStorage.setItem('mmaura_me',JSON.stringify({name:'CEO', phone:CEO_NUMBER, sponsor:'CEO', link:'https://mmauranaturals.netlify.app/?sponsor=CEO&sphone='+CEO_NUMBER, isCEO:true, purchase:0})); closeLogin(); showCEO(); return;}
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
  let user=users.find(u=>u.phone===phone && u.pass===pass);
  if(!user){alert('Wrong phone or password');return;}
@@ -155,35 +158,25 @@ function doLogin(){
 function getDownlines(users, name, level, maxLevel, result){
  if(level>maxLevel) return;
  let direct=users.filter(u=>u.sponsor.toLowerCase()===name.toLowerCase());
- direct.forEach(d=>{
-   result.push({...d, lvl:level});
-   getDownlines(users, d.name, level+1, maxLevel, result);
- });
+ direct.forEach(d=>{ result.push({...d, lvl:level}); getDownlines(users, d.name, level+1, maxLevel, result); });
 }
-
 function calcRank(personal, teamSales){
  let rank=RANKS[0];
- for(let i=RANKS.length-1;i>=0;i--){
-   if(personal>=RANKS[i].personal && teamSales>=RANKS[i].team){rank=RANKS[i]; break;}
- }
+ for(let i=RANKS.length-1;i>=0;i--){ if(personal>=RANKS[i].personal && teamSales>=RANKS[i].team){rank=RANKS[i]; break;} }
  return rank;
 }
-
 function loginSuccess(user){
  if(user.isCEO || user.phone===CEO_NUMBER){showCEO(); return;}
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
- // Personal sales = own kit (you can add more purchases later)
- let personalSales=user.kit||270;
- // Get all downlines up to 6 levels
+ let personal=user.purchase||0;
  let allDown=[]; getDownlines(users, user.name, 1, 6, allDown);
- let teamSales=allDown.reduce((s,u)=>s+(u.kit||0),0);
- let rank=calcRank(personalSales, teamSales);
- // Commission per level
+ let teamSales=allDown.reduce((s,u)=>s+(u.purchase||0),0);
+ let rank=calcRank(personal, teamSales);
  let comm=0; let levels={};
  allDown.forEach(d=>{
    if(d.lvl<=rank.levels){
      let perc=rank.perc[d.lvl-1]||0;
-     comm+= (d.kit||0)*perc/100;
+     comm+= (d.purchase||0)*perc/100;
      levels[d.lvl]=(levels[d.lvl]||0)+1;
    }
  });
@@ -191,63 +184,52 @@ function loginSuccess(user){
  document.getElementById('boPhone').textContent=user.phone;
  document.getElementById('boSponsor').textContent=user.sponsor;
  document.getElementById('boLink').textContent=user.link;
- document.getElementById('personalSales').textContent='R'+personalSales;
+ document.getElementById('personalSales').textContent='R'+personal;
  document.getElementById('teamSales').textContent='R'+teamSales;
  document.getElementById('earnDirect').textContent='R'+Math.round(comm);
  document.getElementById('earnBonus').textContent='R'+rank.bonus;
  document.getElementById('earnTotal').textContent='R'+Math.round(comm+rank.bonus);
  document.getElementById('rankName').textContent=rank.name+' (L'+rank.levels+' - '+rank.perc.join('+')+'%)';
- document.getElementById('rankPersonal').textContent='R'+personalSales+' / R'+RANKS[RANKS.findIndex(r=>r.name===rank.name)+1]?.personal||'MAX';
- document.getElementById('rankTeam').textContent='R'+teamSales+' / R'+(RANKS[RANKS.findIndex(r=>r.name===rank.name)+1]?.team||'MAX');
  document.getElementById('nextRank').textContent=rank.next;
-
- let levelHtml=''; for(let i=1;i<=6;i++){
-   let count=levels[i]||0;
-   let active=i<=rank.levels? '✅':'🔒';
-   levelHtml+=`<div class="team-item"><span>L${i} — ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${active}</span><span>${count} members</span></div>`;
- }
+ let levelHtml=''; for(let i=1;i<=6;i++){ let count=levels[i]||0; let active=i<=rank.levels? '✅':'🔒'; levelHtml+=`<div class="team-item"><span>L${i} — ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${active}</span><span>${count}</span></div>`; }
  document.getElementById('teamLevels').innerHTML=levelHtml;
- let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet. Share your link!</p>';
- allDown.forEach(m=>{
-   listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl} — Kit R${m.kit}<br><small>${m.phone} • via ${m.sponsor}</small></span><span class="badge">${m.perc? '' : (rank.perc[m.lvl-1]||0)+'%'} </span></div>`;
- });
+ let listHtml=allDown.length? '': '<p style="font-size:.75rem;color:#999">No team yet. Share your link! Free join!</p>';
+ allDown.forEach(m=>{ listHtml+=`<div class="team-item"><span><b>${m.name}</b> L${m.lvl}<br><small>${m.phone} • Purchase R${m.purchase||0}</small></span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`; });
  document.getElementById('teamList').innerHTML=listHtml;
  showMember(); document.getElementById('boBtn').textContent='MY BO';
 }
-
 function renderCEO(){
  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');
  let search=(document.getElementById('ceoSearch').value||'').toLowerCase();
  let filtered=users.filter(u=>u.name.toLowerCase().includes(search)||u.phone.includes(search));
  document.getElementById('ceoTotalMembers').textContent=users.length;
- document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.kit||0),0);
+ document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.purchase||0),0);
  let totalComm=0; users.forEach(u=>{
-   let personal=u.kit||0;
    let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
-   let teamSales=allDown.reduce((s,x)=>s+(x.kit||0),0);
-   let rank=calcRank(personal, teamSales);
-   let comm=0; allDown.forEach(d=>{ if(d.lvl<=rank.levels){ comm+=(d.kit||0)*(rank.perc[d.lvl-1]||0)/100; }});
+   let teamSales=allDown.reduce((s,x)=>s+(x.purchase||0),0);
+   let rank=calcRank(u.purchase||0, teamSales);
+   let comm=0; allDown.forEach(d=>{ if(d.lvl<=rank.levels){ comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100; }});
    totalComm+=comm;
  });
  document.getElementById('ceoTotalComm').textContent='R'+Math.round(totalComm);
  let bonuses=users.reduce((s,u)=>{
    let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
-   let teamSales=allDown.reduce((a,b)=>a+(b.kit||0),0);
-   let rank=calcRank(u.kit||0, teamSales);
+   let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);
+   let rank=calcRank(u.purchase||0, teamSales);
    return s+rank.bonus;
  },0);
  document.getElementById('ceoBonuses').textContent='R'+bonuses;
  let html=''; filtered.forEach(u=>{
    let allDown=[]; getDownlines(users, u.name, 1, 6, allDown);
-   let teamSales=allDown.reduce((a,b)=>a+(b.kit||0),0);
-   let rank=calcRank(u.kit||0, teamSales);
-   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor} | Team R${teamSales}</small></span><span>R${u.kit}</span></div>`;
+   let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);
+   let rank=calcRank(u.purchase||0, teamSales);
+   html+=`<div class="team-item"><span><b>${u.name}</b> ${rank.name}<br><small>${u.phone} | Sponsor: ${u.sponsor} | Team R${teamSales} | Purchase R${u.purchase||0}</small></span></div>`;
  });
  document.getElementById('ceoList').innerHTML=html||'No members';
 }
 function logout(){localStorage.removeItem('mmaura_me');showMain();document.getElementById('boBtn').textContent='BO LOGIN';}
 function copyBoLink(){navigator.clipboard.writeText(document.getElementById('boLink').textContent).then(()=>alert('Copied!'));}
-function shareWa(){let t=document.getElementById('boLink').textContent; window.open(`https://wa.me/?text=${encodeURIComponent('Join MM AURA under me! '+t)}`,'_blank');}
+function shareWa(){let t=document.getElementById('boLink').textContent; window.open(`https://wa.me/?text=${encodeURIComponent('Join MM AURA FREE under me! '+t)}`,'_blank');}
 let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');
 if(me){document.getElementById('boBtn').textContent=me.phone===CEO_NUMBER?'CEO ADMIN':'MY BO';}
 </script>
