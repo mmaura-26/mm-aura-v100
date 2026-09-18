@@ -1,222 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MM AURA V101 - Final Bank 2584793357</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MM AURA V103 FINAL CLEAN</title>
 <style>
-:root{--gold:#C8A46B;--goldD:#9C7B4A;--black:#1A1A1A;--border:#F2E8DA;--cream:#FFF8F2}
-*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Montserrat',sans-serif;background:#FFFEFB}
-.topbar{background:#1A1A1A;color:white;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:100}
-.topbar button{background:var(--gold);border:none;color:white;padding:7px 12px;border-radius:20px;font-weight:700;font-size:.7rem;margin-left:4px}
-.header{text-align:center;padding:16px;background:var(--cream)}.logo-line{font-family:'Cormorant Garamond',serif;font-size:2rem;letter-spacing:2px}
-.wrap{padding:10px 10px 80px}
-.prod{border:1px solid var(--border);border-radius:12px;padding:12px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;background:white}
-.prod b{font-size:.86rem}.prod small{font-size:.68rem;color:#666;display:block}
-.prod button{background:var(--black);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.7rem;font-weight:700}
-.btn{width:100%;background:linear-gradient(135deg,var(--gold),var(--goldD));color:white;border:none;padding:14px;border-radius:30px;font-weight:700;margin-top:10px}
-.section-title{font-family:'Cormorant Garamond',serif;text-align:center;margin:18px 0 8px;font-size:1.3rem}
-.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:9999;align-items:flex-start;justify-content:center;padding:10px;overflow-y:auto}.modal.active{display:flex}
-.modal-box{background:white;border-radius:18px;padding:16px;width:100%;max-width:400px;border:2px solid var(--gold);margin:20px 0}
-.modal-box input,.modal-box select,.modal-box textarea{width:100%;padding:11px;border:1px solid var(--border);border-radius:10px;margin-bottom:8px;font-size:.85rem}
-.bo{display:none;padding:10px}.bo.active{display:block}
-.bo-card{background:white;border:1px solid var(--border);border-radius:14px;padding:14px;margin-bottom:10px}
-.earn-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.earn-box{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center}.earn-box b{color:var(--goldD);font-size:1.1rem;display:block}
-.rank-bar{background:var(--black);color:white;border-radius:12px;padding:12px;margin:10px 0;font-size:.72rem}.rank-bar b{color:var(--gold)}
-.cart-item{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee;font-size:.78rem}
-.cart-total{background:var(--black);color:white;padding:12px;border-radius:10px;margin-top:10px}
-.linkbox{background:var(--cream);border:2px dashed var(--gold);border-radius:10px;padding:10px;word-break:break-all;font-size:.73rem;color:var(--goldD);font-weight:700}
-.status{padding:4px 10px;border-radius:12px;font-size:.70rem;font-weight:800;display:inline-block;border:1px solid}
-.status-Pending{background:#FFF3CD;color:#856404;border-color:#FFE69C}.status-Confirmed{background:#D4EDDA;color:#155724}.status-Packed{background:#CCE5FF;color:#004085}.status-Shipped{background:#E2D9F3;color:#3D1B7A}.status-Delivered{background:#1A1A1A;color:var(--gold)}
-.timeline{display:flex;justify-content:space-between;margin:12px 0;position:relative}.timeline::before{content:'';position:absolute;top:12px;left:8%;right:8%;height:4px;background:#eee;z-index:0;border-radius:2px}
-.t-step{position:relative;z-index:1;text-align:center;flex:1}.t-dot{width:26px;height:26px;border-radius:50%;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;font-size:.8rem;border:2px solid #ddd;background:white;font-weight:800}
-.t-dot.done{background:var(--gold);border-color:var(--goldD);color:white}.t-dot.active{background:var(--black);border-color:var(--gold);color:var(--gold)}
-.t-label{font-size:.58rem;font-weight:700;line-height:1.1}
-.payBox{margin-top:10px;background:#FFF8F2;border:1px dashed var(--gold);border-radius:10px;padding:12px;font-size:.75rem}
-</style>
-</head>
-<body>
-<div class="topbar"><span>MM  AURA V101</span><div><button onclick="openCart()"> <span id="cartCount">0</span></button><button onclick="openLogin()" id="boBtn">BO LOGIN</button></div></div>
-<div id="mainPage"><div style="background:#1A1A1A;color:var(--gold);text-align:center;padding:12px">Invited by <span id="s1">CEO</span> — FREE JOIN</div><div class="header"><div class="logo-line">MM  AURA</div><p style="font-size:.75rem;color:#666">Free join • Commission AFTER purchase • 20% Direct</p><button class="btn" onclick="openReg()">JOIN FREE UNDER <span id="s2">CEO</span></button></div><div class="wrap"><div class="section-title"> Combo Kits 1-10</div><div id="mainKits"></div><div class="section-title"> Singles — R40 R50 R25 R15 R75 R20 R35 R60 R32.50 R25 R100</div><div id="mainSingles"></div></div></div>
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial}
+body{background:#fffaf5}header{position:sticky;top:0;background:#111;color:#fff;padding:12px;display:flex;justify-content:space-between;z-index:10}
+.btn{background:#111;color:#fff;border:0;padding:10px 16px;border-radius:20px;font-weight:bold;cursor:pointer}
+.btn-gold{background:#c9a86a;color:#111;width:100%;margin-top:12px;padding:14px;font-size:16px;border-radius:12px;font-weight:bold;border:0}
+.card{background:#fff;border:1px solid #eee;border-radius:16px;padding:15px;margin:12px}
+.black{background:#111;color:#fff;border-radius:14px;padding:14px;margin-top:10px}
+.input,select,textarea{width:100%;padding:13px;border:1px solid #ddd;border-radius:12px;margin-top:6px;font-size:15px;background:#f9fafb}
+.eft-box{background:#fffaf0;border:2px dashed #c9a86a;border-radius:14px;padding:14px;margin-top:10px}
+.banner{background:#fef3c7;border:2px dashed #c9a86a;padding:10px;text-align:center;font-weight:bold;margin:12px;border-radius:12px;display:none}
+.leader{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #f3f4f6}
+.small{font-size:11px;color:#666}
+</style></head><body>
+<header><b>MM AURA V103 CLEAN</b><span id="sponsorTag">CEO</span></header>
+<div id="refBanner" class="banner"></div>
 
-<div id="memberBO" class="bo">
-<div class="bo-card"><h3>Welcome <span id="boName">-</span> </h3><p style="font-size:.7rem">Phone: <span id="boPhone"></span> | Sponsor: <span id="boSponsor"></span></p></div>
-<div class="bo-card"><h3> Commission AFTER Purchase</h3><div class="earn-grid"><div class="earn-box"><b id="personalSales">R0</b><small>Personal</small></div><div class="earn-box"><b id="teamSales">R0</b><small>Team</small></div><div class="earn-box"><b id="earnDirect">R0</b><small>20% L1</small></div><div class="earn-box"><b id="earnBonus">R0</b><small>Bonus</small></div></div><div class="rank-bar">Rank: <b id="rankName">STARTER</b><br>Next: <b id="nextRank"></b><br>Total: <b id="earnTotal">R0</b></div></div>
-<div class="bo-card"><h3> Kits 1-10</h3><div id="boKits"></div></div>
-<div class="bo-card"><h3> Singles</h3><div id="boSingles"></div></div>
-<div class="bo-card" style="text-align:center"><button class="btn" onclick="openCart()"> CHECKOUT (<span id="cartCount2">0</span>)</button></div>
-<div class="bo-card"><h3> My Link</h3><div class="linkbox" id="boLink"></div><button onclick="copyBoLink()" style="background:var(--gold);color:white;border:none;padding:8px 14px;border-radius:20px;font-size:.72rem">COPY LINK</button></div>
-<div class="bo-card"><h3> My Orders — Timeline Colours</h3><div id="myOrders"></div></div>
-<div class="bo-card"><h3> My Team L1-L6</h3><div id="teamLevels"></div><div id="teamList"></div></div>
-<button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button>
+<div class="card" style="background:#111;color:#c9a86a">
+<h3>👑 DISTRIBUTOR BACK OFFICE - CLEAN ZERO</h3>
+<p class="small" style="color:#c9a86a">Capitec 2584793357 | All trials erased | Netlify deleted | GitHub only</p>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:10px;margin-top:10px;text-align:center">
+<div>Members<br><b id="mCount">0</b></div><div>Sales<br><b id="mSales">R0</b></div><div>Orders<br><b id="mOrders">0</b></div><div>Comm 20%<br><b id="mComm">R0</b></div>
+</div>
+<div style="margin-top:12px;background:#fff1;border-radius:12px;padding:10px">
+<b>🔗 My Referral Link (share WhatsApp):</b>
+<input id="myLink" readonly class="input" style="font-size:11px">
+<button onclick="navigator.clipboard.writeText(document.getElementById('myLink').value);alert('Link copied!')" class="btn" style="background:#c9a86a;color:#111;margin-top:6px;width:100%">Copy Link</button>
+</div>
 </div>
 
-<div id="ceoBO" class="bo"><div class="bo-card" style="background:#1A1A1A;color:white"><h3 style="color:var(--gold)"> CEO — Verify EFT: Capitec 2584793357</h3><div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;font-size:.8rem;margin-top:8px"><div>Members <b id="ceoTotalMembers" style="color:var(--gold)">0</b></div><div>Sales <b id="ceoTotalSales" style="color:var(--gold)">R0</b></div><div>Comm <b id="ceoTotalComm" style="color:var(--gold)">R0</b></div><div>Orders <b id="ceoOrdersCount" style="color:var(--gold)">0</b></div></div></div><div class="bo-card"><h3> All Orders — Change Status = Customer Sees Colour Move!</h3><div id="ceoOrders"></div></div><div class="bo-card"><h3>Members</h3><div id="ceoList"></div></div><button class="btn" style="background:#1A1A1A" onclick="logout()">LOGOUT</button></div>
+<div class="card"><h3>🏆 Leaderboard</h3><div id="leader">Clean start - 0 sales - Ready!</div></div>
 
-<div id="regModal" class="modal"><div class="modal-box"><h2 style="text-align:center">Join FREE</h2><p style="text-align:center;font-size:.75rem;color:#666">Under <span id="s4">CEO</span></p><input id="regName" placeholder="Full Name"><input id="regPhone" placeholder="WhatsApp"><input id="regPass" type="password" placeholder="Password"><button onclick="doRegister()" class="btn">REGISTER FREE  BO</button><button onclick="closeReg()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
-<div id="loginModal" class="modal"><div class="modal-box"><h2 style="text-align:center">BO Login</h2><input id="loginPhone" placeholder="Phone"><input id="loginPass" type="password" placeholder="Password"><button onclick="doLogin()" class="btn">SIGN IN</button><button onclick="closeLogin()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Cancel</button></div></div>
+<div class="card" id="cartBox">
+<h2>🛒 CART & CHECKOUT</h2>
+<div id="cartItems" style="margin-top:10px">Cart empty</div>
+<div class="black">
+<div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="tSub">R0</b></div>
+<div style="display:flex;justify-content:space-between"><span>Shipping:</span><b id="tShip" style="color:#fbbf24">R0 - SELECT COURIER!</b></div>
+<div style="display:flex;justify-content:space-between;font-size:22px;margin-top:8px;border-top:1px solid #333;padding-top:8px"><span>TOTAL:</span><b id="tTotal" style="color:#c9a86a">R0</b></div>
+<p class="small" style="color:#aaa;margin-top:6px">Sponsor: <b id="sponsorDisplay">CEO</b> gets 20%</p>
+</div>
 
-<div id="cartModal" class="modal"><div class="modal-box">
-<h2 style="text-align:center"> CART & CHECKOUT</h2><div id="cartItems"></div>
-<div class="cart-total"><div style="display:flex;justify-content:space-between"><span>Subtotal:</span><b id="cartSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping:</span><b id="cartShip">R0</b></div><div style="display:flex;justify-content:space-between;font-size:1.1rem;margin-top:6px"><span>TOTAL:</span><b id="cartTotal" style="color:var(--gold)">R0</b></div></div>
-<h3 style="margin:12px 0 6px;font-size:.85rem"> Courier *</h3>
-<select id="courierSelect" onchange="calcCart()">
+<div style="margin-top:14px"><b>🚚 Courier Option *</b>
+<select id="courier" class="input" onchange="calc()">
 <option value="">-- Select --</option>
-<option value="60">Paxi R60 (7-9 days)</option>
-<option value="75">Pudo R75 (3-5 days)</option>
-<option value="65">Pargo R65 — Pickup Point</option>
-<option value="85">Pargo R85 — Door to Door</option>
-<option value="120">Courier Guy R120 (1-2 days)</option>
-<option value="0">Collection Free</option>
+<option value="PAXI|100">PAXI - R100 (7-9 days)</option>
+<option value="PAXI_3_5|110">Paxi 3-5 days R110</option>
+<option value="COURIER_GUY|99">Courier Guy - R99</option>
+<option value="CAPE_TOWN_FLATS|75">Cape Town Orders (For Cape Flats 48-72hr) - R75</option>
 </select>
-<h3 style="margin:10px 0 6px;font-size:.85rem"> Payment * — EFT Main</h3>
-<select id="payMethod" onchange="showPaymentDetails()">
-<option value="EFT">EFT — Capitec 2584793357 (Manual - Main)</option>
-<option value="FastPay"> PayFast Instant EFT / Card — Merchant 36377707</option>
-<option value="Cash">Cash on Collection</option>
-<option value="COD">COD (+R40)</option>
+<p id="cErr" style="color:red;font-size:12px;display:none">⚠️ Select courier — TOTAL must include shipping!</p>
+</div>
+
+<div style="margin-top:10px"><b>💳 Payment *</b>
+<select id="payMethod" class="input">
+<option>EFT — Capitec 2584793357 (Manual - Main)</option>
+<option>PayFast</option>
+<option>EFT / Bank Transfer</option>
 </select>
-<div id="paymentDetailsBox" class="payBox" style="display:none"></div>
-<h3 style="margin:10px 0 6px;font-size:.85rem"> Address *</h3><input id="deliveryAddr" placeholder="Street, Town, Province">
-<h3 style="margin:10px 0 6px;font-size:.85rem"> Notes</h3><textarea id="orderNotes" placeholder="Notes..."></textarea>
-<button onclick="checkout()" class="btn"> CHECKOUT</button>
-<button onclick="closeCart()" style="width:100%;background:#eee;border:none;padding:10px;border-radius:20px;margin-top:6px">Continue Shopping</button>
+</div>
+
+<div class="eft-box">
+<b>💳 EFT — CAPITEC BANK — MAIN METHOD:</b><br>
+Bank: <b>Capitec Bank</b><br>Account Name: <b>MM Aura</b><br>Account No: <b>2584793357</b><br>
+Branch Code: <b>470010 (Universal)</b><br>Reference: <b>Your Name + Order ID</b>
+<div style="background:#fff;border:2px solid #c9a86a;border-radius:12px;padding:10px;margin-top:10px">
+<b>After you pay via Capitec App:</b>
+<input id="eftRef" class="input" placeholder="Enter EFT Reference / POP No *">
+</div>
+<p class="small" style="margin-top:8px">🟡 Status = Pending. CEO checks Capitec App 2584793357 → Changes to ✅ Approved</p>
+</div>
+
+<div style="margin-top:12px"><b>📍 Delivery Address *</b><input id="addr" class="input" placeholder="Street, Town, Province, Postal Code"></div>
+<div style="margin-top:10px"><b>📝 Note Box</b><textarea id="note" class="input" placeholder="Shade, allergies, leave at gate..."></textarea></div>
+
+<button class="btn-gold" onclick="checkout()">✅ CHECKOUT & PAY</button>
+<button class="btn" style="width:100%;margin-top:8px;background:#eee;color:#111" onclick="cart=[];calc();">Continue Shopping</button>
+</div>
+
+<div class="card"><h3>🧴 Kits — Add to Cart</h3>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px">
+<button class="btn" onclick="addKit('Kit 1',270)">Kit 1<br><b>R270</b></button>
+<button class="btn" onclick="addKit('Kit 2',450)">Kit 2<br><b>R450</b></button>
+<button class="btn" onclick="addKit('Kit 3',750)">Kit 3<br><b>R750</b></button>
 </div></div>
 
+<div class="card"><h3>📦 Orders LIVE — ALL DISTRIBUTORS</h3><div id="orders">Clean - No trials</div></div>
+
 <script>
-const PAYFAST_MERCHANT_ID="36377707"; const PAYFAST_MERCHANT_KEY="xjjvc07mqh1jy";
-const BANK_ACCOUNT="2584793357"; const BANK_NAME="MM Aura"; const CEO_NUMBER="27684729270";
-const RANKS=[{name:'STARTER',personal:0,team:0,levels:1,perc:[20],bonus:0,next:'TEAM BUILDER — Need R400 + R5k'},{name:'TEAM BUILDER',personal:400,team:5000,levels:2,perc:[20,10],bonus:500,next:'SUPERVISOR — Need R800 + R10k'},{name:'SUPERVISOR',personal:800,team:10000,levels:3,perc:[20,10,4],bonus:1000,next:'MANAGER — Need R1200 + R30k'},{name:'MANAGER',personal:1200,team:30000,levels:4,perc:[20,10,4,3],bonus:2500,next:'DIRECTOR — Need R1800 + R65k'},{name:'DIRECTOR',personal:1800,team:65000,levels:5,perc:[20,10,4,3,2],bonus:8000,next:'EXECUTIVE — Need R2500 + R100k'},{name:'EXECUTIVE',personal:2500,team:100000,levels:6,perc:[20,10,4,3,2,1],bonus:15000,next:'MAX RANK '}];
-const KITS=[{id:101,name:'Kit 1',price:270,desc:'3x Soaps + 2x Glow oil + 2x Lip scrubs'},{id:102,name:'Kit 2',price:370,desc:'3x Soaps + 3x Glow oil + 3x Heel balm'},{id:103,name:'Kit 3',price:400,desc:'3x Soaps + 2x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Hand lotion'},{id:104,name:'Kit 4',price:495,desc:'3x Soaps + 3x Glow oil + 3x Lip scrub + 3x Lip balm + 3x Face mask'},{id:105,name:'Kit 5',price:520,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on'},{id:106,name:'Kit 6',price:600,desc:'3x Soaps + 3x Glow oil + 2x Body oil + 4x Roll on + 6x AirFreshner'},{id:107,name:'Kit 7',price:400,desc:'10x Lip scrub + 10x Lip balm'},{id:108,name:'Kit 8',price:375,desc:'15x Air freshners'},{id:109,name:'Kit 9',price:540,desc:'6x Soap + 6x Glow oil'},{id:110,name:'Kit 10',price:600,desc:'3x Perfume (hers) + 3x Perfume (his)'}];
-const SINGLES=[{id:1,name:'Soap',price:40},{id:2,name:'Glow Oil',price:50},{id:3,name:'Lip Scrub',price:25},{id:4,name:'Lip Balm',price:15},{id:5,name:'Heel Balm',price:75},{id:6,name:'Hand Lotion',price:20},{id:7,name:'Face Mask',price:35},{id:8,name:'Body Oil',price:60},{id:9,name:'Roll On',price:32.5},{id:10,name:'Air Freshner',price:25},{id:11,name:'Perfume',price:100}];
-let cart=JSON.parse(localStorage.getItem('mmaura_cart')||'[]');
-const p=new URLSearchParams(location.search);let sponsor=p.get('sponsor')?decodeURIComponent(p.get('sponsor')):'CEO';let sponsorPhone=p.get('sphone')||CEO_NUMBER;
-document.getElementById('s1').textContent=sponsor;document.getElementById('s2').textContent=sponsor.toUpperCase();document.getElementById('s4').textContent=sponsor;
-(function migrateOrders(){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let changed=false;orders.forEach(o=>{if(!o.status){o.status='Pending';changed=true;} if(o.tracking===undefined){o.tracking='';changed=true;}});if(changed){localStorage.setItem('mmaura_orders',JSON.stringify(orders));}})();
-function renderShop(){document.getElementById('mainKits').innerHTML=KITS.map(k=>`<div class="prod"><div><b>${k.name} — R${k.price}</b><small>${k.desc}</small></div><button onclick="addToCart(${k.id},'kit')">ADD</button></div>`).join('');document.getElementById('mainSingles').innerHTML=SINGLES.map(s=>`<div class="prod"><div><b>${s.name} — R${s.price}</b></div><button onclick="addToCart(${s.id},'single')">ADD</button></div>`).join('');document.getElementById('boKits').innerHTML=KITS.map(k=>`<div class="prod"><div><b>${k.name} — R${k.price}</b><small>${k.desc}</small></div><button onclick="addToCart(${k.id},'kit')">ADD</button></div>`).join('');document.getElementById('boSingles').innerHTML=SINGLES.map(s=>`<div class="prod"><div><b>${s.name} — R${s.price}</b></div><button onclick="addToCart(${s.id},'single')">ADD</button></div>`).join('');}renderShop();
-function openReg(){document.getElementById('regModal').classList.add('active')}function closeReg(){document.getElementById('regModal').classList.remove('active')}function openLogin(){document.getElementById('loginModal').classList.add('active')}function closeLogin(){document.getElementById('loginModal').classList.remove('active')}function openCart(){document.getElementById('cartModal').classList.add('active');renderCart();}function closeCart(){document.getElementById('cartModal').classList.remove('active')}function showMain(){document.getElementById('memberBO').classList.remove('active');document.getElementById('ceoBO').classList.remove('active');document.getElementById('mainPage').style.display='block';}function showMember(){document.getElementById('mainPage').style.display='none';document.getElementById('memberBO').classList.add('active');}function showCEO(){document.getElementById('mainPage').style.display='none';document.getElementById('ceoBO').classList.add('active');renderCEO();}
-function addToCart(id,type){let prod=(type==='kit'?KITS:SINGLES).find(p=>p.id===id);let exist=cart.find(c=>c.id===id);if(exist)exist.qty++;else cart.push({id:prod.id,name:prod.name,price:prod.price,qty:1});localStorage.setItem('mmaura_cart',JSON.stringify(cart));updateCartCount();renderCart();}
-function updateCartCount(){let c=cart.reduce((s,i)=>s+i.qty,0);document.getElementById('cartCount').textContent=c;let c2=document.getElementById('cartCount2');if(c2)c2.textContent=c;}
-function getStatusTimeline(currentStatus){
-  const steps=['Pending','Confirmed','Packed','Shipped','Delivered'];
-  const icons=['','','','',''];
-  const idx=steps.indexOf(currentStatus);
-  let html='<div class="timeline">';
-  steps.forEach((s,i)=>{
-    let state = i < idx? 'done' : i===idx? 'active' : '';
-    let label = i<=idx? '' : '';
-    html+=`<div class="t-step"><div class="t-dot ${state}">${i<=idx?'':''}</div><div class="t-label">${icons[i]}<br>${s}</div></div>`;
-  });
-  html+='</div>';
-  return html;
+// ==== AUTO-CLEAR ALL OLD DISTRIBUTORS & TRIALS ====
+const CURRENT_VERSION = "v103_final_clean";
+let lastVer = localStorage.getItem('mm_version');
+if(lastVer!== CURRENT_VERSION){
+  localStorage.removeItem('mm_orders');
+  localStorage.removeItem('mm_orders_v103');
+  localStorage.removeItem('mm_members');
+  localStorage.removeItem('mm_cart');
+  // Keep sponsor if ref present
+  let keepSponsor = localStorage.getItem('mm_sponsor');
+  localStorage.clear();
+  if(keepSponsor) localStorage.setItem('mm_sponsor', keepSponsor);
+  localStorage.setItem('mm_version', CURRENT_VERSION);
+  console.log('Cleared old trials');
 }
-function showPaymentDetails(){
-  calcCart();
-  let method=document.getElementById('payMethod').value;
-  let box=document.getElementById('paymentDetailsBox');
-  box.style.display='block';
-  if(method==='EFT'){
-    box.innerHTML=`<b> EFT — CAPITEC BANK — MAIN METHOD:</b><br>
-    Bank: <b>Capitec Bank</b><br>
-    Account Name: <b>${BANK_NAME}</b><br>
-    Account No: <b>${BANK_ACCOUNT}</b><br>
-    Branch Code: 470010 (Universal)<br>
-    Reference: <b>Your Name + Order ID</b><br><br>
-    <div style="background:white;border:2px solid var(--gold);border-radius:10px;padding:8px">
-    <b>After you pay via Capitec App:</b><br>
-    <input id="eftRef" placeholder="Enter EFT Reference / POP No *" style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin-top:6px">
-    </div>
-    <small style="color:#666;display:block;margin-top:6px"> Status = Pending. CEO checks Capitec App 2584793357 and changes to  Payment Approved. Customer sees colour move!</small>`;
-  } else if(method==='FastPay'){
-    box.innerHTML=`<b> PAYFAST — Instant EFT / Card — Merchant ${PAYFAST_MERCHANT_ID}</b><br>
-    Pay securely via PayFast using Capitec App, FNB, ABSA, Standard Bank or Card.<br><br>
-    <div style="background:white;border:2px solid var(--gold);border-radius:10px;padding:10px;text-align:center">
-    <b>Total: <span id="payfastTotal">R0</span></b><br>
-    <small>Account: ${BANK_ACCOUNT} — ${BANK_NAME}</small><br>
-    <button onclick="payWithPayFast()" style="background:linear-gradient(135deg,var(--gold),var(--goldD));color:white;border:none;padding:12px 20px;border-radius:25px;font-weight:700;margin-top:8px;width:100%"> PAY NOW WITH PAYFAST</button>
-    <small style="display:block;margin-top:6px;color:#666">Redirects to PayFast secure page. Order becomes  Confirmed automatically after payment.</small>
-    </div>
-    <input type="hidden" id="fastRef" value="PayFast Payment">`;
-    document.getElementById('payfastTotal').textContent=document.getElementById('cartTotal').textContent;
-  } else if(method==='Cash'){
-    box.innerHTML=`<b> CASH ON COLLECTION:</b><br>Collect: 32488 Khwaza Street, Delft, Cape Town<br>Pay cash when you collect.`;
-  } else if(method==='COD'){
-    box.innerHTML=`<b> CASH ON DELIVERY:</b><br>R40 COD fee added. Pay cash to courier.`;
-  }
+localStorage.setItem('mm_version', CURRENT_VERSION);
+
+// ==== CONFIG ====
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbzYOUR_ID_HERE/exec";
+let cart = [];
+let orders = JSON.parse(localStorage.getItem('mm_orders_v103_final')||'[]');
+
+// Check?clear=1 or?ref=
+let params = new URLSearchParams(location.search);
+if(params.get('clear')=='1'){ localStorage.clear(); orders=[]; localStorage.setItem('mm_version', CURRENT_VERSION); alert('✅ ERASED ALL DISTRIBUTORS & TRIALS! Clean Zero!'); }
+let ref = params.get('ref');
+let sponsor = localStorage.getItem('mm_sponsor')||'CEO';
+if(ref){ localStorage.setItem('mm_sponsor', ref); sponsor=ref; let b=document.getElementById('refBanner'); b.style.display='block'; b.innerText='🎉 Shopping via '+ref.toUpperCase()+' — '+ref+' earns 20% commission!'; }
+
+document.getElementById('sponsorTag').innerText='Sponsor: '+sponsor;
+document.getElementById('myLink').value=location.origin+location.pathname+'?ref='+(localStorage.getItem('mm_current_user')||'CEO');
+
+function calc(){
+  let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);
+  let cVal=document.getElementById('courier').value;
+  let ship=cVal?Number(cVal.split('|')[1]):0;
+  document.getElementById('tSub').innerText='R'+sub;
+  if(ship==0){ document.getElementById('tShip').innerText='R0 - SELECT COURIER!'; document.getElementById('tShip').style.color='red'; document.getElementById('cErr').style.display='block'; }
+  else{ document.getElementById('tShip').innerText='R'+ship; document.getElementById('tShip').style.color='#fbbf24'; document.getElementById('cErr').style.display='none'; }
+  document.getElementById('tTotal').innerText='R'+(sub+ship);
+  document.getElementById('sponsorDisplay').innerText=sponsor;
+  let html=''; cart.forEach((it,i)=>{ html+=`<div style="display:flex;justify-content:space-between;margin:6px 0"><span>${it.name} x${it.qty} — R${it.price*it.qty}</span><span><button onclick="cart[${i}].qty++;calc()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);calc()">-</button> <button onclick="cart.splice(${i},1);calc()">x</button></span></div>`; });
+  document.getElementById('cartItems').innerHTML=html||'Cart empty — Add Kit 1 R270';
 }
-function payWithPayFast(){
-  let {total}=calcCart();
-  let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');
-  if(!me){alert('Join FREE first');return;}
-  let form=document.createElement('form');
-  form.method='POST'; form.action='https://www.payfast.co.za/eng/process';
-  let fields={
-    merchant_id: PAYFAST_MERCHANT_ID,
-    merchant_key: PAYFAST_MERCHANT_KEY,
-    return_url: location.href.split('?')[0]+'?pay=success',
-    cancel_url: location.href.split('?')[0]+'?pay=cancel',
-    notify_url: location.href.split('?')[0],
-    m_payment_id: Date.now().toString(),
-    amount: total.toFixed(2),
-    item_name: 'MM Aura Order - '+cart.map(c=>c.name).join(', '),
-    item_description: 'Order for '+me.name+' Phone '+me.phone
-  };
-  for(let k in fields){let i=document.createElement('input');i.type='hidden';i.name=k;i.value=fields[k];form.appendChild(i);}
-  document.body.appendChild(form); form.submit();
-}
-function renderCart(){let html='';let sub=0;cart.forEach((it,idx)=>{sub+=it.price*it.qty;html+=`<div class="cart-item"><span><b>${it.name}</b> x${it.qty}<br><small>R${it.price*it.qty}</small></span><span><button onclick="changeQty(${idx},-1)">-</button> <button onclick="changeQty(${idx},1)">+</button> <button onclick="removeItem(${idx})" style="background:#f44;color:white;border:none;padding:2px 6px;border-radius:8px">x</button></span></div>`;});document.getElementById('cartItems').innerHTML=html||'<p style="text-align:center;color:#999">Cart empty</p>';calcCart();showPaymentDetails();}
-function changeQty(i,d){cart[i].qty+=d;if(cart[i].qty<=0)cart.splice(i,1);localStorage.setItem('mmaura_cart',JSON.stringify(cart));updateCartCount();renderCart();}
-function removeItem(i){cart.splice(i,1);localStorage.setItem('mmaura_cart',JSON.stringify(cart));updateCartCount();renderCart();}
-function calcCart(){let sub=cart.reduce((s,it)=>s+it.price*it.qty,0);let shipVal=document.getElementById('courierSelect').value;let ship=shipVal===''?0:parseInt(shipVal||0);if(document.getElementById('payMethod').value==='COD')ship+=40;document.getElementById('cartSub').textContent='R'+sub;document.getElementById('cartShip').textContent='R'+ship;document.getElementById('cartTotal').textContent='R'+(sub+ship);let pt=document.getElementById('payfastTotal');if(pt)pt.textContent='R'+(sub+ship);return{sub,ship,total:sub+ship};}
+function addKit(name,price){ let f=cart.find(c=>c.name==name); if(f) f.qty++; else cart.push({name,price,qty:1}); calc(); }
 function checkout(){
-  if(cart.length===0){alert('Cart empty');return;}
-  let courierSel=document.getElementById('courierSelect');if(!courierSel.value){alert('Select courier');return;}
-  let pay=document.getElementById('payMethod').value;
-  let addr=document.getElementById('deliveryAddr').value.trim();let notes=document.getElementById('orderNotes').value.trim();
-  if(!addr){alert('Enter address');return;}
-  let paymentRef="";
-  if(pay==='EFT'){paymentRef=document.getElementById('eftRef')?.value.trim();if(!paymentRef){alert('Enter EFT Reference from Capitec App after you pay to 2584793357');return;}}
-  else if(pay==='FastPay'){if(confirm('Pay now via PayFast secure page? Total '+document.getElementById('cartTotal').textContent)){payWithPayFast();return;} paymentRef='PayFast - Pending';}
-  else if(pay==='COD'){paymentRef='COD +R40';} else {paymentRef='Cash on Collection';}
-  let {sub,ship,total}=calcCart();
-  let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');if(!me){alert('Join FREE first');openReg();return;}
-  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let idx=users.findIndex(u=>u.phone===me.phone);if(idx>=0){users[idx].purchase=(users[idx].purchase||0)+sub;me.purchase=users[idx].purchase;localStorage.setItem('mmaura_users',JSON.stringify(users));localStorage.setItem('mmaura_me',JSON.stringify(me));}
-  let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let orderId=Date.now();let status= (pay==='FastPay')? 'Confirmed' : 'Pending';
-  orders.push({id:orderId,status,tracking:'',buyer:me.name,phone:me.phone,sponsor:me.sponsor,items:[...cart],sub,ship,total,courier:courierSel.options[courierSel.selectedIndex].text,pay: pay + ' — ' + paymentRef,addr,notes,paymentDetails:paymentRef,date:new Date().toLocaleString()});
-  localStorage.setItem('mmaura_orders',JSON.stringify(orders));cart=[];localStorage.setItem('mmaura_cart',JSON.stringify(cart));updateCartCount();closeCart();
-  alert(` ORDER #${orderId} PLACED!\nBank: Capitec ${BANK_ACCOUNT} ${BANK_NAME}\nCourier: ${courierSel.options[courierSel.selectedIndex].text}\nMethod: ${pay}\nRef: ${paymentRef}\nTotal: R${total}\nStatus: ${status}\n\nTIMELINE:\n Pending (Order Placed)\n Payment Approved (You verify EFT in Capitec App)\n Packed\n Shipped + Tracking\n Delivered\n\nCEO: Check Capitec App for R${total} then change status to Confirmed!`);
-  loginSuccess(me);
+  let cVal=document.getElementById('courier').value;
+  if(cart.length==0){ alert('Cart empty! Add Kit!'); return; }
+  if(!cVal){ alert('⚠️ SELECT COURIER! Shipping cannot be R0!'); document.getElementById('courier').style.border='2px solid red'; return; }
+  if(!document.getElementById('addr').value){ alert('Enter Delivery Address *'); return; }
+  if(!document.getElementById('eftRef').value){ alert('Enter EFT Reference / POP No *'); return; }
+  let sub=cart.reduce((a,b)=>a+b.price*b.qty,0);
+  let ship=Number(cVal.split('|')[1]);
+  let courierName=cVal.split('|')[0];
+  let order={
+    order_id:'MM'+Date.now().toString().slice(-6),
+    customer_name: prompt('Your Full Name for order?')||'Customer',
+    items: cart.map(x=>x.name+' x'+x.qty).join(', '),
+    subtotal: sub,
+    amount: sub+ship,
+    sponsor: sponsor,
+    sponsor_comm: Math.round(sub*0.2),
+    courier: courierName,
+    courier_price: ship,
+    pay_method: document.getElementById('payMethod').value,
+    address: document.getElementById('addr').value,
+    eft_ref: document.getElementById('eftRef').value,
+    note: document.getElementById('note').value,
+    status: 'Pending',
+    tracking: 'Pending - CEO to approve EFT',
+    date: new Date().toISOString().slice(0,10)
+  };
+  orders.push(order);
+  localStorage.setItem('mm_orders_v103_final', JSON.stringify(orders));
+  if(!SHEET_URL.includes('YOUR_ID')){ fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:JSON.stringify(order)}); }
+  alert('✅ Order '+order.order_id+' placed! TOTAL R'+(sub+ship)+' — Sponsor '+sponsor+' earns R'+order.sponsor_comm+' (20%). Capitec 2584793357');
+  cart=[]; calc(); render();
 }
-function doRegister(){let name=document.getElementById('regName').value.trim();let phone=document.getElementById('regPhone').value.trim();let pass=document.getElementById('regPass').value.trim();if(!name||!phone||!pass){alert('Fill all');return;}let cleanPhone=phone.replace(/\D/g,'');if(cleanPhone.startsWith('0'))cleanPhone='27'+cleanPhone.substring(1);let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');if(users.find(u=>u.phone===cleanPhone)){alert('Already registered');closeReg();openLogin();return;}let myLink=`https://mmauranaturals.netlify.app/?sponsor=${encodeURIComponent(name)}&sphone=${cleanPhone}`;users.push({name,phone:cleanPhone,pass,sponsor,sponsorPhone,purchase:0,date:new Date().toLocaleString(),link:myLink});localStorage.setItem('mmaura_users',JSON.stringify(users));let userObj={name,phone:cleanPhone,pass,sponsor,sponsorPhone,link:myLink,purchase:0,isCEO:cleanPhone===CEO_NUMBER};localStorage.setItem('mmaura_me',JSON.stringify(userObj));closeReg();loginSuccess(userObj);}
-function doLogin(){let phone=document.getElementById('loginPhone').value.trim().replace(/\D/g,'');if(phone.startsWith('0'))phone='27'+phone.substring(1);let pass=document.getElementById('loginPass').value.trim();if(phone===CEO_NUMBER){localStorage.setItem('mmaura_me',JSON.stringify({name:'CEO',phone:CEO_NUMBER,sponsor:'CEO',link:'https://mmauranaturals.netlify.app/?sponsor=CEO&sphone='+CEO_NUMBER,isCEO:true,purchase:0}));closeLogin();showCEO();return;}let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let user=users.find(u=>u.phone===phone&&u.pass===pass);if(!user){alert('Wrong login');return;}localStorage.setItem('mmaura_me',JSON.stringify(user));closeLogin();loginSuccess(user);}
-function getDownlines(users,name,level,maxLevel,result){if(level>maxLevel)return;let direct=users.filter(u=>u.sponsor.toLowerCase()===name.toLowerCase());direct.forEach(d=>{result.push({...d,lvl:level});getDownlines(users,d.name,level+1,maxLevel,result);});}
-function calcRank(personal,teamSales){let rank=RANKS[0];for(let i=RANKS.length-1;i>=0;i--){if(personal>=RANKS[i].personal&&teamSales>=RANKS[i].team){rank=RANKS[i];break;}}return rank;}
-function loginSuccess(user){
-  if(user.isCEO||user.phone===CEO_NUMBER){showCEO();return;}
-  let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let personal=user.purchase||0;let allDown=[];getDownlines(users,user.name,1,6,allDown);let teamSales=allDown.reduce((s,u)=>s+(u.purchase||0),0);let rank=calcRank(personal,teamSales);let comm=0;let levels={};allDown.forEach(d=>{if(d.lvl<=rank.levels){comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100;levels[d.lvl]=(levels[d.lvl]||0)+1;}});
-  document.getElementById('boName').textContent=user.name;document.getElementById('boPhone').textContent=user.phone;document.getElementById('boSponsor').textContent=user.sponsor;document.getElementById('boLink').textContent=user.link;document.getElementById('personalSales').textContent='R'+personal;document.getElementById('teamSales').textContent='R'+teamSales;document.getElementById('earnDirect').textContent='R'+Math.round(comm);document.getElementById('earnBonus').textContent='R'+rank.bonus;document.getElementById('earnTotal').textContent='R'+Math.round(comm+rank.bonus);document.getElementById('rankName').textContent=rank.name+' L'+rank.levels+' '+rank.perc.join('+')+'%';document.getElementById('nextRank').textContent=rank.next;
-  let levelHtml='';for(let i=1;i<=6;i++){let c=levels[i]||0;let a=i<=rank.levels?'':'';levelHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:.75rem"><span>L${i} ${RANKS.find(r=>r.levels>=i)?.perc[i-1]||0}% ${a}</span><span>${c} members</span></div>`;}document.getElementById('teamLevels').innerHTML=levelHtml;
-  let listHtml=allDown.length?'':'<p style="font-size:.75rem;color:#999">No team yet — Share your link!</p>';allDown.forEach(m=>{listHtml+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #eee;font-size:.72rem"><span><b>${m.name}</b> L${m.lvl} R${m.purchase||0}</span><span>${m.lvl===1?'20%':(rank.perc[m.lvl-1]||0)+'%'} </span></div>`;});document.getElementById('teamList').innerHTML=listHtml;
-  let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]').filter(o=>o.phone===user.phone);
-  document.getElementById('myOrders').innerHTML=orders.length? orders.map(o=>{
-    let st=o.status||'Pending';let tr=o.tracking||'';
-    return `<div style="border:1px solid var(--border);border-radius:14px;padding:12px;margin-bottom:12px;font-size:.72rem;background:white">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b>#${o.id}</b><span class="status status-${st}">${st.toUpperCase()}</span></div>
-    ${getStatusTimeline(st)}
-    <div style="margin-top:8px"><b>R${o.total}</b> - ${o.courier}</div><div style="color:#666">${o.items.map(it=>it.name+' x'+it.qty).join(', ')}</div>
-    <div style="margin-top:4px;font-size:.68rem">${o.addr}<br>${o.pay}<br>Notes: ${o.notes||'-'}</div>
-    ${tr?`<div style="margin-top:6px;background:var(--cream);padding:6px;border-radius:6px;border:1px dashed var(--gold)"><b> Tracking: ${tr}</b></div>`:''}
-    <small style="color:#999">${o.date}</small></div>`;
-  }).join('') : '<p style="font-size:.75rem;color:#999">No orders yet</p>';
-  showMember();document.getElementById('boBtn').textContent='MY BO';
+function render(){
+  let map={}; orders.forEach(o=>{ if(!map[o.sponsor]) map[o.sponsor]=[]; map[o.sponsor].push(o); });
+  let arr=Object.entries(map).map(([name,list])=>({name,sales:list.reduce((a,b)=>a+b.subtotal,0),count:list.length})).sort((a,b)=>b.sales-a.sales);
+  document.getElementById('mCount').innerText=Object.keys(map).length;
+  document.getElementById('mSales').innerText='R'+orders.reduce((a,b)=>a+b.subtotal,0);
+  document.getElementById('mOrders').innerText=orders.length;
+  document.getElementById('mComm').innerText='R'+orders.reduce((a,b)=>a+b.sponsor_comm,0);
+  document.getElementById('leader').innerHTML=arr.length? arr.map((m,i)=>{let med=i==0?'🥇':i==1?'🥈':i==2?'🥉':'🏅'; return `<div class=leader><span>${med} <b>${m.name}</b> (${m.count})</span><b>R${m.sales}</b></div>`}).join('') : 'Clean start - 0 sales - Ready for real business! All trials erased!';
+  document.getElementById('orders').innerHTML=orders.slice().reverse().map(o=>`<div style=background:#fffaf0;border:1px solid #fde68a;border-radius:12px;padding:10px;margin-top:8px><b>#${o.order_id} ${o.customer_name}</b> — ${o.status}<br><span class=small>${o.items} | R${o.amount} (Ship R${o.courier_price} ${o.courier}) | Sponsor:${o.sponsor} 20% R${o.sponsor_comm} | ${o.date}</span><br><span class=small>EFT Ref:${o.eft_ref} | ${o.address}</span></div>`).join('') || 'Clean - No trials - 0 orders';
 }
-function renderCEO(){let users=JSON.parse(localStorage.getItem('mmaura_users')||'[]');let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');document.getElementById('ceoTotalMembers').textContent=users.length;document.getElementById('ceoTotalSales').textContent='R'+users.reduce((s,u)=>s+(u.purchase||0),0);document.getElementById('ceoOrdersCount').textContent=orders.length;let totalComm=0;users.forEach(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((s,x)=>s+(x.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);let comm=0;allDown.forEach(d=>{if(d.lvl<=rank.levels)comm+=(d.purchase||0)*(rank.perc[d.lvl-1]||0)/100;});totalComm+=comm;});document.getElementById('ceoTotalComm').textContent='R'+Math.round(totalComm);document.getElementById('ceoOrders').innerHTML=orders.length? orders.map(o=>{let st=o.status||'Pending';let tr=o.tracking||'';return `<div style="border:2px solid var(--border);border-radius:12px;padding:10px;margin-bottom:10px;font-size:.72rem;background:var(--cream)"><div style="display:flex;justify-content:space-between"><b>#${o.id} ${o.buyer} ${o.phone}</b><span class="status status-${st}">${st}</span></div>${getStatusTimeline(st)}Items: ${o.items.map(it=>it.name+' x'+it.qty).join(', ')}<br>Sub R${o.sub}  Sponsor ${o.sponsor} 20% = R${Math.round(o.sub*0.2)}<br>Courier: ${o.courier}<br>Pay: ${o.pay}<br>Addr: ${o.addr}<br>Notes: ${o.notes||'-'}<br><small>${o.date}</small><div style="margin-top:8px;display:flex;gap:6px;flex-wrap:wrap"><select onchange="updateStatus(${o.id}, this.value)" style="padding:6px;border-radius:8px;border:1px solid var(--gold);font-size:.7rem"><option ${st==='Pending'?'selected':''}>Pending</option><option ${st==='Confirmed'?'selected':''}>Confirmed</option><option ${st==='Packed'?'selected':''}>Packed</option><option ${st==='Shipped'?'selected':''}>Shipped</option><option ${st==='Delivered'?'selected':''}>Delivered</option></select><input id="track-${o.id}" placeholder="Tracking No" value="${tr}" style="flex:1;padding:6px;border-radius:8px;border:1px solid var(--border);font-size:.7rem;min-width:120px"><button onclick="saveTracking(${o.id})" style="background:var(--black);color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">SAVE TRACKING</button><button onclick="whatsappCustomer('${o.phone}', ${o.id})" style="background:#25D366;color:white;border:none;padding:6px 10px;border-radius:8px;font-size:.7rem">WA</button></div></div>`;}).join('') : '<p style="font-size:.75rem;color:#999">No orders</p>';document.getElementById('ceoList').innerHTML=users.map(u=>{let allDown=[];getDownlines(users,u.name,1,6,allDown);let teamSales=allDown.reduce((a,b)=>a+(b.purchase||0),0);let rank=calcRank(u.purchase||0,teamSales);return `<div style="padding:6px 0;border-bottom:1px solid #eee;font-size:.72rem"><b>${u.name}</b> ${rank.name} R${u.purchase||0} Team R${teamSales}</div>`;}).join('')||'No members';}
-function updateStatus(orderId, newStatus){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].status=newStatus;localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(` Status updated to ${newStatus.toUpperCase()} — Customer BO will now show ${newStatus} colour indicator moved!`);}}
-function saveTracking(orderId){let track=document.getElementById('track-'+orderId).value.trim();let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let idx=orders.findIndex(o=>o.id===orderId);if(idx>=0){orders[idx].tracking=track;if(track && (orders[idx].status==='Pending'||orders[idx].status==='Confirmed')){orders[idx].status='Shipped';}localStorage.setItem('mmaura_orders',JSON.stringify(orders));renderCEO();alert(` Tracking ${track} saved — Status  SHIPPED  — Customer sees tracking!`);}}
-function whatsappCustomer(phone, orderId){let orders=JSON.parse(localStorage.getItem('mmaura_orders')||'[]');let o=orders.find(x=>x.id===orderId);let st=o.status||'Pending';let msg=`Hi ${o.buyer}  Your MM AURA Order #${o.id} is now ${st} ${o.tracking?' Tracking: '+o.tracking:''} Total R${o.total}`;window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`,'_blank');}
-function logout(){localStorage.removeItem('mmaura_me');showMain();document.getElementById('boBtn').textContent='BO LOGIN';}
-function copyBoLink(){navigator.clipboard.writeText(document.getElementById('boLink').textContent).then(()=>alert('Link copied!'));}
-let me=JSON.parse(localStorage.getItem('mmaura_me')||'null');if(me)document.getElementById('boBtn').textContent=me.phone===CEO_NUMBER?'CEO ADMIN':'MY BO';updateCartCount();
+calc(); render();
 </script>
-</body>
-</html>
+</body></html>
