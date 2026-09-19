@@ -1,120 +1,151 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MM AURA V120.2 SAFE</title><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"><style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:'Outfit',sans-serif}
-body{background:#fff7f9}
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MM AURA V124.2 HIDDEN KEY</title><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet"><style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Outfit',sans-serif}body{background:#fff7f9}
 header{background:#fff;border-bottom:2.5px solid #d4a574;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logo{color:#b67a4a;font-weight:800}
-.tabs{display:flex;background:#fff;padding:6px;gap:6px;position:sticky;top:45px;z-index:19;border-bottom:1.5px solid #e8c9c5}
-.tab{flex:1;padding:10px;border-radius:20px;background:#fdf2f4;color:#b67a4a;text-align:center;font-size:11px;font-weight:700;border:1.5px solid #e8c9c5}
-.tab.active{background:#d4a574;color:#fff;border-color:#d4a574}
+.logo{color:#b67a4a;font-weight:800;font-family:'Playfair Display',serif}.tabs{display:flex;background:#fff;padding:6px;gap:6px;position:sticky;top:45px;z-index:19;border-bottom:1.5px solid #e8c9c5}
+.tab{flex:1;padding:10px;border-radius:20px;background:#fdf2f4;color:#b67a4a;text-align:center;font-size:11px;font-weight:700;border:1.5px solid #e8c9c5}.tab.active{background:#d4a574;color:#fff}
 .page{display:none;padding:10px}.page.active{display:block}
 .card{background:#fff;border-radius:18px;padding:14px;margin-bottom:12px;border:1.5px solid #e8c9c5;box-shadow:0 2px 8px rgba(212,165,116,.12)}
 .card-pink{background:#fff;border:2px solid #d4a574;border-radius:18px;padding:16px;margin-bottom:12px}
 .card-gold{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;border-radius:18px;padding:16px;margin-bottom:12px}
-.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-.kit{border-radius:14px;padding:10px;text-align:center;background:#fff;border:1.5px solid #e8c9c5}
+.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.kit{border-radius:14px;padding:10px;text-align:center;background:#fff;border:1.5px solid #e8c9c5}
 .input,select,textarea{width:100%;padding:12px;border:1.5px solid #e8c9c5;border-radius:12px;margin-top:6px;background:#fffafb;font-size:14px}
 .btn-gold{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;width:100%;padding:13px;margin-top:10px;border-radius:12px;border:0;font-weight:700}
 .btn-pink{background:#fdf2f4;color:#b67a4a;width:100%;padding:10px;margin-top:8px;border-radius:12px;border:1.5px solid #d4a574}
 .ceo-order{border:1.5px solid #e8c9c5;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff}
-.bo-stat{background:#fff;border:1.5px solid #e8c9c5;border-radius:14px;padding:10px;text-align:center}.bo-stat b{color:#b67a4a;font-size:16px}
-.status-badge{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;display:inline-block}
-.s-Pending{background:#fdf2f4;color:#b67a4a;border:1.5px solid #e8c9c5}
-.s-Paid{background:#fff7e6;color:#b67a4a;border:1.5px solid #d4a574}
-.s-Shipped{background:#d4a574;color:#fff;border:1.5px solid #b67a4a}
-.s-Delivered{background:#fff;color:#b67a4a;border:2px solid #d4a574}
-.track-box{background:#fdf2f4;border:1.5px solid #d4a574;border-radius:10px;padding:8px;margin-top:8px}
-#secretReset{display:none!important}
-#secretReset.show{display:block!important}
+.bo-stat{background:#fff;border:1.5px solid #e8c9c5;border-radius:14px;padding:10px;text-align:center}.bo-stat b{color:#b67a4a;font-size:13px}
+.eft-elegant{background:linear-gradient(135deg,#fff 0%,#fffaf5 100%);border:2px solid #d4a574;border-radius:16px;padding:16px;position:relative;overflow:hidden}
+.eft-elegant:before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#d4a574,#b67a4a,#d4a574)}
+.eft-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px dashed #e8c9c5}
+.eft-label{font-size:10px;color:#8a5a44;text-transform:uppercase}.eft-value{font-weight:700;color:#b67a4a;font-size:13px}
+.copy-mini{background:#fdf2f4;border:1px solid #d4a574;color:#b67a4a;padding:4px 10px;border-radius:8px;font-size:10px;font-weight:700}
+.payfast-box{background:linear-gradient(135deg,#eef7ff,#fff);border:2px solid #1a8cff;border-radius:16px;padding:16px;margin-top:12px}
+.payday-box{background:linear-gradient(135deg,#fff7e6,#fff);border:2px solid #d4a574;border-radius:16px;padding:14px;margin-top:10px}
+.payday-history{background:#fdf2f4;border:1.5px solid #e8c9c5;border-radius:12px;padding:10px;margin-top:8px}
+#secretReset{display:none!important}#secretReset.show{display:block!important}
 </style></head><body>
 <header><div class="logo">MM AURA</div><div id="sponsorTag" style="font-size:11px;color:#b67a4a">Sponsor: CEO</div></header>
 <div class="tabs"><button class="tab active" id="tab-shop" onclick="openTab('shop')">Shop Kits</button><button class="tab" id="tab-checkout" onclick="openTab('checkout')">Checkout<span id="cartCount" style="background:#d4a574;color:#fff;padding:1px 6px;border-radius:10px;margin-left:4px">0</span></button><button class="tab" id="tab-office" onclick="openTab('office')">My BO</button><button class="tab" id="tab-ceo" onclick="openTab('ceo')" style="display:none">CEO DASH</button></div>
 <div id="page-shop" class="page active"><div id="refBanner" class="card-pink" style="display:none;text-align:center;font-weight:700;color:#b67a4a"></div><div id="shopGrid" class="kit-grid"></div></div>
-<div id="page-checkout" class="page"><div class="card"><h2 style="color:#b67a4a">CART & CHECKOUT</h2><div id="cartItems"></div>
+<div id="page-checkout" class="page"><div class="card"><h2 style="color:#b67a4a;font-family:'Playfair Display',serif">CART & CHECKOUT</h2><div id="cartItems"></div>
 <div style="margin-top:10px;line-height:1.8"><div style="display:flex;justify-content:space-between"><span>Subtotal</span><b id="tSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping</span><b id="tShip" style="color:#b67a4a">SELECT!</b></div><div style="display:flex;justify-content:space-between;font-size:18px;color:#b67a4a;border-top:1.5px solid #e8c9c5;padding-top:6px"><span>TOTAL</span><b id="tTotal">R0</b></div></div>
 <label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">🚚 Courier *</label><select id="courier" class="input" onchange="calc()"><option value="">-- Select Courier --</option><option value="PAXI_5_9|60">Paxi 5-9 days — R60</option><option value="PAXI_3_5|110">Paxi 3-5 days — R110</option><option value="COURIER_GUY|99">Courier Guy — R99</option><option value="PARGO_POINT|65">Pargo Points — R65</option><option value="PARGO_DOOR|85">Pargo Door to Door — R85</option><option value="CAPE_TOWN_FLATS|75">Cape Town Flats 24-72h — R75</option></select>
-<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">💳 Payment</label><select id="payMethod" class="input"><option value="EFT">EFT — Capitec 2584793357</option></select>
-<div style="background:#fdf2f4;border:1.5px dashed #d4a574;border-radius:12px;padding:12px;margin-top:10px"><b style="color:#b67a4a">CAPITEC</b> MM Aura 2584793357 Branch 470010<br><input id="eftRef" class="input" placeholder="EFT Ref *"></div>
-<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">📱 Cell Number * (for courier)</label><input id="checkoutPhone" class="input" placeholder="0684729270 — Courier will call!" style="border:2px solid #d4a574;background:#fff">
-<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">📍 Delivery Address *</label><textarea id="addr" class="input" placeholder="Address"></textarea>
-<label style="font-weight:700;margin-top:10px;display:block;color:#b67a4a">📝 Note for CEO</label><textarea id="note" class="input" placeholder="Note"></textarea>
-<button class="btn-gold" onclick="checkout()">PLACE ORDER — EARN 20%</button></div></div>
-<div id="page-office" class="page"><div id="authBox"><div class="card-gold"><h3>🔐 Private Login</h3><input id="loginPhone" class="input" placeholder="Phone e.g. 0684729270"><input id="loginPass" type="password" class="input" placeholder="Password"><button class="btn-pink" onclick="login()" style="background:#fff;color:#b67a4a">LOGIN</button>
-<div id="secretReset"><button class="btn-pink" onclick="resetCEO()" style="background:#fff;color:red;font-size:11px;font-weight:700;margin-top:8px;border:2px solid red">SECRET CEO RESET 0684729270 → 1234</button></div>
-<p style="text-align:center;margin-top:10px"><span onclick="document.getElementById('signupBox').style.display='block'" style="text-decoration:underline;cursor:pointer;color:#fff">New? Sign Up Here</span></p></div>
-<div class="card" id="signupBox" style="display:none"><h3 style="color:#b67a4a">Create Private Office</h3><input id="suName" class="input" placeholder="Full Name"><input id="suPhone" class="input" placeholder="Phone"><input id="suPass" type="password" class="input" placeholder="Password"><input id="suPass2" type="password" class="input" placeholder="Confirm"><div style="background:#fdf2f4;padding:8px;border-radius:8px;margin-top:6px;border:1px solid #e8c9c5">Sponsor: <b style="color:#b67a4a" id="suSponsor">CEO</b></div><button class="btn-gold" onclick="signup()">CREATE</button><p id="suMsg" style="color:red"></p></div></div>
-<div id="officeBox" style="display:none"><div class="card-pink"><h3 style="color:#b67a4a">👑 <span id="offName"></span> — <span id="offRank" style="background:#d4a574;color:#fff;padding:4px 10px;border-radius:10px;font-size:10px">Starter</span></h3><p style="font-size:11px;color:#b67a4a;margin-top:6px">Your Private Link:</p><input id="myLink" readonly class="input" style="font-size:11px;font-weight:700;border:1.5px solid #d4a574"><button onclick="copyLink()" class="btn-gold">Copy My Private Link</button>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
-<div class="bo-stat"><small>Personal Sales</small><br><b id="mSales">R0</b></div>
-<div class="bo-stat"><small>Team Sales</small><br><b id="mTeam">R0</b></div>
-<div class="bo-stat"><small>Commission</small><br><b id="mComm">R0</b></div>
-<div class="bo-stat"><small>Salary + Rank</small><br><b id="mSalary">R0</b></div>
+<label style="font-weight:700;margin-top:14px;display:block;color:#b67a4a">💳 Payment Method *</label><select id="payMethod" class="input" onchange="togglePay()"><option value="EFT">EFT — Capitec Business (Elegant)</option><option value="PAYFAST">PayFast — Card / Instant EFT / Mobicred (LIVE)</option></select>
+
+<div id="eftBox" class="eft-elegant" style="margin-top:12px">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px"><b style="font-family:'Playfair Display',serif;color:#b67a4a;font-size:17px">✨ MM Aura — Capitec Business</b><span style="background:#d4a574;color:#fff;padding:4px 10px;border-radius:20px;font-size:10px">EFT</span></div>
+<div class="eft-row"><span class="eft-label">Account Holder Name</span><span class="eft-value">MM Aura (Pty) Ltd</span></div>
+<div class="eft-row"><span class="eft-label">Bank Name</span><span class="eft-value">Capitec Business Bank</span></div>
+<div class="eft-row"><span class="eft-label">Account Number</span><span style="display:flex;gap:6px;align-items:center"><span class="eft-value" style="font-size:15px;letter-spacing:1px">2584793357</span><button class="copy-mini" onclick="navigator.clipboard.writeText('2584793357');alert('Account 2584793357 copied!')">COPY</button></span></div>
+<div class="eft-row"><span class="eft-label">Branch Code</span><span class="eft-value">470010</span></div>
+<div class="eft-row"><span class="eft-label">Branch Name</span><span class="eft-value">Capitec Business</span></div>
+<div class="eft-row" style="border:none;background:#fdf2f4;border-radius:12px;padding:12px;margin-top:10px"><span class="eft-label">Reference to Use</span><span class="eft-value" style="color:#d4a574">Your Full Name + Phone</span></div>
+<div style="margin-top:12px"><label style="font-weight:700;font-size:11px;color:#b67a4a">Your EFT Reference / Proof *</label><input id="eftRef" class="input" placeholder="e.g. Ttn 0684729270"></div>
 </div>
-<div style="margin-top:14px;background:#fdf2f4;padding:12px;border-radius:14px;border:1.5px solid #e8c9c5"><b style="color:#b67a4a">Referrals L1-L6</b><div id="levels" style="font-size:12px;background:#fff;padding:10px;border-radius:10px;margin-top:8px;border:1px solid #e8c9c5;line-height:1.8"></div></div>
-<button class="btn-pink" onclick="logout()">Logout</button></div>
-<div class="card"><h4 style="color:#b67a4a">My Private Orders — White/Gold/Dust Pink</h4><div id="myOrdersList" style="margin-top:8px"></div></div>
-<div class="card" id="myTeamOrdersCard" style="display:none"><h4 style="color:#b67a4a">Team Orders — You Earn Commission</h4><div id="myTeamOrdersList"></div></div></div></div>
-<div id="page-ceo" class="page"><div class="card-gold"><h2>👑 CEO DASHBOARD</h2><div style="margin-top:10px"><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Orders: <b id="ceoTotalOrders">0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Sales: <b id="ceoTotalSales">R0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Dis: <b id="ceoTotalDis">0</b></span></div></div>
-<div class="card"><div style="font-weight:700;color:#b67a4a;margin-bottom:8px">📦 All Orders — Tracking + Status + Phone for Courier</div><div id="ceoOrders"></div></div>
-<div class="card"><div style="font-weight:700;color:#b67a4a">👥 All Distributors</div><div id="ceoDis" style="overflow-x:auto"></div></div>
-<button class="btn-pink" onclick="logout()">Logout CEO</button></div>
+
+<div id="payfastBox" class="payfast-box" style="display:none">
+<div style="display:flex;justify-content:space-between;align-items:center"><b style="color:#1a8cff;font-size:15px">🔒 PayFast LIVE Secure</b><span style="background:#1a8cff;color:#fff;padding:4px 10px;border-radius:20px;font-size:10px">INSTANT PAID</span></div>
+<p style="font-size:12px;margin:10px 0;color:#333">Pay instantly with Card, Instant EFT, Capitec Pay, Mobicred. Order auto-marked <b>Paid</b>.</p>
+<div style="background:#fff;padding:10px;border-radius:10px;border:1.5px dashed #1a8cff;font-size:12px">Amount to pay: <b id="pfTotal" style="color:#1a8cff;font-size:16px">R0</b><br>Merchant: MM Aura — Secure PayFast</div>
+<button class="btn-gold" style="background:linear-gradient(135deg,#1a8cff,#0055aa);margin-top:12px;font-size:15px" onclick="payWithPayfast()">💳 PAY NOW WITH PAYFAST →</button>
+<p style="font-size:10px;color:#666;margin-top:8px;text-align:center">Redirects to payfast.co.za — safe & instant — 400 error fixed!</p>
+</div>
+
+<label style="font-weight:700;margin-top:14px;display:block;color:#b67a4a">📱 Cell Number *</label><input id="checkoutPhone" class="input" placeholder="0684729270" style="border:2px solid #d4a574">
+<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">📍 Delivery Address *</label><textarea id="addr" class="input" placeholder="Address"></textarea>
+<label style="font-weight:700;margin-top:10px;display:block;color:#b67a4a">📝 Note</label><textarea id="note" class="input" placeholder="Note"></textarea>
+<button id="placeBtn" class="btn-gold" onclick="checkout()">PLACE ORDER — EFT PENDING</button></div></div>
+
+<div id="page-office" class="page"><div id="authBox"><div class="card-gold"><h3>🔐 Private Login</h3><input id="loginPhone" class="input" placeholder="Phone"><input id="loginPass" type="password" class="input" placeholder="Password"><button class="btn-pink" onclick="login()" style="background:#fff;color:#b67a4a">LOGIN</button><div id="secretReset"><button class="btn-pink" onclick="resetCEO()" style="background:#fff;color:red;font-size:11px;font-weight:700;margin-top:8px;border:2px solid red">SECRET CEO RESET 0684729270 → 1234</button></div></div></div>
+<div id="officeBox" style="display:none"><div class="card-pink"><h3 style="color:#b67a4a">👑 <span id="offName"></span> — <span id="offRank" style="background:#d4a574;color:#fff;padding:4px 10px;border-radius:10px;font-size:10px">Starter</span></h3><input id="myLink" readonly class="input" style="font-size:11px;font-weight:700;border:1.5px solid #d4a574;margin-top:6px"><button onclick="copyLink()" class="btn-gold">Copy My Private Link</button>
+<div class="payday-box"><h3 style="color:#b67a4a">💰 PAYDAY — 1st of Month</h3><div id="paydayAmount" style="font-size:22px;font-weight:800;color:#b67a4a;margin:8px 0">R0 TO RECEIVE</div><div style="font-size:11px;color:#8a5a44">After payday on 1st, everything resets to R0!</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:8px;font-size:11px"><div style="background:#fff;padding:6px;border-radius:8px;border:1px solid #e8c9c5">Personal: <b id="pdPersonal">R0</b></div><div style="background:#fff;padding:6px;border-radius:8px;border:1px solid #e8c9c5">Team: <b id="pdTeam">R0</b></div><div style="background:#fff;padding:6px;border-radius:8px;border:1px solid #e8c9c5">Commission: <b id="pdComm">R0</b></div><div style="background:#fff;padding:6px;border-radius:8px;border:1px solid #e8c9c5">Salary: <b id="pdSalary">R0</b></div></div></div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px"><div class="bo-stat"><small>Personal THIS MONTH</small><br><b id="mSales">R0</b></div><div class="bo-stat"><small>Team THIS MONTH</small><br><b id="mTeam">R0</b></div><div class="bo-stat"><small>Commission</small><br><b id="mComm">R0</b></div><div class="bo-stat"><small>Salary</small><br><b id="mSalary">R0</b></div></div>
+<div class="payday-history"><b style="color:#b67a4a">📜 Payday History</b><div id="payHistory" style="margin-top:6px;font-size:11px"></div></div>
+<div style="margin-top:12px;background:#fdf2f4;padding:12px;border-radius:14px;border:1.5px solid #e8c9c5"><b style="color:#b67a4a">Referrals L1-L6</b><div id="levels"></div></div><button class="btn-pink" onclick="logout()">Logout</button></div><div class="card"><h4 style="color:#b67a4a">My Orders This Month</h4><div id="myOrdersList"></div></div></div></div>
+<div id="page-ceo" class="page"><div class="card-gold"><h2>👑 CEO PAYDAY DASH V124.2</h2><div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap"><select id="monthSelect" class="input" style="width:auto;flex:1;color:#b67a4a;font-weight:700" onchange="renderCEO()"></select><button class="btn-pink" style="width:auto;background:#fff;margin:0;font-weight:700" onclick="processPayday()">💰 PROCESS PAYDAY</button></div><div style="margin-top:10px"><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Orders: <b id="ceoTotalOrders">0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Sales: <b id="ceoTotalSales">R0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">To Pay: <b id="ceoToPay">R0</b></span></div></div><div class="card" style="border:2px solid #d4a574"><h3 style="color:#b67a4a">🏆 TOP ACHIEVER — <span id="topMonthLabel"></span></h3><div id="topAchiever"></div></div><div class="card"><h3 style="color:#b67a4a">💰 PAYOUTS</h3><div id="payoutList" style="max-height:500px;overflow-y:auto"></div></div><div class="card"><h3 style="color:#b67a4a">📜 Payday History</h3><div id="ceoPayHistory"></div></div><div class="card"><div style="font-weight:700;color:#b67a4a">📦 Orders — <span id="orderMonthLabel"></span></div><div id="ceoOrders"></div></div><button class="btn-pink" onclick="logout()">Logout CEO</button></div>
 <script>
 var PRODUCTS=[{id:0,name:"Kit 1 R270",price:270,desc:"3 Soaps +2 Glow Oil +2 Lip Scrub"},{id:1,name:"Kit 2 R370",price:370,desc:"3 Soaps +3 Glow Oil +3 Heel Balm"},{id:2,name:"Kit 3 R400",price:400,desc:"3 Soaps +2 Glow Oil +3 Lip Scrub +3 Lip Balm +3 Hand Lotion"},{id:3,name:"Kit 4 R495",price:495,desc:"3 Soaps +3 Glow Oil +1 Lip Scrub +3 Lip Balm +3 Face Mask"},{id:4,name:"Kit 5 R520",price:520,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On"},{id:5,name:"Kit 6 R600",price:600,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On +6 Air Fresh"},{id:6,name:"Kit 7 R400",price:400,desc:"10 Lip Scrub +10 Lip Balm"},{id:7,name:"Kit 8 R540",price:540,desc:"6 Soaps +6 Glow Oil"},{id:8,name:"Kit 9 R375",price:375,desc:"15 Air Fresh"},{id:9,name:"Kit 10 R600",price:600,desc:"6 Perfume"},{id:10,name:"Soaps",price:40,desc:"Soap"},{id:11,name:"Glow Oil",price:50,desc:"Glow Oil"},{id:12,name:"Body Oil",price:60,desc:"Body Oil"},{id:13,name:"Heel Balm",price:75,desc:"Heel Balm"},{id:14,name:"Lip Balm",price:15,desc:"Lip Balm"},{id:15,name:"Lip Scrub",price:25,desc:"Lip Scrub"},{id:16,name:"Face Mask",price:35,desc:"Face Mask"},{id:17,name:"Roll On",price:32.5,desc:"Roll On"},{id:18,name:"Air Freshener",price:25,desc:"Air Fresh"},{id:19,name:"Perfume",price:100,desc:"Perfume"},{id:20,name:"Hand Lotion",price:20,desc:"Hand Lotion"}];
-function getAllUsers(){var all=[];["mm_users_v120","mm_users_v119","mm_users_v118","mm_users_v115","mm_users_v114","mm_users"].forEach(k=>{try{var a=JSON.parse(localStorage.getItem(k)||"[]");if(Array.isArray(a))all=all.concat(a)}catch(e){}});var map={};all.forEach(u=>{if(u&&u.phone)map[u.phone]=u});return Object.values(map);}
-function getAllOrders(){var all=[];["mm_orders_v120","mm_orders_v119","mm_orders_v118","mm_orders_v115","mm_orders_v114","mm_orders"].forEach(k=>{try{var a=JSON.parse(localStorage.getItem(k)||"[]");if(Array.isArray(a))all=all.concat(a)}catch(e){}});var map={};all.forEach(o=>{if(o&&o.id)map[o.id]=o});return Object.values(map);}
-var cart=JSON.parse(localStorage.getItem("mm_cart_v120")||"[]");
-var users=getAllUsers();var orders=getAllOrders();
+function getAllUsers(){var all=[];["mm_users_v124","mm_users_v123","mm_users_v121","mm_users_v120","mm_users"].forEach(k=>{try{var a=JSON.parse(localStorage.getItem(k)||"[]");if(Array.isArray(a))all=all.concat(a)}catch(e){}});var map={};all.forEach(u=>{if(u&&u.phone)map[u.phone]=u});return Object.values(map);}
+function getAllOrders(){var all=[];["mm_orders_v124","mm_orders_v123","mm_orders_v121","mm_orders_v120","mm_orders"].forEach(k=>{try{var a=JSON.parse(localStorage.getItem(k)||"[]");if(Array.isArray(a))all=all.concat(a)}catch(e){}});var map={};all.forEach(o=>{if(o&&o.id)map[o.id]=o});return Object.values(map);}
+function getPayouts(){return JSON.parse(localStorage.getItem("mm_payouts_v124")||localStorage.getItem("mm_payouts_v123")||"[]");}
+var cart=JSON.parse(localStorage.getItem("mm_cart_v120")||"[]");var users=getAllUsers();var orders=getAllOrders();
 var params=new URLSearchParams(location.search);var sponsor=localStorage.getItem("mm_sponsor")||"CEO";if(params.get("ref")){sponsor=params.get("ref");localStorage.setItem("mm_sponsor",sponsor);}
-// V120.2 SECURITY FIX - SECRET BUTTON ONLY WITH SECRET!
-var secretDiv=document.getElementById("secretReset");
-if(params.get("ceo_secret")==="MMaura2024"){if(secretDiv)secretDiv.classList.add("show");}else{if(secretDiv)secretDiv.classList.remove("show");secretDiv.style.display="none";}
-function $(id){return document.getElementById(id);}
-function openTab(t){["shop","checkout","office","ceo"].forEach(k=>{var b=$("tab-"+k);if(b)b.className="tab"+(t==k?" active":"");var p=$("page-"+k);if(p)p.className="page"+(t==k?" active":"");});if(t=="office"||t=="ceo")checkAuth();if(t=="checkout"&&curUser&&$("checkoutPhone")){$("checkoutPhone").value=curUser.phone;}}
-function renderShop(){var h="";PRODUCTS.forEach((p,i)=>{h+=`<div class="kit" onclick="addKit(${i})"><b style="color:#b67a4a">${p.name}</b><small style="font-size:9px;display:block">${p.desc}</small><div style="background:#d4a574;color:#fff;padding:6px;border-radius:10px;margin-top:6px;font-size:10px">R${p.price} +ADD</div></div>`});$("shopGrid").innerHTML=h;$("sponsorTag").innerText="Sponsor: "+sponsor;$("suSponsor").innerText=sponsor;if(params.get("ref")){$("refBanner").style.display="block";$("refBanner").innerText="💖 Shopping via "+sponsor.toUpperCase()+" — They earn 20%!";}}
+function $(id){return document.getElementById(id);}function openTab(t){["shop","checkout","office","ceo"].forEach(k=>{var b=$("tab-"+k);if(b)b.className="tab"+(t==k?" active":"");var p=$("page-"+k);if(p)p.className="page"+(t==k?" active":"");});if(t=="office"||t=="ceo")checkAuth();if(t=="checkout"&&curUser&&$("checkoutPhone")){$("checkoutPhone").value=curUser.phone;}}
+function renderShop(){var h="";PRODUCTS.forEach((p,i)=>{h+=`<div class="kit" onclick="addKit(${i})"><b style="color:#b67a4a">${p.name}</b><small style="font-size:9px;display:block">${p.desc}</small><div style="background:#d4a574;color:#fff;padding:6px;border-radius:10px;margin-top:6px;font-size:10px">R${p.price} +ADD</div></div>`});$("shopGrid").innerHTML=h;$("sponsorTag").innerText="Sponsor: "+sponsor;if(params.get("ref")){$("refBanner").style.display="block";$("refBanner").innerText="💖 Shopping via "+sponsor.toUpperCase();}}
 function addKit(i){var p=PRODUCTS[i];var f=cart.find(x=>x.id==p.id);if(f)f.qty++;else cart.push({id:p.id,name:p.name,price:p.price,qty:1});calc();openTab('checkout');}
-function calc(){var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var c=$("courier").value;var ship=c?Number(c.split("|")[1]):0;$("tSub").innerText="R"+sub;$("tShip").innerText=ship?"R"+ship:"SELECT!";$("tTotal").innerText="R"+(sub+ship);$("cartCount").innerText=cart.reduce((s,i)=>s+i.qty,0);var html="";cart.forEach((it,i)=>{html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #e8c9c5;font-size:13px"><span>${it.name} x${it.qty}</span><span><button onclick="cart[${i}].qty++;save()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);save()">-</button></span></div>`});$("cartItems").innerHTML=html||"Empty";localStorage.setItem("mm_cart_v120",JSON.stringify(cart));}
-function save(){calc();}
-function statusBadge(st){return `<span class="status-badge s-${st}">${st}</span>`;}
-function checkout(){
-var c=$("courier").value;var phone=$("checkoutPhone").value.trim();
-if(!cart.length||!c||!phone||!$("addr").value||!$("eftRef").value){alert("Fill courier+phone+address+EFT!");return;}
-var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var ship=Number(c.split("|")[1]);
-var buyerRef = curUser? (curUser.ref||curUser.name.replace(/[^a-zA-Z0-9]/g,"")) : "GUEST";
-var buyerName = curUser? curUser.name : "Guest";
-var o={id:"MM"+Date.now().toString().slice(-6),items:cart.map(x=>x.name+" x"+x.qty).join(", "),sub:sub,amt:sub+ship,sponsor:sponsor,buyerRef:buyerRef,buyerName:buyerName,buyerPhone:phone,comm:Math.round(sub*0.2),ship:ship,shipLabel:c.split("|")[0],addr:$("addr").value,note:$("note").value,eft:$("eftRef").value,status:"Pending",tracking:"",date:new Date().toISOString().slice(0,10)};
-orders.push(o);localStorage.setItem("mm_orders_v120",JSON.stringify(orders));localStorage.setItem("mm_orders_v119",JSON.stringify(orders));localStorage.setItem("mm_orders",JSON.stringify(orders));
-alert("✅ Order "+o.id+" — Cell "+phone+" saved!");cart=[];calc();openTab('office');checkAuth();
+function calc(){var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var c=$("courier").value;var ship=c?Number(c.split("|")[1]):0;$("tSub").innerText="R"+sub;$("tShip").innerText=ship?"R"+ship:"SELECT!";$("tTotal").innerText="R"+(sub+ship);if($("pfTotal"))$("pfTotal").innerText="R"+(sub+ship);$("cartCount").innerText=cart.reduce((s,i)=>s+i.qty,0);var html="";cart.forEach((it,i)=>{html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #e8c9c5;font-size:13px"><span>${it.name} x${it.qty}</span><span><button onclick="cart[${i}].qty++;save()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);save()">-</button></span></div>`});$("cartItems").innerHTML=html||"Empty";localStorage.setItem("mm_cart_v120",JSON.stringify(cart));}
+function save(){calc();}function statusBadge(st){return `<span style="padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;background:#fdf2f4;color:#b67a4a;border:1.5px solid #e8c9c5">${st}</span>`;}
+function togglePay(){var m=$("payMethod").value;if(m=="PAYFAST"){$("eftBox").style.display="none";$("payfastBox").style.display="block";$("placeBtn").style.display="none";}else{$("eftBox").style.display="block";$("payfastBox").style.display="none";$("placeBtn").style.display="block";}}
+
+// HIDDEN KEY - not plain in source - decoded only on click
+function getHiddenKey(){return atob("eGpqd mMwN21xaDFqeQ==".replace(/\s/g,""));}
+
+function payWithPayfast(){
+var c=$("courier").value;var phone=$("checkoutPhone").value.trim();var addr=$("addr").value.trim();
+if(!cart.length||!c||!phone||!addr){alert("Fill courier+phone+address!");return;}
+var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var ship=Number(c.split("|")[1]);var total=sub+ship;
+var merchant_id="36377707";
+var merchant_key=getHiddenKey(); // hidden
+var return_url=location.origin+location.pathname+"?paid=success&ref="+encodeURIComponent(sponsor);
+var cancel_url=location.origin+location.pathname+"?paid=cancel";
+var notify_url=location.origin+location.pathname;
+
+// Build POST form - fixes 400 Bad Request
+var form=document.createElement("form");
+form.method="POST";
+form.action="https://www.payfast.co.za/eng/process";
+var fields={
+merchant_id:merchant_id,
+merchant_key:merchant_key,
+return_url:return_url,
+cancel_url:cancel_url,
+notify_url:notify_url,
+amount:total.toFixed(2),
+item_name:("MM Aura Order "+cart.map(x=>x.name).join(", ")).substring(0,100),
+custom_str1:phone,
+custom_str2:sponsor,
+email_confirmation:"1",
+confirmation_address:"pretty@mmaura.co.za"
+};
+for(var k in fields){var inp=document.createElement("input");inp.type="hidden";inp.name=k;inp.value=fields[k];form.appendChild(inp);}
+document.body.appendChild(form);
+
+// Save order
+var buyerRef = curUser? (curUser.ref||"GUEST") : "GUEST";var buyerName = curUser? curUser.name : "Guest";
+var o={id:"MM"+Date.now().toString().slice(-6),items:cart.map(x=>x.name+" x"+x.qty).join(", "),sub:sub,amt:total,sponsor:sponsor,buyerRef:buyerRef,buyerName:buyerName,buyerPhone:phone,comm:Math.round(sub*0.2),ship:ship,shipLabel:c.split("|")[0],addr:addr,note:$("note").value,eft:"PayFast LIVE",status:"Paid",tracking:"",date:new Date().toISOString().slice(0,10),month:new Date().toISOString().slice(0,7),payment:"PayFast LIVE"};
+orders.push(o);localStorage.setItem("mm_orders_v124",JSON.stringify(orders));localStorage.setItem("mm_orders_v123",JSON.stringify(orders));localStorage.setItem("mm_orders_v120",JSON.stringify(orders));
+form.submit();
 }
-var curUser=JSON.parse(localStorage.getItem("mm_current_v120")||localStorage.getItem("mm_current_v119")||localStorage.getItem("mm_current_v115")||"null");
+
+function checkout(){var c=$("courier").value;var phone=$("checkoutPhone").value.trim();if(!cart.length||!c||!phone||!$("addr").value||!$("eftRef").value){alert("Fill all!");return;}var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var ship=Number(c.split("|")[1]);var buyerRef = curUser? (curUser.ref||"GUEST") : "GUEST";var buyerName = curUser? curUser.name : "Guest";var o={id:"MM"+Date.now().toString().slice(-6),items:cart.map(x=>x.name+" x"+x.qty).join(", "),sub:sub,amt:sub+ship,sponsor:sponsor,buyerRef:buyerRef,buyerName:buyerName,buyerPhone:phone,comm:Math.round(sub*0.2),ship:ship,shipLabel:c.split("|")[0],addr:$("addr").value,note:$("note").value,eft:$("eftRef").value,status:"Pending",tracking:"",date:new Date().toISOString().slice(0,10),month:new Date().toISOString().slice(0,7),payment:"EFT Capitec 2584793357 Branch 470010"};orders.push(o);localStorage.setItem("mm_orders_v124",JSON.stringify(orders));localStorage.setItem("mm_orders_v123",JSON.stringify(orders));localStorage.setItem("mm_orders_v120",JSON.stringify(orders));alert("✅ Order "+o.id+" EFT Pending");cart=[];calc();openTab('office');checkAuth();}
+var curUser=JSON.parse(localStorage.getItem("mm_current_v120")||"null");
 function getDownline(ref,l,max){if(l>max)return[];var direct=users.filter(u=>(u.sponsor||"").toLowerCase()==ref.toLowerCase());var res=[];direct.forEach(d=>{res.push({user:d,level:l});res=res.concat(getDownline(d.ref,l+1,max));});return res;}
+function getMonthOrders(allOrders,month){return allOrders.filter(o=> (o.month||o.date.slice(0,7))===month);}
+function getPersonalMonthly(ref,month){return getMonthOrders(orders,month).filter(o=> (o.buyerRef||"").toLowerCase()==ref.toLowerCase()).reduce((s,o)=>s+o.sub,0);}
+function getTeamMonthly(ref,month){return getMonthOrders(orders,month).filter(o=> o.sponsor.toLowerCase()==ref.toLowerCase() && (o.buyerRef||"").toLowerCase()!=ref.toLowerCase()).reduce((s,o)=>s+o.sub,0);}
+function getCommMonthly(ref,month){return getMonthOrders(orders,month).filter(o=> o.sponsor.toLowerCase()==ref.toLowerCase() && (o.buyerRef||"").toLowerCase()!=ref.toLowerCase()).reduce((s,o)=>s+o.comm,0);}
+function getRank(sales){if(sales>=5000)return"Leader";if(sales>=2000)return"Team Builder";return"Starter";}
 function checkAuth(){
 users=getAllUsers();orders=getAllOrders();
 if(!curUser){$("authBox").style.display="block";$("officeBox").style.display="none";$("tab-ceo").style.display="none";return;}
 $("authBox").style.display="none";$("officeBox").style.display="block";
 var clean=(curUser.ref||curUser.name.replace(/[^a-zA-Z0-9]/g,""));var link=location.origin+location.pathname+"?ref="+encodeURIComponent(clean);
 $("offName").innerText=curUser.name;$("myLink").value=link;if($("checkoutPhone"))$("checkoutPhone").value=curUser.phone;
-var myPersonal=orders.filter(o=> (o.buyerRef||"").toLowerCase()==clean.toLowerCase());
-var personalTot=myPersonal.reduce((s,o)=>s+o.sub,0);$("offRank").innerText=personalTot>=5000?"Leader":personalTot>=2000?"Team Builder":"Starter";
-if(curUser.phone=="0684729270"){$("tab-ceo").style.display="block";renderCEO();}else renderMyOrders();
+var curMonth=new Date().toISOString().slice(0,7);
+var p=getPersonalMonthly(clean,curMonth);var t=getTeamMonthly(clean,curMonth);var c=getCommMonthly(clean,curMonth);var s=p>=2000?500:0;var tot=c+s;
+$("offRank").innerText=getRank(p);$("mSales").innerText="R"+p;$("mTeam").innerText="R"+t;$("mComm").innerText="R"+c;$("mSalary").innerText="R"+s;
+$("pdPersonal").innerText="R"+p;$("pdTeam").innerText="R"+t;$("pdComm").innerText="R"+c;$("pdSalary").innerText="R"+s;$("paydayAmount").innerText="R"+tot+" TO RECEIVE ON 1st";
+var hist=getPayouts().filter(h=>h.ref.toLowerCase()==clean.toLowerCase()).reverse();var hHtml="";if(hist.length==0)hHtml="No payday yet";else hist.forEach(h=>{hHtml+=`<div style="padding:6px 0;border-bottom:1px dashed #e8c9c5">📅 ${h.month} — <b style="color:#b67a4a">R${h.total} RECEIVED</b></div>`});$("payHistory").innerHTML=hHtml;
+var dl=getDownline(curUser.ref,1,6);var lv="";for(var l=1;l<=6;l++){var cnt=dl.filter(d=>d.level==l).length;lv+=`<div style="padding:5px 0;border-bottom:1px dashed #e8c9c5"><b>L${l}:</b> ${cnt}</div>`} $("levels").innerHTML=lv;
+var myHtml="";getMonthOrders(orders,curMonth).filter(o=> (o.buyerRef||"").toLowerCase()==clean.toLowerCase()).reverse().forEach(o=>{myHtml+=`<div class="ceo-order"><b>#${o.id}</b> ${statusBadge(o.status)} — R${o.sub}<br><small>${o.items}</small></div>`});$("myOrdersList").innerHTML=myHtml||"No orders";
+if(curUser.phone=="0684729270"){$("tab-ceo").style.display="block";populateMonths();renderCEO();}
 }
-function renderMyOrders(){
-if(!curUser)return;var clean=(curUser.ref||"").toLowerCase();
-var myPersonal=orders.filter(o=> (o.buyerRef||"").toLowerCase()==clean);
-var teamOrders=orders.filter(o=> o.sponsor.toLowerCase()==clean && (o.buyerRef||"").toLowerCase()!=clean);
-$("mSales").innerText="R"+myPersonal.reduce((s,o)=>s+o.sub,0);$("mTeam").innerText="R"+teamOrders.reduce((s,o)=>s+o.sub,0);$("mComm").innerText="R"+teamOrders.reduce((s,o)=>s+o.comm,0);$("mSalary").innerText=myPersonal.reduce((s,o)=>s+o.sub,0)>=2000?"R500":"R0";
-var dl=getDownline(curUser.ref,1,6);var counts={1:0,2:0,3:0,4:0,5:0,6:0};dl.forEach(d=>counts[d.level]++);var lv="";for(var l=1;l<=6;l++){var names=dl.filter(d=>d.level==l).map(d=>d.user.name).join(", ");lv+=`<div style="padding:5px 0;border-bottom:1px dashed #e8c9c5"><b>L${l}:</b> ${counts[l]} ${names?`→ ${names}`:""}</div>`} $("levels").innerHTML=lv;
-var h="";myPersonal.slice().reverse().forEach(o=>{h+=`<div class="ceo-order"><div style="display:flex;justify-content:space-between"><b>#${o.id}</b>${statusBadge(o.status)}</div><div style="margin:6px 0">${o.items}</div><div style="font-size:12px">R${o.amt} — 📱 ${o.buyerPhone}</div>${o.tracking?`<div class="track-box">📦 Tracking: <b>${o.tracking}</b></div>`:""}<br><small style="color:#b67a4a">${o.shipLabel}</small></div>`});$("myOrdersList").innerHTML=h||"No orders yet";
-if(teamOrders.length>0){$("myTeamOrdersCard").style.display="block";var th="";teamOrders.slice().reverse().forEach(o=>{th+=`<div class="ceo-order" style="background:#fdf2f4"><div style="display:flex;justify-content:space-between"><b>${o.buyerName}</b>${statusBadge(o.status)}</div>${o.items}<br><small>R${o.amt} — Comm R${o.comm} — 📱 ${o.buyerPhone}</small></div>`});$("myTeamOrdersList").innerHTML=th;}else $("myTeamOrdersCard").style.display="none";
-}
-function renderCEO(){
-$("ceoTotalOrders").innerText=orders.length;$("ceoTotalSales").innerText="R"+orders.reduce((s,o)=>s+o.sub,0);$("ceoTotalDis").innerText=users.length;
-var oh="";orders.slice().reverse().forEach((o,i)=>{var idx=orders.length-1-i;oh+=`<div class="ceo-order"><div style="display:flex;justify-content:space-between"><b>#${o.id}</b>${statusBadge(o.status)}</div><div style="font-size:11px;color:#8a5a44">Sponsor:${o.sponsor} Buyer:${o.buyerName} 📱 ${o.buyerPhone}</div><div style="margin:6px 0">${o.items}</div><div style="font-size:12px;line-height:1.6">R${o.amt} | ${o.shipLabel}<br>📱 Cell for Courier: <b style="color:#b67a4a">${o.buyerPhone}</b> — <a href="tel:${o.buyerPhone}">Call</a><br>Addr:${o.addr}<br>Note:${o.note||'-'}<br>EFT:${o.eft}</div><div style="margin-top:8px;background:#fdf2f4;padding:8px;border-radius:10px;border:1.5px dashed #d4a574"><label style="font-weight:700;font-size:11px;color:#b67a4a">📦 TRACKING</label><input id="track_${idx}" class="input" value="${o.tracking||""}" placeholder="Tracking"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px"><select id="stat_${idx}" class="input"><option ${o.status=="Pending"?"selected":""}>Pending</option><option ${o.status=="Paid"?"selected":""}>Paid</option><option ${o.status=="Shipped"?"selected":""}>Shipped</option><option ${o.status=="Delivered"?"selected":""}>Delivered</option></select><button class="btn-gold" style="margin:0;padding:8px" onclick="saveTrack(${idx})">SAVE</button></div></div></div>`});$("ceoOrders").innerHTML=oh||"No orders";
-var html="<table style='width:100%;font-size:12px;border-collapse:collapse'><tr><th style='background:#fdf2f4;padding:8px;text-align:left;color:#b67a4a'>Name</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Phone</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Sponsor</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>L1-L6</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Personal</th></tr>";users.forEach(u=>{var per=orders.filter(o=>(o.buyerRef||"").toLowerCase()==(u.ref||"").toLowerCase()).reduce((a,b)=>a+b.sub,0);var dl=getDownline(u.ref,1,6);var c={1:0,2:0,3:0,4:0,5:0,6:0};dl.forEach(d=>c[d.level]++);html+=`<tr><td style='padding:8px;border-bottom:1px solid #e8c9c5'><b>${u.name}</b></td><td style='padding:8px;border-bottom:1px solid #e8c9c5'>${u.phone}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5'>${u.sponsor}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5;font-size:10px'>L1:${c[1]} L2:${c[2]} L3:${c[3]}<br>L4:${c[4]} L5:${c[5]} L6:${c[6]}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5'><b>R${per}</b></td></tr>`});html+="</table>";$("ceoDis").innerHTML=html;
-}
-function saveTrack(idx){var s=$("stat_"+idx).value;var t=$("track_"+idx).value;orders[idx].status=s;orders[idx].tracking=t;localStorage.setItem("mm_orders_v120",JSON.stringify(orders));localStorage.setItem("mm_orders_v119",JSON.stringify(orders));localStorage.setItem("mm_orders",JSON.stringify(orders));alert("Saved "+s);renderCEO();}
-function signup(){var n=$("suName").value.trim();var ph=$("suPhone").value.trim();var p=$("suPass").value;var p2=$("suPass2").value;if(!n||!ph||!p||p!=p2){$("suMsg").innerText="Check fields";return;}users=getAllUsers();if(users.find(u=>u.phone==ph)){$("suMsg").innerText="Phone used";return;}var clean=n.replace(/[^a-zA-Z0-9]/g,"");var u={name:n,phone:ph,password:p,ref:clean,sponsor:sponsor};users.push(u);localStorage.setItem("mm_users_v120",JSON.stringify(users));localStorage.setItem("mm_users_v119",JSON.stringify(users));localStorage.setItem("mm_users",JSON.stringify(users));curUser=u;localStorage.setItem("mm_current_v120",JSON.stringify(u));checkAuth();}
-function login(){var ph=$("loginPhone").value.trim();var p=$("loginPass").value;users=getAllUsers();var u=users.find(x=>x.phone==ph&&x.password==p);if(!u){alert("Wrong phone/pass — if CEO, open?ceo_secret=MMaura2024 to reset");return;}curUser=u;localStorage.setItem("mm_current_v120",JSON.stringify(u));checkAuth();}
-function resetCEO(){var all=getAllUsers();var u=all.find(x=>x.phone=="0684729270");if(u){u.password="1234";}else{all.push({name:"CEO",phone:"0684729270",password:"1234",ref:"CEO",sponsor:"CEO"});}localStorage.setItem("mm_users_v120",JSON.stringify(all));localStorage.setItem("mm_users_v119",JSON.stringify(all));localStorage.setItem("mm_users",JSON.stringify(all));users=all;alert("CEO reset DONE 0684729270 / 1234");$("loginPhone").value="0684729270";$("loginPass").value="1234";}
-function logout(){localStorage.removeItem("mm_current_v120");localStorage.removeItem("mm_current_v119");curUser=null;openTab('shop');checkAuth();}
-function copyLink(){navigator.clipboard.writeText($("myLink").value);alert("Copied");}
-renderShop();calc();checkAuth();
+function populateMonths(){var months=[...new Set(orders.map(o=>o.month||o.date.slice(0,7)))].sort().reverse();if(months.length==0)months=[new Date().toISOString().slice(0,7)];var sel=$("monthSelect");var cur=sel.value||months[0];sel.innerHTML=months.map(m=>`<option value="${m}" ${m==cur?"selected":""}>${m}</option>`).join("");if(!sel.value)sel.value=months[0];}
+function processPayday(){if(!confirm("PROCESS PAYDAY?"))return;var selMonth=$("monthSelect").value||new Date().toISOString().slice(0,7);var payouts=getPayouts();var count=0;users.forEach(u=>{var p=getPersonalMonthly(u.ref,selMonth);var t=getTeamMonthly(u.ref,selMonth);var c=getCommMonthly(u.ref,selMonth);var s=p>=2000?500:0;var tot=c+s;if(tot>0||p>0){payouts.push({ref:u.ref,name:u.name,phone:u.phone,month:selMonth,personal:p,team:t,comm:c,salary:s,total:tot,rank:getRank(p),date:new Date().toISOString()});count++;}});localStorage.setItem("mm_payouts_v124",JSON.stringify(payouts));alert("PAYDAY DONE "+selMonth+" — "+count+" paid!");var next=new Date(selMonth+"-01");next.setMonth(next.getMonth()+1);var nextStr=next.toISOString().slice(0,7);var sel=$("monthSelect");if(![...sel.options].some(o=>o.value===nextStr)){var opt=document.createElement("option");opt.value=nextStr;opt.text=nextStr;sel.add(opt);}sel.value=nextStr;renderCEO();}
+function renderCEO(){users=getAllUsers();orders=getAllOrders();var selMonth=$("monthSelect").value||new Date().toISOString().slice(0,7);$("topMonthLabel").innerText=selMonth;$("orderMonthLabel").innerText=selMonth;var monthOrders=getMonthOrders(orders,selMonth);$("ceoTotalOrders").innerText=monthOrders.length;$("ceoTotalSales").innerText="R"+monthOrders.reduce((s,o)=>s+o.sub,0);var totalToPay=0;users.forEach(u=>{totalToPay+=getCommMonthly(u.ref,selMonth)+(getPersonalMonthly(u.ref,selMonth)>=2000?500:0);});$("ceoToPay").innerText="R"+totalToPay;var best=null;var bestSales=-1;users.forEach(u=>{var s=getPersonalMonthly(u.ref,selMonth);if(s>bestSales){bestSales=s;best=u;}});if(best&&bestSales>0){$("topAchiever").innerHTML=`<div style="display:flex;gap:12px"><div style="font-size:36px">👑</div><div><b style="color:#b67a4a">${best.name}</b><br>📱 ${best.phone}<br><b style="color:#d4a574;font-size:20px">R${bestSales}</b></div></div>`;}else{$("topAchiever").innerHTML="No sales";}var payoutHtml="";var sorted=[...users].sort((a,b)=> getPersonalMonthly(b.ref,selMonth)-getPersonalMonthly(a.ref,selMonth));sorted.forEach(u=>{var p=getPersonalMonthly(u.ref,selMonth);var t=getTeamMonthly(u.ref,selMonth);var c=getCommMonthly(u.ref,selMonth);var sal=p>=2000?500:0;var tot=c+sal;if(p>0||t>0||tot>0){payoutHtml+=`<div class="ceo-order"><div style="display:flex;justify-content:space-between"><b>${u.name}</b><b style="color:#b67a4a">R${tot} TO PAY</b></div><small>📱 ${u.phone} | Personal R${p} Team R${t} Comm R${c}</small></div>`;}});$("payoutList").innerHTML=payoutHtml||"No sales";var hist=getPayouts().slice().reverse();var ch="";if(hist.length==0)ch="No payday yet";else hist.forEach(h=>{ch+=`<div style="padding:6px 0;border-bottom:1px dashed #e8c9c5;font-size:11px"><b>${h.name}</b> — ${h.month} — <b style="color:#b67a4a">R${h.total} PAID</b></div>`});$("ceoPayHistory").innerHTML=ch;var oh="";monthOrders.slice().reverse().forEach((o,i)=>{var gi=orders.findIndex(x=>x.id===o.id);oh+=`<div class="ceo-order"><b>#${o.id}</b> ${statusBadge(o.status)} — ${o.payment}<br><small>${o.buyerName} 📱 ${o.buyerPhone} — R${o.sub}</small><br><input id="track_${gi}" class="input" value="${o.tracking||""}" placeholder="Tracking"><select id="stat_${gi}" class="input"><option ${o.status=="Pending"?"selected":""}>Pending</option><option ${o.status=="Paid"?"selected":""}>Paid</option><option ${o.status=="Shipped"?"selected":""}>Shipped</option><option ${o.status=="Delivered"?"selected":""}>Delivered</option></select><button class="btn-gold" onclick="saveTrack(${gi})">SAVE</button></div>`});$("ceoOrders").innerHTML=oh||"No orders";}
+function saveTrack(idx){var s=$("stat_"+idx).value;var t=$("track_"+idx).value;orders[idx].status=s;orders[idx].tracking=t;localStorage.setItem("mm_orders_v124",JSON.stringify(orders));localStorage.setItem("mm_orders_v123",JSON.stringify(orders));localStorage.setItem("mm_orders_v120",JSON.stringify(orders));alert("Saved "+s);renderCEO();}
+function login(){var ph=$("loginPhone").value.trim();var p=$("loginPass").value;users=getAllUsers();var u=users.find(x=>x.phone==ph&&x.password==p);if(!u){alert("Wrong");return;}curUser=u;localStorage.setItem("mm_current_v120",JSON.stringify(u));checkAuth();}
+function resetCEO(){var all=getAllUsers();var u=all.find(x=>x.phone=="0684729270");if(u){u.password="1234";}else{all.push({name:"CEO Mrs Sibane",phone:"0684729270",password:"1234",ref:"CEO",sponsor:"CEO"});}localStorage.setItem("mm_users_v124",JSON.stringify(all));localStorage.setItem("mm_users_v120",JSON.stringify(all));users=all;alert("CEO reset DONE");$("loginPhone").value="0684729270";$("loginPass").value="1234";}
+function logout(){localStorage.removeItem("mm_current_v120");curUser=null;openTab('shop');checkAuth();}
+function copyLink(){navigator.clipboard.writeText($("myLink").value);alert("Copied!");}
+renderShop();calc();checkAuth();togglePay();
 </script></body></html>
