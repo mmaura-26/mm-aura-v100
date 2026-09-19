@@ -1,123 +1,112 @@
-<!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MM AURA V114 CEO PINK GOLD</title>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-<style>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MM AURA V120 FINAL</title><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet"><style>
 *{box-sizing:border-box;margin:0;padding:0;font-family:'Outfit',sans-serif}
 body{background:#fff7f9}
-header{background:#fff;border-bottom:3px solid #d4a574;padding:10px 14px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
-.logo{font-family:'Playfair Display';color:#b67a4a;font-size:20px}.logo span{color:#d4a574}
-.tabs{display:flex;background:#fff;padding:6px 8px;gap:6px;position:sticky;top:54px;z-index:19;border-bottom:1px solid #f3d9e0}
-.tab{flex:1;padding:10px;border-radius:20px;background:#fff0f3;color:#b67a4a;text-align:center;font-size:11px;font-weight:700;border:1.5px solid #f3d9e0}
-.tab.active{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;border-color:#d4a574}
-.page{display:none;padding:12px}.page.active{display:block}
-.card{background:#fff;border-radius:18px;padding:16px;margin-bottom:12px;border:1px solid #f9dbe3;box-shadow:0 4px 12px rgba(212,165,116,.15)}
-.card-pink{background:linear-gradient(135deg,#fff0f3,#ffe4e9);border:2px solid #d4a574;border-radius:18px;padding:16px;margin-bottom:12px}
+header{background:#fff;border-bottom:2.5px solid #d4a574;padding:10px 12px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:20}
+.logo{color:#b67a4a;font-weight:800}
+.tabs{display:flex;background:#fff;padding:6px;gap:6px;position:sticky;top:45px;z-index:19;border-bottom:1.5px solid #e8c9c5}
+.tab{flex:1;padding:10px;border-radius:20px;background:#fdf2f4;color:#b67a4a;text-align:center;font-size:11px;font-weight:700;border:1.5px solid #e8c9c5}
+.tab.active{background:#d4a574;color:#fff;border-color:#d4a574}
+.page{display:none;padding:10px}.page.active{display:block}
+.card{background:#fff;border-radius:18px;padding:14px;margin-bottom:12px;border:1.5px solid #e8c9c5;box-shadow:0 2px 8px rgba(212,165,116,.12)}
+.card-pink{background:#fff;border:2px solid #d4a574;border-radius:18px;padding:16px;margin-bottom:12px;box-shadow:0 4px 12px rgba(212,165,116,.15)}
 .card-gold{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;border-radius:18px;padding:16px;margin-bottom:12px}
-.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.kit{border-radius:16px;padding:12px;text-align:center;background:#fff;border:1.5px solid #f3d9e0}
-.input,select,textarea{width:100%;padding:13px;border:1.5px solid #f3d9e0;border-radius:12px;margin-top:6px;background:#fffafb}
-.btn-gold{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;width:100%;padding:14px;margin-top:10px;border-radius:12px;border:0;font-weight:700}
-.btn-pink{background:#fff0f3;color:#b67a4a;width:100%;padding:10px;margin-top:8px;border-radius:12px;border:1.5px solid #d4a574}
-.badge{background:#d4a574;color:#fff;padding:2px 8px;border-radius:12px;font-size:10px}
-.checkout-box{background:#fff;border:2px solid #d4a574;border-radius:16px;padding:14px;margin:10px 0}
-.eft-box{background:#fffaf0;border:2px dashed #d4a574;border-radius:14px;padding:14px;margin-top:10px}
-table{width:100%;font-size:11px;border-collapse:collapse} th{background:#fff0f3;color:#b67a4a;padding:6px;text-align:left} td{padding:6px;border-bottom:1px solid #f3d9e0}
-.rank-badge{background:#d4a574;color:#fff;padding:3px 8px;border-radius:10px;font-size:9px}
+.kit-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kit{border-radius:14px;padding:10px;text-align:center;background:#fff;border:1.5px solid #e8c9c5}
+.input,select,textarea{width:100%;padding:12px;border:1.5px solid #e8c9c5;border-radius:12px;margin-top:6px;background:#fffafb;font-size:14px}
+.btn-gold{background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;width:100%;padding:13px;margin-top:10px;border-radius:12px;border:0;font-weight:700}
+.btn-pink{background:#fdf2f4;color:#b67a4a;width:100%;padding:10px;margin-top:8px;border-radius:12px;border:1.5px solid #d4a574}
+.ceo-order{border:1.5px solid #e8c9c5;border-radius:14px;padding:12px;margin-bottom:10px;background:#fff}
+.bo-stat{background:#fff;border:1.5px solid #e8c9c5;border-radius:14px;padding:10px;text-align:center}.bo-stat b{color:#b67a4a;font-size:16px}.bo-stat small{color:#b67a4a}
+.status-badge{padding:5px 12px;border-radius:20px;font-size:11px;font-weight:700;display:inline-block}
+.s-Pending{background:#fdf2f4;color:#b67a4a;border:1.5px solid #e8c9c5}
+.s-Paid{background:#fff7e6;color:#b67a4a;border:1.5px solid #d4a574}
+.s-Shipped{background:#d4a574;color:#fff;border:1.5px solid #b67a4a}
+.s-Delivered{background:#fff;color:#b67a4a;border:2px solid #d4a574}
+.track-box{background:#fdf2f4;border:1.5px solid #d4a574;border-radius:10px;padding:8px;margin-top:8px}
 </style></head><body>
-<header><div class="logo">MM <span>AURA</span></div><div id="sponsorTag" style="font-size:11px;color:#b67a4a">Sponsor: CEO</div></header>
-<div class="tabs"><button class="tab active" id="tab-shop" onclick="openTab('shop')">Shop Kits</button><button class="tab" id="tab-checkout" onclick="openTab('checkout')">Checkout<span id="cartCount" class="badge">0</span></button><button class="tab" id="tab-office" onclick="openTab('office')">My BO</button><button class="tab" id="tab-ceo" onclick="openTab('ceo')" style="display:none">CEO DASH</button></div>
-
+<header><div class="logo">MM AURA</div><div id="sponsorTag" style="font-size:11px;color:#b67a4a">Sponsor: CEO</div></header>
+<div class="tabs"><button class="tab active" id="tab-shop" onclick="openTab('shop')">Shop Kits</button><button class="tab" id="tab-checkout" onclick="openTab('checkout')">Checkout<span id="cartCount" style="background:#d4a574;color:#fff;padding:1px 6px;border-radius:10px;margin-left:4px">0</span></button><button class="tab" id="tab-office" onclick="openTab('office')">My BO</button><button class="tab" id="tab-ceo" onclick="openTab('ceo')" style="display:none">CEO DASH</button></div>
 <div id="page-shop" class="page active"><div id="refBanner" class="card-pink" style="display:none;text-align:center;font-weight:700;color:#b67a4a"></div><div id="shopGrid" class="kit-grid"></div></div>
-
-<div id="page-checkout" class="page"><div class="card"><h2 style="color:#b67a4a">🛒 CART & CHECKOUT</h2><div id="cartItems"></div>
-<div class="checkout-box"><div style="display:flex;justify-content:space-between"><span>Subtotal</span><b id="tSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping</span><b id="tShip">R0</b></div><div style="display:flex;justify-content:space-between;font-size:18px;font-weight:700;color:#b67a4a;border-top:1px solid #f3d9e0;margin-top:6px;padding-top:8px"><span>TOTAL</span><b id="tTotal">R0</b></div></div>
-<label style="font-weight:700;margin-top:10px;display:block">🚚 Courier *</label>
-<select id="courier" class="input" onchange="calc()">
-<option value="">-- Select Courier --</option>
-<option value="PAXI_5_9|60">Paxi 5-9 days — R60</option>
-<option value="PAXI_3_5|110">Paxi 3-5 days — R110</option>
-<option value="COURIER_GUY|99">Courier Guy — R99</option>
-<option value="PARGO_POINT|65">Pargo Points (Pick up) — R65</option>
-<option value="PARGO_DOOR|85">Pargo Door to Door — R85</option>
-<option value="CAPE_TOWN_FLATS|75">Cape Town (Cape Flats 24-72hrs ONLY) — R75</option>
-</select>
-<label style="font-weight:700;margin-top:12px;display:block">💳 Payment Method</label>
-<select id="payMethod" class="input"><option value="EFT">EFT — Capitec 2584793357</option><option value="PAYFAST">PayFast (Card/EFT)</option></select>
-<div class="eft-box"><b style="color:#b67a4a">CAPITEC BANK</b><br>Account: MM Aura<br>No: 2584793357<br>Branch: 470010<br>Ref: <span style="color:#b67a4a">Your Name + Order No (e.g. Pretty MM1234)</span>
-<input id="eftRef" class="input" placeholder="EFT Reference / POP No *"><p style="font-size:10px;color:#b67a4a;margin-top:4px">Order No visible after placing!</p></div>
-<label style="font-weight:700;margin-top:12px;display:block">📍 Delivery Address *</label><textarea id="addr" class="input" placeholder="Street, Area, City, Code"></textarea>
-<label style="font-weight:700;margin-top:8px;display:block">📝 Note for CEO (optional)</label><textarea id="note" class="input" placeholder="e.g. Call before delivery, leave at..."></textarea>
-<button class="btn-gold" onclick="checkout()">✅ PLACE ORDER — EARN 20%</button>
-<div style="font-size:10px;color:#b67a4a;margin-top:6px">Sponsor <b id="sponsorDisplay">CEO</b> earns 20% commission</div>
-</div></div>
-
-<div id="page-office" class="page"><div id="authBox"><div class="card-gold"><h3>🔐 Private Login — Distributors & CEO</h3><input id="loginPhone" class="input" placeholder="Phone e.g. 0684729270"><input id="loginPass" type="password" class="input" placeholder="Password"><button class="btn-pink" onclick="login()" style="background:#fff;color:#b67a4a">LOGIN</button><button class="btn-pink" onclick="resetCEO()" style="border:1.5px solid #fff">🆘 Reset CEO 0684729270 → 1234</button><p style="text-align:center;margin-top:10px"><span onclick="document.getElementById('signupBox').style.display='block'" style="text-decoration:underline;cursor:pointer">New? Sign Up Here</span></p></div>
-<div class="card" id="signupBox" style="display:none"><h3 style="color:#b67a4a">Create Private Office</h3><input id="suName" class="input" placeholder="Full Name e.g. Guzzie"><input id="suPhone" class="input" placeholder="Phone"><input id="suPass" type="password" class="input" placeholder="Password"><input id="suPass2" type="password" class="input" placeholder="Confirm"><div style="background:#fff0f3;padding:6px;border-radius:8px;margin-top:6px;font-size:11px">Your Sponsor: <b id="suSponsor">CEO</b></div><button class="btn-gold" onclick="signup()">CREATE ACCOUNT — GET MY LINK</button><p id="suMsg" style="color:red;font-size:11px"></p></div></div>
-
-<div id="officeBox" style="display:none"><div class="card-pink"><h3 style="color:#b67a4a">👑 <span id="offName"></span> — <span id="offRank" class="rank-badge">Starter</span></h3>
-<p style="font-size:11px">Your Private Link (Different for each!):</p><input id="myLink" readonly class="input" style="font-size:11px;font-weight:700"><button onclick="copyLink()" class="btn-gold">Copy My Private Link</button>
-<p style="font-size:10px">?ref=<span id="myRef"></span></p>
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px">
-<div class="card" style="margin:0;text-align:center"><small>Personal Sales</small><b id="mSales">R0</b></div>
-<div class="card" style="margin:0;text-align:center"><small>Team Sales</small><b id="mTeam">R0</b></div>
-<div class="card" style="margin:0;text-align:center"><small>Commission 20%</small><b id="mComm">R0</b></div>
-<div class="card" style="margin:0;text-align:center"><small>Salary + Rank</small><b id="mSalary">R0</b></div>
+<div id="page-checkout" class="page"><div class="card"><h2 style="color:#b67a4a">CART & CHECKOUT</h2><div id="cartItems"></div>
+<div style="margin-top:10px;line-height:1.8"><div style="display:flex;justify-content:space-between"><span>Subtotal</span><b id="tSub">R0</b></div><div style="display:flex;justify-content:space-between"><span>Shipping</span><b id="tShip" style="color:#b67a4a">SELECT!</b></div><div style="display:flex;justify-content:space-between;font-size:18px;color:#b67a4a;border-top:1.5px solid #e8c9c5;padding-top:6px"><span>TOTAL</span><b id="tTotal">R0</b></div></div>
+<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">🚚 Courier *</label><select id="courier" class="input" onchange="calc()"><option value="">-- Select Courier --</option><option value="PAXI_5_9|60">Paxi 5-9 days — R60</option><option value="PAXI_3_5|110">Paxi 3-5 days — R110</option><option value="COURIER_GUY|99">Courier Guy — R99</option><option value="PARGO_POINT|65">Pargo Points — R65</option><option value="PARGO_DOOR|85">Pargo Door to Door — R85</option><option value="CAPE_TOWN_FLATS|75">Cape Town Flats 24-72h — R75</option></select>
+<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">💳 Payment</label><select id="payMethod" class="input"><option value="EFT">EFT — Capitec 2584793357</option></select>
+<div style="background:#fdf2f4;border:1.5px dashed #d4a574;border-radius:12px;padding:12px;margin-top:10px"><b style="color:#b67a4a">CAPITEC</b> MM Aura 2584793357 Branch 470010<br><input id="eftRef" class="input" placeholder="EFT Ref *"></div>
+<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">📱 Cell Number * (for courier)</label><input id="checkoutPhone" class="input" placeholder="0684729270 — Courier will call!" style="border:2px solid #d4a574;background:#fff">
+<label style="font-weight:700;margin-top:12px;display:block;color:#b67a4a">📍 Delivery Address *</label><textarea id="addr" class="input" placeholder="Address"></textarea>
+<label style="font-weight:700;margin-top:10px;display:block;color:#b67a4a">📝 Note for CEO</label><textarea id="note" class="input" placeholder="Note"></textarea>
+<button class="btn-gold" onclick="checkout()">PLACE ORDER — EARN 20%</button></div></div>
+<div id="page-office" class="page"><div id="authBox"><div class="card-gold"><h3>🔐 Private Login</h3><input id="loginPhone" class="input" placeholder="Phone"><input id="loginPass" type="password" class="input" placeholder="Password"><button class="btn-pink" onclick="login()" style="background:#fff;color:#b67a4a">LOGIN</button><div id="secretReset" style="display:none"><button class="btn-pink" onclick="resetCEO()" style="background:#fff;color:red;font-size:10px;margin-top:8px">SECRET CEO RESET</button></div><p style="text-align:center;margin-top:10px"><span onclick="document.getElementById('signupBox').style.display='block'" style="text-decoration:underline;cursor:pointer;color:#fff">New? Sign Up Here</span></p></div>
+<div class="card" id="signupBox" style="display:none"><h3 style="color:#b67a4a">Create Private Office</h3><input id="suName" class="input" placeholder="Full Name"><input id="suPhone" class="input" placeholder="Phone"><input id="suPass" type="password" class="input" placeholder="Password"><input id="suPass2" type="password" class="input" placeholder="Confirm"><div style="background:#fdf2f4;padding:8px;border-radius:8px;margin-top:6px;border:1px solid #e8c9c5">Sponsor: <b style="color:#b67a4a" id="suSponsor">CEO</b></div><button class="btn-gold" onclick="signup()">CREATE</button><p id="suMsg" style="color:red"></p></div></div>
+<div id="officeBox" style="display:none"><div class="card-pink"><h3 style="color:#b67a4a">👑 <span id="offName"></span> — <span id="offRank" style="background:#d4a574;color:#fff;padding:4px 10px;border-radius:10px;font-size:10px">Starter</span></h3><p style="font-size:11px;color:#b67a4a;margin-top:6px">Your Private Link:</p><input id="myLink" readonly class="input" style="font-size:11px;font-weight:700;border:1.5px solid #d4a574"><button onclick="copyLink()" class="btn-gold">Copy My Private Link</button>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px">
+<div class="bo-stat"><small>Personal Sales</small><br><b id="mSales">R0</b></div>
+<div class="bo-stat"><small>Team Sales</small><br><b id="mTeam">R0</b></div>
+<div class="bo-stat"><small>Commission</small><br><b id="mComm">R0</b></div>
+<div class="bo-stat"><small>Salary + Rank</small><br><b id="mSalary">R0</b></div>
 </div>
-<div style="margin-top:10px"><b>Referrals L1-L6</b><div id="levels" style="font-size:11px"></div></div>
-<button class="btn-pink" onclick="logout()">Logout</button>
-</div>
-<div class="card"><h4 style="color:#b67a4a">My Private Orders</h4><div id="myOrdersList"></div></div>
-</div></div>
-
-<div id="page-ceo" class="page"><div class="card-gold"><h2>👑 CEO DASHBOARD — PRIVATE</h2><p>Welcome CEO — You see everything!</p><div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:10px"><div style="background:rgba(255,255,255,.2);border-radius:10px;padding:8px;text-align:center"><small>Total Orders</small><b id="ceoTotalOrders">0</b></div><div style="background:rgba(255,255,255,.2);border-radius:10px;padding:8px;text-align:center"><small>All Sales</small><b id="ceoTotalSales">R0</b></div><div style="background:rgba(255,255,255,.2);border-radius:10px;padding:8px;text-align:center"><small>Distributors</small><b id="ceoTotalDis">0</b></div></div></div>
-
-<div class="card"><h4 style="color:#b67a4a">📦 All Orders — Change Status</h4><div id="ceoOrders"></div></div>
-<div class="card"><h4 style="color:#b67a4a">👥 All Distributors — Level 1-6</h4><div id="ceoDis"></div></div>
-<div class="card"><h4 style="color:#b67a4a">🏆 Leaderboard — Top This Month</h4><div id="ceoLeader"></div></div>
-<div class="card"><h4 style="color:#b67a4a">💰 Commissions + Salaries to Pay</h4><div id="ceoPayouts"></div></div>
-<button class="btn-pink" onclick="logout()">Logout CEO</button>
-</div>
-
+<div style="margin-top:14px;background:#fdf2f4;padding:12px;border-radius:14px;border:1.5px solid #e8c9c5"><b style="color:#b67a4a">Referrals L1-L6</b><div id="levels" style="font-size:12px;background:#fff;padding:10px;border-radius:10px;margin-top:8px;border:1px solid #e8c9c5;line-height:1.8"></div></div>
+<button class="btn-pink" onclick="logout()">Logout</button></div>
+<div class="card"><h4 style="color:#b67a4a">My Private Orders</h4><div id="myOrdersList" style="margin-top:8px"></div></div>
+<div class="card" id="myTeamOrdersCard" style="display:none"><h4 style="color:#b67a4a">Team Orders — You Earn Commission</h4><div id="myTeamOrdersList"></div></div></div></div>
+<div id="page-ceo" class="page"><div class="card-gold"><h2>👑 CEO DASHBOARD</h2><div style="margin-top:10px"><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Orders: <b id="ceoTotalOrders">0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Sales: <b id="ceoTotalSales">R0</b></span><span style="background:rgba(255,255,255,.3);padding:6px 10px;border-radius:10px;margin:2px;font-size:12px">Dis: <b id="ceoTotalDis">0</b></span></div></div>
+<div class="card"><div style="font-weight:700;color:#b67a4a;margin-bottom:8px">📦 All Orders — Tracking + Status</div><div id="ceoOrders"></div></div>
+<div class="card"><div style="font-weight:700;color:#b67a4a">👥 All Distributors</div><div id="ceoDis" style="overflow-x:auto"></div></div>
+<button class="btn-pink" onclick="logout()">Logout CEO</button></div>
 <script>
-var PRODUCTS=[{id:0,name:"Kit 1 R270",price:270,desc:"3 Soaps +2 Glow Oil +2 Lip Scrub"},{id:1,name:"Kit 2 R370",price:370,desc:"3 Soaps +3 Glow Oil +3 Heel Balm"},{id:2,name:"Kit 3 R400",price:400,desc:"3 Soaps +2 Glow Oil +3 Lip Scrub +3 Lip Balm +3 Hand Lotion"},{id:3,name:"Kit 4 R495",price:495,desc:"3 Soaps +3 Glow Oil +1 Lip Scrub +3 Lip Balm +3 Face Mask"},{id:4,name:"Kit 5 R520",price:520,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On"},{id:5,name:"Kit 6 R600",price:600,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On +6 Air Fresh"},{id:6,name:"Kit 7 R400",price:400,desc:"10 Lip Scrub +10 Lip Balm"},{id:7,name:"Kit 8 R540",price:540,desc:"6 Soaps +6 Glow Oil"},{id:8,name:"Kit 9 R375",price:375,desc:"15 Air Fresh"},{id:9,name:"Kit 10 R600",price:600,desc:"6 Perfume"},{id:10,name:"Soaps",price:40,desc:"Soap 100g"},{id:11,name:"Glow Oil",price:50,desc:"Glow Oil"},{id:12,name:"Body Oil",price:60,desc:"Body Oil"},{id:13,name:"Heel Balm",price:75,desc:"Heel Balm"},{id:14,name:"Lip Balm",price:15,desc:"Lip Balm"},{id:15,name:"Lip Scrub",price:25,desc:"Lip Scrub"},{id:16,name:"Face Mask",price:35,desc:"Face Mask"},{id:17,name:"Roll On",price:32.5,desc:"Roll On"},{id:18,name:"Air Freshener",price:25,desc:"Air Fresh"},{id:19,name:"Perfume",price:100,desc:"Perfume 50ml"},{id:20,name:"Hand Lotion",price:20,desc:"Hand Lotion"}];
-var cart=JSON.parse(localStorage.getItem("mm_cart_v114")||"[]");var orders=JSON.parse(localStorage.getItem("mm_orders_v114")||"[]");var users=JSON.parse(localStorage.getItem("mm_users_v114")||"[]");
-try{var old=[];["mm_users_final","mm_users_v113","mm_users_v112","mm_users_v111"].forEach(k=>{try{old=old.concat(JSON.parse(localStorage.getItem(k)||"[]"))}catch(e){}}); if(users.length==0&&old.length>0){users=old;localStorage.setItem("mm_users_v114",JSON.stringify(users));}}catch(e){}
+var PRODUCTS=[{id:0,name:"Kit 1 R270",price:270,desc:"3 Soaps +2 Glow Oil +2 Lip Scrub"},{id:1,name:"Kit 2 R370",price:370,desc:"3 Soaps +3 Glow Oil +3 Heel Balm"},{id:2,name:"Kit 3 R400",price:400,desc:"3 Soaps +2 Glow Oil +3 Lip Scrub +3 Lip Balm +3 Hand Lotion"},{id:3,name:"Kit 4 R495",price:495,desc:"3 Soaps +3 Glow Oil +1 Lip Scrub +3 Lip Balm +3 Face Mask"},{id:4,name:"Kit 5 R520",price:520,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On"},{id:5,name:"Kit 6 R600",price:600,desc:"3 Soaps +3 Glow Oil +2 Body Oil +4 Roll On +6 Air Fresh"},{id:6,name:"Kit 7 R400",price:400,desc:"10 Lip Scrub +10 Lip Balm"},{id:7,name:"Kit 8 R540",price:540,desc:"6 Soaps +6 Glow Oil"},{id:8,name:"Kit 9 R375",price:375,desc:"15 Air Fresh"},{id:9,name:"Kit 10 R600",price:600,desc:"6 Perfume"},{id:10,name:"Soaps",price:40,desc:"Soap"},{id:11,name:"Glow Oil",price:50,desc:"Glow Oil"},{id:12,name:"Body Oil",price:60,desc:"Body Oil"},{id:13,name:"Heel Balm",price:75,desc:"Heel Balm"},{id:14,name:"Lip Balm",price:15,desc:"Lip Balm"},{id:15,name:"Lip Scrub",price:25,desc:"Lip Scrub"},{id:16,name:"Face Mask",price:35,desc:"Face Mask"},{id:17,name:"Roll On",price:32.5,desc:"Roll On"},{id:18,name:"Air Freshener",price:25,desc:"Air Fresh"},{id:19,name:"Perfume",price:100,desc:"Perfume"},{id:20,name:"Hand Lotion",price:20,desc:"Hand Lotion"}];
+var cart=JSON.parse(localStorage.getItem("mm_cart_v120")||localStorage.getItem("mm_cart_v119")||"[]");
+var orders=JSON.parse(localStorage.getItem("mm_orders_v120")||localStorage.getItem("mm_orders_v119")||"[]");
+var users=JSON.parse(localStorage.getItem("mm_users_v120")||localStorage.getItem("mm_users_v119")||"[]");
 var params=new URLSearchParams(location.search);var sponsor=localStorage.getItem("mm_sponsor")||"CEO";if(params.get("ref")){sponsor=params.get("ref");localStorage.setItem("mm_sponsor",sponsor);}
+if(params.get("ceo_secret")==="MMaura2024")setTimeout(()=>{var e=document.getElementById("secretReset");if(e)e.style.display="block";},400);
 function $(id){return document.getElementById(id);}
-function openTab(t){["shop","checkout","office","ceo"].forEach(k=>{$( "tab-"+k).className="tab"+(t==k?" active":"");$("page-"+k).className="page"+(t==k?" active":"");}); if(t=="office"||t=="ceo")checkAuth();}
-function renderShop(){var h="";PRODUCTS.forEach((p,i)=>{h+=`<div class="kit" onclick="addKit(${i})"><b style="color:#b67a4a">${p.name}</b><small style="font-size:9px;display:block">${p.desc}</small><div style="background:linear-gradient(135deg,#d4a574,#b67a4a);color:#fff;padding:6px;border-radius:10px;margin-top:6px;font-size:10px">R${p.price} +ADD</div></div>`});$("shopGrid").innerHTML=h;$("sponsorTag").innerText="Sponsor: "+sponsor;$("sponsorDisplay").innerText=sponsor;$("suSponsor").innerText=sponsor;if(params.get("ref")){$("refBanner").style.display="block";$("refBanner").innerText="💖 Shopping via "+sponsor.toUpperCase()+" — They earn 20%!";}}
-function addKit(idx){var p=PRODUCTS[idx];var f=cart.find(x=>x.id==p.id);if(f)f.qty++;else cart.push({id:p.id,name:p.name,price:p.price,qty:1});calc();openTab('checkout');}
-function calc(){var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var c=$("courier").value;var ship=c?Number(c.split("|")[1]):0;$("tSub").innerText="R"+sub;$("tShip").innerText=ship?"R"+ship:"SELECT!";$("tShip").style.color=ship?"#b67a4a":"red";$("tTotal").innerText="R"+(sub+ship);$("cartCount").innerText=cart.reduce((s,i)=>s+i.qty,0);var html="";cart.forEach((it,i)=>{html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #f3d9e0"><span>${it.name} x${it.qty}</span><span><button onclick="cart[${i}].qty++;save()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);save()">-</button></span></div>`});$("cartItems").innerHTML=html||"Empty — Add Kits";localStorage.setItem("mm_cart_v114",JSON.stringify(cart));}
+function openTab(t){["shop","checkout","office","ceo"].forEach(k=>{var b=$("tab-"+k);if(b)b.className="tab"+(t==k?" active":"");var p=$("page-"+k);if(p)p.className="page"+(t==k?" active":"");});if(t=="office"||t=="ceo")checkAuth();if(t=="checkout"&&curUser&&$("checkoutPhone")){$("checkoutPhone").value=curUser.phone;}}
+function renderShop(){var h="";PRODUCTS.forEach((p,i)=>{h+=`<div class="kit" onclick="addKit(${i})"><b style="color:#b67a4a">${p.name}</b><small style="font-size:9px;display:block">${p.desc}</small><div style="background:#d4a574;color:#fff;padding:6px;border-radius:10px;margin-top:6px;font-size:10px">R${p.price} +ADD</div></div>`});$("shopGrid").innerHTML=h;$("sponsorTag").innerText="Sponsor: "+sponsor;$("suSponsor").innerText=sponsor;if(params.get("ref")){$("refBanner").style.display="block";$("refBanner").innerText="💖 Shopping via "+sponsor.toUpperCase()+" — They earn 20%!";}}
+function addKit(i){var p=PRODUCTS[i];var f=cart.find(x=>x.id==p.id);if(f)f.qty++;else cart.push({id:p.id,name:p.name,price:p.price,qty:1});calc();openTab('checkout');}
+function calc(){var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var c=$("courier").value;var ship=c?Number(c.split("|")[1]):0;$("tSub").innerText="R"+sub;$("tShip").innerText=ship?"R"+ship:"SELECT!";$("tTotal").innerText="R"+(sub+ship);$("cartCount").innerText=cart.reduce((s,i)=>s+i.qty,0);var html="";cart.forEach((it,i)=>{html+=`<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #e8c9c5;font-size:13px"><span>${it.name} x${it.qty}</span><span><button onclick="cart[${i}].qty++;save()">+</button> <button onclick="cart[${i}].qty--;if(cart[${i}].qty<=0)cart.splice(${i},1);save()">-</button></span></div>`});$("cartItems").innerHTML=html||"Empty";localStorage.setItem("mm_cart_v120",JSON.stringify(cart));}
 function save(){calc();}
-function checkout(){var c=$("courier").value;if(!cart.length){alert("Cart empty");return;}if(!c){alert("Select courier!");return;}if(!$("addr").value||!$("eftRef").value){alert("Address + EFT Ref required!");return;}var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var ship=Number(c.split("|")[1]);var pay=$("payMethod").value;var o={id:"MM"+Date.now().toString().slice(-6),items:cart.map(x=>x.name+" x"+x.qty).join(", "),sub:sub,amt:sub+ship,sponsor:sponsor,comm:Math.round(sub*0.2),ship:ship,shipLabel:c.split("|")[0],pay:pay,addr:$("addr").value,note:$("note").value,eft:$("eftRef").value,status:"Pending",date:new Date().toISOString().slice(0,10)};orders.push(o);localStorage.setItem("mm_orders_v114",JSON.stringify(orders));alert("✅ Order "+o.id+" R"+o.amt+" via "+sponsor+" — Ref: "+o.eft+" Note saved!");cart=[];calc();openTab('office');}
-var curUser=JSON.parse(localStorage.getItem("mm_current_v114")||"null");
-function isCEO(){return curUser&&curUser.phone=="0684729270";}
+function statusBadge(st){return `<span class="status-badge s-${st}">${st}</span>`;}
+function checkout(){
+var c=$("courier").value;var phone=$("checkoutPhone").value.trim();
+if(!cart.length||!c||!phone||!$("addr").value||!$("eftRef").value){alert("Fill courier+phone+address+EFT!");return;}
+var sub=cart.reduce((s,i)=>s+i.price*i.qty,0);var ship=Number(c.split("|")[1]);
+var buyerRef = curUser? (curUser.ref||curUser.name.replace(/[^a-zA-Z0-9]/g,"")) : "GUEST";
+var buyerName = curUser? curUser.name : "Guest";
+var o={id:"MM"+Date.now().toString().slice(-6),items:cart.map(x=>x.name+" x"+x.qty).join(", "),sub:sub,amt:sub+ship,sponsor:sponsor,buyerRef:buyerRef,buyerName:buyerName,buyerPhone:phone,comm:Math.round(sub*0.2),ship:ship,shipLabel:c.split("|")[0],addr:$("addr").value,note:$("note").value,eft:$("eftRef").value,status:"Pending",tracking:"",date:new Date().toISOString().slice(0,10)};
+orders.push(o);localStorage.setItem("mm_orders_v120",JSON.stringify(orders));localStorage.setItem("mm_orders_v119",JSON.stringify(orders));
+alert("✅ Order "+o.id+" — Cell "+phone+" saved!");cart=[];calc();openTab('office');checkAuth();
+}
+var curUser=JSON.parse(localStorage.getItem("mm_current_v120")||localStorage.getItem("mm_current_v119")||"null");
+function getDownline(ref,l,max){if(l>max)return[];var direct=users.filter(u=>(u.sponsor||"").toLowerCase()==ref.toLowerCase());var res=[];direct.forEach(d=>{res.push({user:d,level:l});res=res.concat(getDownline(d.ref,l+1,max));});return res;}
 function checkAuth(){
 if(!curUser){$("authBox").style.display="block";$("officeBox").style.display="none";$("tab-ceo").style.display="none";return;}
 $("authBox").style.display="none";$("officeBox").style.display="block";
 var clean=(curUser.ref||curUser.name.replace(/[^a-zA-Z0-9]/g,""));var link=location.origin+location.pathname+"?ref="+encodeURIComponent(clean);
-$("offName").innerText=curUser.name;$("myLink").value=link;$("myRef").innerText=clean;
-var rank="Starter";var tot=orders.filter(o=>o.sponsor.toLowerCase()==clean.toLowerCase()).reduce((s,o)=>s+o.sub,0);if(tot>=2000)rank="Team Builder";if(tot>=5000)rank="Leader";$("offRank").innerText=rank;
-if(isCEO()){$("tab-ceo").style.display="block";renderCEO();openTab('ceo');}else{$("tab-ceo").style.display="none";renderMyOrders();}
+$("offName").innerText=curUser.name;$("myLink").value=link;if($("checkoutPhone"))$("checkoutPhone").value=curUser.phone;
+var myPersonal=orders.filter(o=> (o.buyerRef||"").toLowerCase()==clean.toLowerCase());
+var personalTot=myPersonal.reduce((s,o)=>s+o.sub,0);$("offRank").innerText=personalTot>=5000?"Leader":personalTot>=2000?"Team Builder":"Starter";
+if(curUser.phone=="0684729270"){$("tab-ceo").style.display="block";renderCEO();}else renderMyOrders();
 }
-function renderMyOrders(){if(!curUser)return;var clean=(curUser.ref||curUser.name.replace(/[^a-zA-Z0-9]/g,"")).toLowerCase();var my=orders.filter(o=>o.sponsor.toLowerCase()==clean);var tot=my.reduce((s,o)=>s+o.sub,0);var comm=my.reduce((s,o)=>s+o.comm,0);var team=0;
-$("mSales").innerText="R"+tot;$("mComm").innerText="R"+comm;$("mTeam").innerText="R"+team;$("mSalary").innerText=tot>=2000?"R500":"R0";
-var lvHtml="";for(var l=1;l<=6;l++){lvHtml+=`L${l}: 0 referrals<br>`} $("levels").innerHTML=lvHtml;
-var h="";my.slice().reverse().forEach(o=>{h+=`<div class="card" style="margin:6px 0;padding:8px"><b>#${o.id}</b> ${o.items}<br>R${o.amt} — <b style="color:#b67a4a">${o.status}</b><br><small>${o.shipLabel} | ${o.pay} | Note: ${o.note||'-'}</small></div>`});$("myOrdersList").innerHTML=h||"No orders yet — Share your link!";
+function renderMyOrders(){
+if(!curUser)return;var clean=(curUser.ref||"").toLowerCase();
+var myPersonal=orders.filter(o=> (o.buyerRef||"").toLowerCase()==clean);
+var teamOrders=orders.filter(o=> o.sponsor.toLowerCase()==clean && (o.buyerRef||"").toLowerCase()!=clean);
+$("mSales").innerText="R"+myPersonal.reduce((s,o)=>s+o.sub,0);$("mTeam").innerText="R"+teamOrders.reduce((s,o)=>s+o.sub,0);$("mComm").innerText="R"+teamOrders.reduce((s,o)=>s+o.comm,0);$("mSalary").innerText=myPersonal.reduce((s,o)=>s+o.sub,0)>=2000?"R500":"R0";
+var dl=getDownline(curUser.ref,1,6);var counts={1:0,2:0,3:0,4:0,5:0,6:0};dl.forEach(d=>counts[d.level]++);var lv="";for(var l=1;l<=6;l++){var names=dl.filter(d=>d.level==l).map(d=>d.user.name).join(", ");lv+=`<div style="padding:5px 0;border-bottom:1px dashed #e8c9c5"><b>L${l}:</b> ${counts[l]} ${names?`→ ${names}`:""}</div>`} $("levels").innerHTML=lv;
+var h="";myPersonal.slice().reverse().forEach(o=>{h+=`<div class="ceo-order"><div style="display:flex;justify-content:space-between"><b>#${o.id}</b>${statusBadge(o.status)}</div><div style="margin:6px 0">${o.items}</div><div style="font-size:12px">R${o.amt} — 📱 ${o.buyerPhone}</div>${o.tracking?`<div class="track-box">📦 Tracking: <b>${o.tracking}</b></div>`:""}<br><small style="color:#b67a4a">${o.shipLabel}</small></div>`});$("myOrdersList").innerHTML=h||"No orders yet";
+if(teamOrders.length>0){$("myTeamOrdersCard").style.display="block";var th="";teamOrders.slice().reverse().forEach(o=>{th+=`<div class="ceo-order" style="background:#fdf2f4"><div style="display:flex;justify-content:space-between"><b>${o.buyerName}</b>${statusBadge(o.status)}</div>${o.items}<br><small>R${o.amt} — Comm R${o.comm} — 📱 ${o.buyerPhone}</small></div>`});$("myTeamOrdersList").innerHTML=th;}else $("myTeamOrdersCard").style.display="none";
 }
 function renderCEO(){
 $("ceoTotalOrders").innerText=orders.length;$("ceoTotalSales").innerText="R"+orders.reduce((s,o)=>s+o.sub,0);$("ceoTotalDis").innerText=users.length;
-var oh="";orders.slice().reverse().forEach((o,i)=>{var realIdx=orders.length-1-i;oh+=`<div class="card" style="padding:8px;margin:6px 0"><b>#${o.id}</b> ${o.date} — ${o.sponsor} — R${o.amt} (Comm R${o.comm})<br><small>${o.items}<br>Addr: ${o.addr}<br>Note: <b>${o.note||'-'}</b> | EFT Ref: ${o.eft} | ${o.shipLabel} | ${o.pay}</small><br>Status: <select onchange="updateStatus(${realIdx},this.value)" class="input" style="padding:4px"><option ${o.status=="Pending"?"selected":""}>Pending</option><option ${o.status=="Paid"?"selected":""}>Paid</option><option ${o.status=="Shipped"?"selected":""}>Shipped</option><option ${o.status=="Delivered"?"selected":""}>Delivered</option></select></div>`});$("ceoOrders").innerHTML=oh||"No orders";
-var dh="<table><tr><th>Name</th><th>Phone</th><th>Sponsor</th><th>Link</th><th>Sales</th></tr>";users.forEach(u=>{var s=orders.filter(o=>o.sponsor.toLowerCase()==(u.ref||"").toLowerCase()).reduce((a,b)=>a+b.sub,0);dh+=`<tr><td>${u.name}</td><td>${u.phone}</td><td>${u.sponsor}</td><td>?ref=${u.ref}</td><td>R${s}</td></tr>`});dh+="</table>";$("ceoDis").innerHTML=dh;
-var map={};orders.forEach(o=>{map[o.sponsor]=(map[o.sponsor]||0)+o.sub});var sorted=Object.entries(map).sort((a,b)=>b[1]-a[1]);var lh="";sorted.slice(0,10).forEach((e,i)=>{lh+=`<div style="display:flex;justify-content:space-between;padding:6px 0"><span>${i+1}. ${e[0]}</span><b>R${e[1]}</b></div>`});$("ceoLeader").innerHTML=lh||"No sales yet";
-var ph="";sorted.forEach(e=>{ph+=`<div style="display:flex;justify-content:space-between;padding:4px 0"><span>${e[0]}</span><span>Comm R${Math.round(e[1]*0.2)} | Salary ${e[1]>=2000?"R500":"R0"}</span></div>`});$("ceoPayouts").innerHTML=ph||"None";
+var oh="";orders.slice().reverse().forEach((o,i)=>{var idx=orders.length-1-i;oh+=`<div class="ceo-order"><div style="display:flex;justify-content:space-between"><b>#${o.id}</b>${statusBadge(o.status)}</div><div style="font-size:11px;color:#8a5a44">Sponsor:${o.sponsor} Buyer:${o.buyerName} 📱 ${o.buyerPhone}</div><div style="margin:6px 0">${o.items}</div><div style="font-size:12px;line-height:1.6">R${o.amt} | ${o.shipLabel}<br>📱 Cell for Courier: <b style="color:#b67a4a">${o.buyerPhone}</b> — <a href="tel:${o.buyerPhone}">Call</a><br>Addr:${o.addr}<br>Note:${o.note||'-'}<br>EFT:${o.eft}</div><div style="margin-top:8px;background:#fdf2f4;padding:8px;border-radius:10px;border:1.5px dashed #d4a574"><label style="font-weight:700;font-size:11px;color:#b67a4a">📦 TRACKING</label><input id="track_${idx}" class="input" value="${o.tracking||""}" placeholder="Tracking"><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:6px"><select id="stat_${idx}" class="input"><option ${o.status=="Pending"?"selected":""}>Pending</option><option ${o.status=="Paid"?"selected":""}>Paid</option><option ${o.status=="Shipped"?"selected":""}>Shipped</option><option ${o.status=="Delivered"?"selected":""}>Delivered</option></select><button class="btn-gold" style="margin:0;padding:8px" onclick="saveTrack(${idx})">SAVE</button></div></div></div>`});$("ceoOrders").innerHTML=oh||"No orders";
+var html="<table style='width:100%;font-size:12px;border-collapse:collapse'><tr><th style='background:#fdf2f4;padding:8px;text-align:left;color:#b67a4a'>Name</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Phone</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Sponsor</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>L1-L6</th><th style='background:#fdf2f4;padding:8px;color:#b67a4a'>Personal</th></tr>";users.forEach(u=>{var per=orders.filter(o=>(o.buyerRef||"").toLowerCase()==(u.ref||"").toLowerCase()).reduce((a,b)=>a+b.sub,0);var dl=getDownline(u.ref,1,6);var c={1:0,2:0,3:0,4:0,5:0,6:0};dl.forEach(d=>c[d.level]++);html+=`<tr><td style='padding:8px;border-bottom:1px solid #e8c9c5'><b>${u.name}</b></td><td style='padding:8px;border-bottom:1px solid #e8c9c5'>${u.phone}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5'>${u.sponsor}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5;font-size:10px'>L1:${c[1]} L2:${c[2]} L3:${c[3]}<br>L4:${c[4]} L5:${c[5]} L6:${c[6]}</td><td style='padding:8px;border-bottom:1px solid #e8c9c5'><b>R${per}</b></td></tr>`});html+="</table>";$("ceoDis").innerHTML=html;
 }
-function updateStatus(idx,val){orders[idx].status=val;localStorage.setItem("mm_orders_v114",JSON.stringify(orders));alert("Status updated to "+val);renderCEO();}
-function signup(){var n=$("suName").value.trim();var ph=$("suPhone").value.trim();var p=$("suPass").value;var p2=$("suPass2").value;if(!n||!ph||!p){$("suMsg").innerText="Fill all";return;}if(p!=p2){$("suMsg").innerText="Passwords no match";return;}if(users.find(u=>u.phone==ph)){$("suMsg").innerText="Phone used — Login";return;}var clean=n.replace(/[^a-zA-Z0-9]/g,"");var u={name:n,phone:ph,password:p,ref:clean,sponsor:sponsor};users.push(u);localStorage.setItem("mm_users_v114",JSON.stringify(users));curUser=u;localStorage.setItem("mm_current_v114",JSON.stringify(u));alert("Welcome "+n+"! Your link?ref="+clean);checkAuth();}
-function login(){var ph=$("loginPhone").value.trim();var p=$("loginPass").value;var u=users.find(x=>x.phone==ph&&x.password==p);if(!u){alert("Wrong phone/password — Try Reset CEO if you are CEO");return;}curUser=u;localStorage.setItem("mm_current_v114",JSON.stringify(u));checkAuth();}
-function resetCEO(){if(!confirm("Reset CEO 0684729270 password to 1234?"))return;var u=users.find(x=>x.phone=="0684729270");if(u)u.password="1234";else users.push({name:"CEO",phone:"0684729270",password:"1234",ref:"CEO",sponsor:"CEO"});localStorage.setItem("mm_users_v114",JSON.stringify(users));alert("✅ Reset done! Login 0684729270 / 1234");$("loginPhone").value="0684729270";$("loginPass").value="1234";}
-function logout(){localStorage.removeItem("mm_current_v114");curUser=null;openTab('shop');checkAuth();}
-function copyLink(){navigator.clipboard.writeText($("myLink").value);alert("Copied: "+$("myLink").value);}
+function saveTrack(idx){var s=$("stat_"+idx).value;var t=$("track_"+idx).value;orders[idx].status=s;orders[idx].tracking=t;localStorage.setItem("mm_orders_v120",JSON.stringify(orders));localStorage.setItem("mm_orders_v119",JSON.stringify(orders));alert("Saved "+s);renderCEO();}
+function signup(){var n=$("suName").value.trim();var ph=$("suPhone").value.trim();var p=$("suPass").value;var p2=$("suPass2").value;if(!n||!ph||!p||p!=p2){$("suMsg").innerText="Check fields";return;}if(users.find(u=>u.phone==ph)){$("suMsg").innerText="Phone used";return;}var clean=n.replace(/[^a-zA-Z0-9]/g,"");var u={name:n,phone:ph,password:p,ref:clean,sponsor:sponsor};users.push(u);localStorage.setItem("mm_users_v120",JSON.stringify(users));localStorage.setItem("mm_users_v119",JSON.stringify(users));curUser=u;localStorage.setItem("mm_current_v120",JSON.stringify(u));checkAuth();}
+function login(){var ph=$("loginPhone").value.trim();var p=$("loginPass").value;var u=users.find(x=>x.phone==ph&&x.password==p);if(!u){alert("Wrong");return;}curUser=u;localStorage.setItem("mm_current_v120",JSON.stringify(u));checkAuth();}
+function resetCEO(){var u=users.find(x=>x.phone=="0684729270");if(u)u.password="1234";else users.push({name:"CEO",phone:"0684729270",password:"1234",ref:"CEO",sponsor:"CEO"});localStorage.setItem("mm_users_v120",JSON.stringify(users));alert("CEO reset");}
+function logout(){localStorage.removeItem("mm_current_v120");localStorage.removeItem("mm_current_v119");curUser=null;openTab('shop');checkAuth();}
+function copyLink(){navigator.clipboard.writeText($("myLink").value);alert("Copied");}
 renderShop();calc();checkAuth();
 </script></body></html>
